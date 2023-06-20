@@ -1,0 +1,828 @@
+div {
+    display: block;
+}
+article, blockquote, body, dd, div, dl, dt, h1, h2, h3, h4, html, li, main, ol, p, section, table, tbody, td, th, thead, tr, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a, address, article, aside, audio, b, body, button, canvas, caption, dd, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, img, input, label, legend, li, nav, ol, p, pre, section, small, span, strong, summary, table, tbody, td, th, thead, time, tr, ul, video {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a, input, optgroup, select, textarea {
+    color: inherit;
+}
+
+a a:active, a:hover, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration-line : none;
+}
+label {
+    cursor: default;
+}
+
+
+input {
+    color: inherit;
+}
+
+
+body, body button, body input, body li, body ol, body select, body textarea, body ul  {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+main {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: inherit;
+    color: inherit;
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+}
+
+body li {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body input {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body, table th {
+    font-weight: 400;
+}
+
+
+body, button, html, input, textarea {
+    font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+}
+
+input, textarea {
+    background: none;
+}
+
+button {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
+form {
+    display: block;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    
+    font: inherit;
+    box-sizing: border-box;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+#page-container {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+.black-bg-wrap, .lypop-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.black-bg-wrap {
+    opacity: .6;
+    z-index: 9999;
+    background: #000;
+}
+
+#wz-header {
+    position: static;
+    top: 0;
+    z-index: 99;
+}
+
+.web-header {
+    position: static;
+    top: 0;
+    transition: top .25s;
+    z-index: 99;
+    width: 100%;
+}
+
+.web-header-large {
+    display: block;
+}
+
+.web-header .web-header-simple {
+    display: block;
+    position: relative;
+    text-align: cdenter;
+}
+
+.web-header .header-wrapper {
+    position: relative;
+    border-bottom: 1px solid #f2f4f6;
+    padding: 0;
+    height: 56px;
+    text-align: left;
+    top: 0;
+    z-index: 9998;
+    background-color: #fff;
+    width: 100%;
+}
+
+.web-header .header-wrapper .header-container {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 100%;
+}
+
+.web-header .wadiz-logo>a {
+    padding: 14px 0 18px;
+    display: block;
+}
+
+.web-header .wadiz-logo .label {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    visibility: none;
+    height: 1px;
+}
+
+.web-header .web-header-simple .header-container .gnb-large {
+    display: block;
+    position: absolute;
+    right: 80px;
+    left: auto;
+    color: #495057;
+}
+
+.web-header .gnb-large {
+    margin-left: 24px;
+    box-shadow: none;
+    width: auto;
+}
+
+.web-header .gnb-large li {
+    float: left;
+    width: auto;
+}
+
+.web-header, .web-header-simple, .header-container, .gnb-large, .item {
+    margin-left: 16px;
+    padding: 0;
+}
+
+.web-header, .gnb-large, .item {
+    display: block;
+    color: #495057;
+}
+
+.web-header, .web-header-simple, .header-container, .gnb-large, .item span {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.web-header .gnb-large, .item span {
+    padding-top: 1px;
+    line-height: 55px;
+    color: #000;
+}
+
+.PreviewOverlay_container__3Q3h2 {
+    line-height: 20px;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #f66;
+    border-top: 1px solid #ff9d9d;
+    border-bottom: 1px solid #ff9d9d;
+    background-color: #fff1f1;
+}
+
+.PreviewOverlay_container__3Q3h2, .PreviewOverlay_title__21y5H {
+    line-height: 28px;
+    letter-spacing: -.3px;
+    font-size: 16px;
+    margin-left: 8px;
+    font-weight: 700;
+}
+
+.PreviewOverlay_container__3Q3h2, .PreviewOverlay_title__21y5H, .PreviewOverlay_description__2ihG6{
+    margin-left: 16px;
+}
+
+.AccountContainer_container__PwFiE {
+    position: relative;
+    margin: 24px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 390px;
+    overflow: hidden;
+}
+.AccountTitle_title__2gD-3 {
+    line-height: 38px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.FirstBenefitPopper_firstBenefitPopper__1dKmf {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: 32px auto 8px;
+    border: solid 1px #e9ecef;
+    border-radius: 19.5px;
+    box-shadow: 1px 3px 4px #dde2e6;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px 17px;
+    width: 251px;
+    height: 38px;
+}
+
+.FirstBenefitPopper_firstBenefitPopper__1dKmf:before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    background-color: #fff;
+    width: 40px;
+    height: 12px;
+    content: "";
+}
+
+.FirstBenefitPopper_firstBenefitPopper__1dKmf .FirstBenefitPopper_content__2XS-G {
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    vertical-align: middle;
+    line-height: 18px;
+    z-index: 3;
+}
+
+.FirstBenefitPopper_firstBenefitPopper__1dKmf .FirstBenefitPopper_giftIcon__1RCpf {
+    display: inline-block;
+    margin-right: 6px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAFZUExURf///+irGP78/OmnGLuCD8iKErN6C6UaIbh/Df7+/61FErZWFPn17+4/QageHqdIFffx6bqACPHo3tyeFrwwM9MZKtspL69SF7h7AsCGFOafG/v59clfG9pPHK4aIO63GefHh5kgHPLmyu7l1uWLGNx3G+Q1O94tL59AFcelYeStrbo8P+TXwc2YEeOlFOqhC6tBGeqvmOrYuHAzDPKIGsGCBvS5vP3u79uUE/BSS+aEJOCDF+O8W8gtNePIoeSYDv1OUHoYG+M+P+XBaNe3eshxGf9aWfR+gfjKyttESMKEW+DRrKQQGPLf4t/Bs8eEBNOvcdZtONgTIZ0dJLCLSHpcB81FHmhFAMubjeS9c9JgLJ8YFH8TG8eQI/HMGsedTq9BHMupbV4JEdcxOrQiGd05KNxCJu25A+O2R+nKdtqqNuRHSOopMZ0sJfKYm8hzEtFrSPBGTudlOICaUfMAAAEiSURBVBjTPdBFd8JQFATgSwh570VoSEKwosW1uLvX3d3d/v+iCfR0lt+5s5gLAEAm44mYG7RKH2WYh5THb9Ov4edPR4hTM+AD2Wo4LAi90UhIHEkEINA4D1Vvlel387Uj5A/3WiI8P8onytlN973rV5T8frEyAF+61mue+lmOvfP4dzlT8RICcigSrlWChUL9wOO5wvZr4F9CasR54XXKKQ6hZYZJAv9UV9Wg15uiaZtOeAlcjWDEOjQYTTReQIjFtEb99r2Vk9MOhokiZLNoRPXbD9ZFQ9qBcRSZbRaHBJQv49bIMCtqhCUg4rF7RyesE4djvLbSlVXdRqNOa+aVVXE2nCptZzSys4m4SP6+QySfc5OJbaxT8B9C5baSLjI/+QVcrCl+ShqYCwAAAABJRU5ErkJggg==");
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+
+
+.FirstBenefitPopper_firstBenefitPopper__1dKmf strong {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.FirstBenefitPopper_firstBenefitPopper__1dKmf:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%) rotate(65deg) skew(35deg);
+    margin-top: -9px;
+    border-top: 0;
+    border-left: 0;
+    box-shadow: 1px 3px 4px #dde2e6;
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    content: "";
+}
+
+.Button_button__2_6-I.Button_lg__2Kv4b {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__2_6-I.Button_block__39TGk {
+    width: 100%;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.SNSButtonList_spacer__38ac5 {
+    margin-top: 12px;
+}
+
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
+}
+
+.Button_button__2_6-I {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 9px 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-font-smoothing: antialiased;
+}
+
+.Button_button__2_6-I span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__2_6-I, .Button_children__weH0H {
+    vertical-align: top;
+}
+.SNSButtonList_kakaoIcon__1s6gw {
+    position: absolute;
+    left: 16px;
+    width: 22px;
+    height: 22px;
+}
+
+.withIcon_icon__1YH1P {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.SNSButtonList_spacer__38ac5 {
+    margin-top: 12px;
+}
+
+.SNSButtonList_naverButton__1rzZ_ {
+    border-color: #00d337;
+    background-color: #00d337;
+    color: #fff;
+}
+
+.Button_button__2_6-I, .Button_children__weH0H {
+    vertical-align: top;
+}
+
+.withIcon_icon__1YH1P {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.SNSButtonList_circularButtonWrapper__hZCKN {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.SNSButtonList_circularButton__2WsLD:first-child {
+    margin-left: 0;
+}
+
+
+
+.SNSButtonList_circularButton__2WsLD {
+    margin-left: 12px;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+}
+
+.SNSButtonList_googleButton__1u6eV {
+    border-color: #ced4da;
+    background-color: #fff;
+}
+
+.SNSButtonList_circularButton__2WsLD span {
+    vertical-align: text-top;
+}
+
+.Button_button__2_6-I, .Button_children__weH0H {
+    vertical-align: top;
+}
+
+.SNSButtonList_feacbookButton__2el51 {
+    border-color: #1877f2;
+    background-color: #1877f2;
+    color: #fff;
+}
+
+.SNSButtonList_appleButton__1rA1b {
+    border-color: #000;
+    background-color: #000;
+    color: #fff
+}
+
+.EquitySignUpLink_equitySignUpLinkWrapper__1js6C {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.EquitySignUpLink_equitySignUpLinkWrapper__1js6C a {
+    line-height: 20px;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #adb5bd;
+}
+
+.EquitySignUpLink_equitySignUpLinkWrapper__1js6C a:first-child::after {
+    display: inline;
+    padding: 0 12px;
+    content: "|";
+}
+
+.SignUpIntroApp_divider__24Rgj {
+    margin-top: 55px;
+    background-color: #f2f4f6;
+    width: 100%;
+    height: 1px;
+}
+.SignUpIntroApp_signUpIntro__2v2wv, .SignUpIntroApp_signUpIntroEmailContainer__3sN5d {
+    margin-top: 49px;
+}
+
+
+.SignUpIntroApp_signUpIntro__2v2wv .SignUpIntroApp_simpleSignUpTitle__3aC7M {
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.EmailSignUpFormContainer_formField__1vy9Q, .EmailSignUpFormContainer_emailField__3ksue {
+    margin-top: 24px
+}
+
+.EmailAuthField_emailAuthField__2E9P2 {
+    padding-bottom: 8px
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_fieldLabel__1jS_Z {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_inputFieldContainer__1BgHY {
+    display: flex;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_inputField__y3EHZ {
+    position: relative;
+    width: 100%;
+}
+
+.Input_input__1bbbo.Input_md__1Nsby {
+    height: 48px;
+    min-height: 48px;
+}
+
+.Input_input__1bbbo {
+    display: block;
+    transition-property: border-color,background-color,color;
+    transition-duration: .15s;
+    outline: none;
+    border: 1px solid #dde2e6;
+    border-radius: 3px;
+    background-color: #fff;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: 100%;
+    color: #212529;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.Button_button__3MO4n.Button_primary__29fd0.Button_contained__1kfgl {
+    border-color: #00c4c4;
+    background-color: #00c4c4;
+    color: #fff;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_cta__1K3Hz {
+    margin-left: 8px;
+    min-width: 103px;
+}
+
+.Button_button__3MO4n.Button_md__3TvVa {
+    padding: 9px 15px;
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+.Button_button__3MO4n.Button_disabled__2II9A, .Button_button__3MO4n:disabled, .Button_button__3MO4n[disabled] {
+    opacity: .45;
+    cursor: default;
+    pointer-events: none;
+}
+
+.Button_button__3MO4n {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.Button_button__3MO4n.Button_lg__D7OVb {
+    padding: 9px 23px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__3MO4n.Button_block__3npc4 {
+    width: 100%;
+}
+
+.Button_button__3MO4n .Button_children__raEW4 {
+    vertical-align: top;
+}
+
+.Button_button__3MO4n span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__3MO4n span svg {
+    display: inline-block;
+}
+
+.SNSButtonList_appleIcon__e42Y0, .SNSButtonList_googleIcon__1DgBx, .SNSButtonList_naverIcon__3TjPM, .SNSButtonList_kakaoIcon__1s6gw {
+    position: absolute;
+    left: 16px;
+    width: 22px;
+    height: 22px;
+}
+
+.TextField_textField__2k9OA {
+    display: block;
+    position: relative;
+}
+
+.TextField_textField__2k9OA.TextField_md__2Z-6K>label {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.TextField_textField__2k9OA>label {
+    display: block;
+    padding-bottom: 4px;
+}
+
+.TextField_textField__2k9OA .TextField_field__3gj8N {
+    position: relative;
+}
+
+.TextField_textField__2k9OA.TextField_right__3aUp8.TextField_md__2Z-6K input {
+    padding-right: 46px;
+}
+
+.Input_input__1bbbo[disabled], .Input_input__1bbbo.Input_disabled__325ag {
+    color: #adb5bd;
+}
+
+.Input_input__1bbbo[readonly], .Input_input__1bbbo[disabled] {
+    border-color: #f2f4f6;
+    background-color: #f9fafb;
+    cursor: default;
+    pointer-events: none;
+}
+
+.TextField_textField__2k9OA.TextField_right__3aUp8 .TextField_endIcon__2DGw_, .TextField_textField__2k9OA.TextField_right__3aUp8 .TextField_endText__1t3v1 {
+    right: 0;
+    text-align: left;
+}
+
+.TextField_textField__2k9OA button.TextField_icon__eNiI4 {
+    position: absolute;
+    top: 0;
+    outline: none;
+    border: none;
+    background-color: #0000;
+    cursor: pointer;
+    padding: 0;
+    height: 100%;
+    pointer-events: auto;
+    box-sizing: content-box!important;
+}
+
+.Button_button__3MO4n.Button_iconOnly__1yhFC {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    line-height: 1;
+}
+
+.TextField_textField__2k9OA.TextField_right__3aUp8.TextField_md__2Z-6K svg {
+    padding-right: 16px;
+    padding-left: 10px;
+}
+
+.TextField_textField__2k9OA button.TextField_icon__eNiI4 svg {
+    fill: #adb5bd;
+}
+
+.FirstBenefitPopper_firstBenefitPopper__1dKmf .FirstBenefitPopper_content__2XS-G .FirstBenefitPopper_text__3hDUb {
+    vertical-align: middle;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheck__PauIo {
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_ {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    border: none;
+    background-color: #0000;
+    padding: 0;
+}
+
+.Checkbox_checkbox__10cSJ.Checkbox_md__39fd8 .Checkbox_icon__GLNHN {
+    font-size: 20px;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_icon__GLNHN {
+    display: block;
+    position: relative;
+    transition-property: opacity,border-color,background-color;
+    transition-duration: .15s;
+    opacity: 1;
+    z-index: 1;
+    border: 1px solid #cdd3d8;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_+.Checkbox_icon__GLNHN .Checkbox_checkIcon__pmCQr, .Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_+.Checkbox_icon__GLNHN .Checkbox_removeIcon__10mz3 {
+    opacity: 0;
+}
+
+.Checkbox_checkbox__10cSJ.Checkbox_md__39fd8 .Checkbox_removeIcon__10mz3 {
+    width: 10px;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_icon__GLNHN svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition-property: opacity,width,fill;
+    transition-duration: .15s;
+    width: 0.7791666667em;
+    height: 0.7791666667em;
+    fill: #fff;
+}
+
+.withIcon_icon__2KxnX {
+    display: block;
+    transition: transform .3s ease-out;
+    transform: scale(1);
+    fill: currentColor;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheckLabel__3TxCG {
+    display: inline-block;
+    width: 80%;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheckLabel__3TxCG .SignUpAllCheckTermsCheckbox_checkboxLabel__28Tow {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheckLabel__3TxCG .SignUpAllCheckTermsCheckbox_checkboxDescription__2X16H {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.Checkbox_checkbox__10cSJ {
+    position: relative;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsMoreButton__wal9S {
+    display: block;
+    margin-top: 4px;
+    border: 0;
+    padding: 2px;
+    line-height: normal;
+}
+
+.Button_button__3MO4n.Button_iconOnly__1yhFC>span svg {
+    width: 16px;
+    height: 16px;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.EmailSignUpFormContainer_signUpSubmitButton__3cZeI {
+    margin-top: 32px;
+}
