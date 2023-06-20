@@ -35,6 +35,9 @@ input {
     color: inherit;
 }
 
+input::placeholder {
+    opacity: 0.65;
+}
 
 body, body button, body input, body li, body ol, body select, body textarea, body ul  {
     box-sizing: border-box;
