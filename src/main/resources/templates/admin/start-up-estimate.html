@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="/css/admin/notice-form.css" rel="stylesheet">
+    <link href="/css/admin/side-nav.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="logoImage">
+            <a href="#"><img src="/image/logo.png"></a>
+        </div>
+        <div class="title">
+            <div>
+                <span class="ChangeTitle">스타트업 상세보기</span>
+            </div>
+            <span><small>관리자모드</small></span>
+        </div>
+    </div>
+
+
+    <!--mainSidebar -->
+    <section class="mainContainer">
+        <!--side bar-->
+        <nav class="mainNav" th:replace="~{/admin/side-bar :: nav}"></nav>
+
+        <!--mainScreen 공지사항 작성하기-->
+        <div class="mainContent">
+
+            <div class="content-wrap">
+
+                <!-- [S] 공지사항 등록 -->
+                <form action="start-up.html" method="post" class="estimate-form">
+                    <div class="con-write-wrap">
+                        <div class="notice-write">
+                            <div class="write-title">스타트업</div>
+                            <div class="write-sec">
+                                <input class="write-text write-input" type="text" readonly>
+                            </div>
+                        </div>
+                        <div class="notice-write">
+                            <div class="write-title">대표자</div>
+                            <div class="write-sec">
+                                <input class="write-text write-input" type="text" readonly>
+                            </div>
+                        </div>
+                        <div class="notice-write">
+                            <div class="write-title">스타트업 소개</div>
+                            <div class="write-sec">
+                                <textarea style="height: 120px;" class="write-text write-notice" type="text" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="notice-write">
+                            <div class="write-title">스타트업</div>
+                            <div class="write-sec">
+                                <input class="write-text write-input" type="text" readonly>
+                            </div>
+                        </div>
+                        <div class="notice-write">
+                            <div class="write-title">스타트업</div>
+                            <div class="write-sec">
+                                <input class="write-text write-input" type="text" readonly>
+                            </div>
+                        </div>
+                        <div class="notice-write">
+                            <div class="write-title">직원 수</div>
+                            <div class="write-sec">
+                                <input class="write-text write-input" type="text" readonly>
+                            </div>
+                        </div>
+                        <div class="notice-write">
+                            <div class="write-title">스타트업</div>
+                            <div class="write-sec">
+                                <input class="write-text write-input" type="text" readonly>
+                            </div>
+                        </div>
+                        <div class="notice-write">
+                            <div class="write-title input-title" style="color : green; ">환영 메세지</div>
+                            <div class="write-sec">
+                                <input class="write-text write-input inputs" type="number" placeholder="스타트업 가입 환영 메세지를 적어주세요" >
+                            </div>
+                        </div>
+
+
+                        <div class="notice-write">
+                            <div class="write-title input-title" style="color :red;">가입 거부 사유</div>
+                            <div class="write-sec">
+                                <textarea style="height: 70px;" class="write-text write-notice inputs" type="text" placeholder="스타트업 가입 거부 사유를 적어주세요"></textarea>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- [E] 공지사항 등록 -->
+
+
+                    <!-- 작성하기 btn -->
+                    <div class="write-btn-wrap">
+                        <button type="button" class="btn btn-list"><a href="/admin/start-up">스타트업 목록</a></button>
+                        <button type="button" class="btn btn-write reject">신청 거부</button>
+                        <button type="button" class="btn btn-write permit">신청 수락</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    <!-- [E] mainSidebar -->
+
+
+</div>
+<!-- [E] wrap -->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/js/admin/side-bar.js"></script>
+<script src="/js/admin/estimate.js"></script>
+</html>
