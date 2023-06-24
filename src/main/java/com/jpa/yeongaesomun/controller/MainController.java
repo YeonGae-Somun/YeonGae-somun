@@ -7,11 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/main-page/*")
-public class MainPageController {
+@RequestMapping("/main/*")
+public class MainController {
 
-    @GetMapping("mypage")
-    public void mypage() {
 
-    }
 }
