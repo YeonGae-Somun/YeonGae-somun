@@ -45,8 +45,6 @@ body, body button, body input, body li, body ol, body select, body textarea, bod
 
 main {
     display: block;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -280,8 +278,8 @@ p {
     overflow: hidden;
 }
 .AccountTitle_title__2gD-3 {
-    line-height: 38px;
-    font-size: 28px;
+    line-height: 48px;
+    font-size: 36px;
     font-weight: 700;
 }
 
@@ -449,7 +447,7 @@ svg:not(:root) {
 .SNSButtonList_circularButtonWrapper__hZCKN {
     display: flex;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 56px;
 }
 
 .SNSButtonList_circularButton__2WsLD:first-child {
@@ -518,9 +516,6 @@ svg:not(:root) {
     background-color: #f2f4f6;
     width: 100%;
     height: 1px;
-}
-.SignUpIntroApp_signUpIntro__2v2wv, .SignUpIntroApp_signUpIntroEmailContainer__3sN5d {
-    margin-top: 49px;
 }
 
 
@@ -829,4 +824,9 @@ svg:not(:root) {
 
 .EmailSignUpFormContainer_signUpSubmitButton__3cZeI {
     margin-top: 32px;
+}
+
+.SignUpIntroApp_signUpIntro__2v2wv .SignUpIntroApp_signUpIntroEmailContainer__3sN5d {
+    margin-top: 49px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
