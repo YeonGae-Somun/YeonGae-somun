@@ -11,18 +11,8 @@ a, address, article, aside, audio, b, body, button, canvas, caption, dd, div, dl
     border: 0;
     padding: 0;
     vertical-align: baseline;
-    font: inherit;
-    box-sizing: border-box;
 }
 
-a, address, article, aside, audio, b, body, button, canvas, caption, dd, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, img, input, label, legend, li, nav, ol, p, pre, section, small, span, strong, summary, table, tbody, td, th, thead, time, tr, ul, video {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    vertical-align: baseline;
-    font: inherit;
-    box-sizing: border-box;
-}
 
 a a:active, a:hover, a:visited {
     text-decoration: none;
@@ -61,11 +51,17 @@ main {
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5em;
-    letter-spacing: -.02em;
-    color: rgba(0,0,0,.84);
+    overflow-x: hidden;
+    line-height: inherit;
+    color: inherit;
     font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+}
+
+body, table th {
     font-weight: 400;
 }
 
@@ -99,6 +95,8 @@ body, body button, body input, body select, body textarea {
     font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
 }
 
+
+
 button {
     box-sizing: border-box;
     margin: 0;
@@ -109,12 +107,6 @@ button {
 
 form {
     display: block;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    
-    font: inherit;
-    box-sizing: border-box;
 }
 
 input, optgroup, select, textarea {
@@ -308,8 +300,8 @@ input, optgroup, select, textarea {
 
 .wz.container {
     position: relative;
-    box-sizing: border-box;
     line-height: 20px;
+    color: rgba(0, 0, 0, 0.84);
     font-size: 15px;
     font-weight: 400;
 }
@@ -327,14 +319,9 @@ input, optgroup, select, textarea {
     color: rgba(0,0,0,.84);
 }
 
-em.wz.text.display2, h1.wz.text.display2, h2.wz.text.display2, h3.wz.text.display2, h4.wz.text.display2, h5.wz.text.display2, h6.wz.text.display2, label.wz.text.display2, p.wz.text.display2, span.wz.text.display2 {
-    line-height: 40px;
-    font-size: 32px; 
-}
 
 em.wz.text.display2, h1.wz.text.display2, h2.wz.text.display2, h3.wz.text.display2, h4.wz.text.display2, h5.wz.text.display2, h6.wz.text.display2, label.wz.text.display2, p.wz.text.display2, span.wz.text.display2 {
     line-height: 36px;
-    letter-spacing: -.6px;
     font-size: 28px;
     font-weight: 700;
 }
@@ -374,14 +361,13 @@ em.wz.text, h1.wz.text, h2.wz.text, h3.wz.text, h4.wz.text, h5.wz.text, h6.wz.te
 }
 
 .wz.input.inline-block, .wz.input:after {
-    display: inline-block; 
+    display: inline-block;
 }
 
 .wz.input:after {
     vertical-align: middle;
     text-transform: none;
     line-height: 1;
-    font-family: wadizicon!important;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -668,7 +654,41 @@ svg:not(:root) {
     color: #00c4c4;
 }
 
-.wz.container {
+.user-sign-container:after {
+    background-image: url(https://static.wadiz.kr/account/media/regist-intro-equity@2x.680dff76.png);
+}
+
+.user-sign-container:after {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 54px);
+    transition: .4s;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    max-width: 340px;
+    height: 449px;
+    pointer-events: none;
+    content: "";
 }
 
 
+.wz.input > input {
+    height: 48px;
+    line-height: 1.2em;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.wz.form .field .helper {
+    margin-top: 4px;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input::placeholder {
+    opacity: 0.75;
+}
