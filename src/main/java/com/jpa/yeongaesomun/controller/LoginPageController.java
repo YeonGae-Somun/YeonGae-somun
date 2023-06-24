@@ -19,4 +19,9 @@ public class LoginPageController {
     public void register(){
 
     }
+
+    @GetMapping("find-password")
+    public void goToFindPassword(){
+
+    }
 }
