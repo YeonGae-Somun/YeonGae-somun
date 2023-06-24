@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @Slf4j
 @RequestMapping("/user/*")
-public class LoginPageController {
+public class UserController {
     @GetMapping("login")
     public void login(){
 
