@@ -46,8 +46,6 @@ body, body button, body input, body li, body ol, body select, body textarea, bod
 
 main {
     display: block;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -300,6 +298,7 @@ input, optgroup, select, textarea {
 
 .wz.container {
     position: relative;
+    padding: 40px 16px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.84);
     font-size: 15px;
@@ -321,9 +320,8 @@ input, optgroup, select, textarea {
 
 
 em.wz.text.display2, h1.wz.text.display2, h2.wz.text.display2, h3.wz.text.display2, h4.wz.text.display2, h5.wz.text.display2, h6.wz.text.display2, label.wz.text.display2, p.wz.text.display2, span.wz.text.display2 {
-    line-height: 36px;
-    font-size: 28px;
-    font-weight: 700;
+    line-height: 44px;
+    font-size: 36px;
 }
 
 em.wz.text, h1.wz.text, h2.wz.text, h3.wz.text, h4.wz.text, h5.wz.text, h6.wz.text, label.wz.text, p.wz.text, span.wz.text {
@@ -654,9 +652,6 @@ svg:not(:root) {
     color: #00c4c4;
 }
 
-.user-sign-container:after {
-    background-image: url(https://static.wadiz.kr/account/media/regist-intro-equity@2x.680dff76.png);
-}
 
 .user-sign-container:after {
     position: absolute;
@@ -671,7 +666,15 @@ svg:not(:root) {
     height: 449px;
     pointer-events: none;
     content: "";
+    background-image: url(https://static.wadiz.kr/account/media/regist-intro-equity@2x.680dff76.png);
 }
+
+.user-sign-container:before {
+    opacity: 1;
+    background-image: url(https://static.wadiz.kr/account/media/regist-intro-benefit.3c9ef4a1.jpeg);
+    border-radius: 24px;
+}
+
 
 
 .wz.input > input {
@@ -691,4 +694,19 @@ svg:not(:root) {
 
 input::placeholder {
     opacity: 0.75;
+}
+
+.user-sign-container:before, .user-sign-container:after {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 54px);
+    transition: .4s;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    max-width: 340px;
+    height: 449px;
+    pointer-events: none;
+    content: "";
 }
