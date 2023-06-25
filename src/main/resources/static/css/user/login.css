@@ -710,3 +710,22 @@ input::placeholder {
     pointer-events: none;
     content: "";
 }
+
+.KeyVisualBanner_container__37DZf {
+    position: relative;
+    background: #babdc0;
+    overflow: hidden;
+}
+
+
+.Main_categoryMargin__1RWGF {
+    height: 16px;
+}
+
+
+@media screen and (min-width: 1097px) {
+    .Main_categoryMargin__1RWGF {
+        height: 32px;
+    }
+}
+
