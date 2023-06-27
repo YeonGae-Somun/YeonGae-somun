@@ -403,6 +403,7 @@ em.wz.text, h1.wz.text, h2.wz.text, h3.wz.text, h4.wz.text, h5.wz.text, h6.wz.te
     transition-duration: .2s,0s;
     outline: none;
     border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
     background: #fff;
     padding: 0 0.94118em;
     width: 100%;
@@ -709,4 +710,14 @@ input::placeholder {
     height: 449px;
     pointer-events: none;
     content: "";
+}
+
+@media (hover: hover) {
+    .wz.input > input:hover, .wz.input > textarea:hover {
+        border-color: rgba(0, 0, 0, 0.54);
+    }
+}
+
+.wz.input > input:focus, .wz.input > input.active, .wz.input > textarea:focus, .wz.input > textarea.active {
+    border-color: #00c4c4;
 }
