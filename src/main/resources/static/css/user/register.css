@@ -137,104 +137,7 @@ p {
     background: #000;
 }
 
-#wz-header {
-    position: static;
-    top: 0;
-    z-index: 99;
-}
 
-.web-header {
-    position: static;
-    top: 0;
-    transition: top .25s;
-    z-index: 99;
-    width: 100%;
-}
-
-.web-header-large {
-    display: block;
-}
-
-.web-header .web-header-simple {
-    display: block;
-    position: relative;
-    text-align: cdenter;
-}
-
-.web-header .header-wrapper {
-    position: relative;
-    border-bottom: 1px solid #f2f4f6;
-    padding: 0;
-    height: 56px;
-    text-align: left;
-    top: 0;
-    z-index: 9998;
-    background-color: #fff;
-    width: 100%;
-}
-
-.web-header .header-wrapper .header-container {
-    padding: 0 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 1440px;
-    height: 100%;
-}
-
-.web-header .wadiz-logo>a {
-    padding: 14px 0 18px;
-    display: block;
-}
-
-.web-header .wadiz-logo .label {
-    display: block;
-    position: absolute;
-    left: -9999px;
-    visibility: none;
-    height: 1px;
-}
-
-.web-header .web-header-simple .header-container .gnb-large {
-    display: block;
-    position: absolute;
-    right: 80px;
-    left: auto;
-    color: #495057;
-}
-
-.web-header .gnb-large {
-    margin-left: 24px;
-    box-shadow: none;
-    width: auto;
-}
-
-.web-header .gnb-large li {
-    float: left;
-    width: auto;
-}
-
-.web-header, .web-header-simple, .header-container, .gnb-large, .item {
-    margin-left: 16px;
-    padding: 0;
-}
-
-.web-header, .gnb-large, .item {
-    display: block;
-    color: #495057;
-}
-
-.web-header, .web-header-simple, .header-container, .gnb-large, .item span {
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.web-header .gnb-large, .item span {
-    padding-top: 1px;
-    line-height: 55px;
-    color: #000;
-}
 
 .PreviewOverlay_container__3Q3h2 {
     line-height: 20px;
@@ -829,4 +732,79 @@ svg:not(:root) {
 .SignUpIntroApp_signUpIntro__2v2wv .SignUpIntroApp_signUpIntroEmailContainer__3sN5d {
     margin-top: 49px;
     padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+@media screen and (min-width: 1201px) {
+    .AccountContainer_container__PwFiE {
+        margin-top: 78px;
+    }
+}
+
+.Button_button__3MO4n {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    background-color: #0000;
+    cursor: pointer;
+    padding: 8px 15px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+}
+
+.SNSButtonList_spacer__38ac5 {
+    margin-top: 12px;
+}
+@media (hover: hover) and (pointer: fine) {
+    .Button_button__3MO4n.Button_hover__1eZMa, .Button_button__3MO4n:hover {
+        border-color: #adb5bd;
+        background-color: #f2f4f6;
+        color: #343a40;
+    }
+}
+.Button_button__3MO4n.Button_block__3npc4 {
+    width: 100%;
+}
+.Button_button__3MO4n.Button_lg__D7OVb {
+    padding: 9px 23px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.SNSButtonList_kakaoButton__2lTDs:hover {
+    background-color: #fee500;
+}
+
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
+}
+
+.SNSButtonList_naverButton__1rzZ_ {
+    border-color: #00d337;
+    background-color: #00d337;
+    color: #fff;
+}
+@media (hover: hover) and (pointer: fine) {
+    .Button_button__3MO4n.Button_hover__1eZMa, .Button_button__3MO4n:hover {
+        border-color: #adb5bd;
+        background-color: #f2f4f6;
+        color: #343a40;
+    }
+}
+
+.SNSButtonList_naverButton__1rzZ_:hover {
+    background-color: #00d337;
+}
+
+.SNSButtonList_kakaoButton__2lTDs:hover {
+    background-color: #fee500;
 }
