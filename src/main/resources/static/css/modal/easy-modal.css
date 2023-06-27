@@ -1,0 +1,231 @@
+.DialogModal_dialogPortal__BM1PV {
+    position: static;
+}
+
+.DialogModal_dialogContent__33Iur, .DialogModal_dialogOverlay__2fDsh {
+    transition-duration: 80ms;
+}
+
+.DialogModal_dialogOverlay__2fDsh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition-property: opacity;
+    opacity: 0;
+    z-index: 20000;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.DialogModal_dialogOverlayAfterOpen__1MGB5 {
+    opacity: 1;
+}
+
+@media screen and (min-width: 769px) {
+    .DialogModal_dialogOverlay__2fDsh.DialogModal_basic__TvFe7 {
+        background: rgba(0, 0, 0, .6);
+    }
+}
+.DialogModal_dialogContent__33Iur {
+    position: relative;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+    outline: none;
+    min-height: 100%;
+}
+
+.DialogModal_dialogContentAfterOpen__uf7yA {
+    transform: none;
+}
+
+.BasicDialog_modalWrap__17eb_ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .BasicDialog_modalWrap__17eb_ {
+        background: none;
+    }
+}
+
+.BasicDialog_modalWrapBox__3QCu3 {
+    position: relative;
+    padding-top: 56px;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+@media screen and (min-width: 769px) {
+    .BasicDialog_modalWrapBox__3QCu3 {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .BasicDialog_modalWrapBox__3QCu3 {
+        display: inline-block;
+        margin: 5%;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+        background: #fff;
+        min-width: 300px;
+    }
+}
+.BasicDialog_dialogBox__kK0GT {
+    position: relative;
+    margin: 0 auto;
+    padding: 24px 32px 32px;
+    min-width: 320px;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 767px) {
+    .BasicDialog_dialogBox__kK0GT {
+        max-width: 560px;
+    }
+}
+
+
+.BasicDialog_dialogTitle__3u28L {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 32px;
+    color: #44484b;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.BasicDialog_dialogMessage__35wCp {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    color: #44484b;
+}
+
+
+.BasicDialog_dialogMessage__35wCp p {
+    margin: 12px 0;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.BasicDialog_dialogButtonArea__3pf8P {
+    margin-top: 31px;
+    text-align: right;
+}
+
+.Button_button__cfyja {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px 15px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+}
+.BasicDialog_dialogButton__1I7wu {
+    margin-left: 10px;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+
+.BasicDialog_dialogButton__1I7wu:not([class*=Button_lg]) {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.BasicDialog_dialogButtonArea__3pf8P.BasicDialog_reverse__1oy8X .BasicDialog_dialogButton__1I7wu {
+    float: right;
+}
+
+
+.Button_button__cfyja span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__cfyja span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+
+.Button_button__cfyja .Button_children__1BTvH {
+    vertical-align: top;
+}
+
+
+.BasicDialog_dialogButtonArea__3pf8P:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.BasicDialog_modalWrap__17eb_ button.BasicDialog_modalClose__2dz6b {
+    position: fixed;
+    top: 30px;
+    left: 28px;
+    transition: color .2s;
+    z-index: 50001;
+    margin: 0!important;
+    border: 0!important;
+    border-radius: 50%;
+    background: hsla(0,0%,100%,.7);
+    cursor: pointer;
+    padding: 0!important;
+    width: 30px!important;
+    height: 30px!important;
+    color: #60656a;
+    font-size: 22px!important;
+    background: hsla(0,0%,100%,.95);
+}
+
+@supports (-webkit-backdrop-filter:initial) or (backdrop-filter:initial) {
+    .BasicDialog_modalWrap__17eb_ button.BasicDialog_modalClose__2dz6b {
+        background-color: hsla(0, 0%, 100%, .85);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .BasicDialog_modalWrap__17eb_ button.BasicDialog_modalClose__2dz6b {
+        position: absolute;
+    }
+}
+
+
+.withIcon_icon__djI-9 {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}

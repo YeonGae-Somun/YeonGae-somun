@@ -1,0 +1,229 @@
+#wz-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+@media screen and (min-width: 1097px) {
+
+    #wz-header {
+        position: static;
+    }
+}
+
+.web-header {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    transition: top .25s;
+    z-index: 99;
+    width: 100%;
+}
+
+@media screen and (min-width: 1097px) {
+
+    .web-header {
+        position: static;
+    }
+}
+
+#wz-header .web-header-large {
+    display: none;
+}
+
+@media screen and (min-width: 1097px) {
+    #wz-header .web-header-large {
+        display: block;
+    }
+}
+
+.web-header .header-wrapper {
+    position: relative;
+    top: 0;
+    z-index: 9998;
+    background-color: #fff;
+    width: 100%;
+    height: 56px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .header-wrapper {
+        position: relative;
+        border-bottom: 1px solid #f2f4f6;
+        padding: 0;
+        height: 56px;
+        text-align: left;
+    }
+}
+
+.web-header .web-header-simple {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.web-header .header-wrapper .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1440px;
+    height: 100%;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .header-wrapper .header-container {
+        padding: 0 80px;
+    }
+}
+
+.web-header .wadiz-logo {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    margin: 0;
+    line-height: 22px;
+    font-size: 32px;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .wadiz-logo {
+        position: static;
+    }
+}
+
+.web-header .web-header-simple .wadiz-logo {
+    display: inline-block;
+    position: static;
+}
+
+.web-header .wadiz-logo>a {
+    display: block;
+    padding: 11px 0 13px;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .wadiz-logo > a {
+        padding: 14px 0 18px;
+    }
+}
+
+
+.web-header .wadiz-logo .label {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    visibility: none;
+    height: 1px;
+}
+
+.web-header .wadiz-logo>a svg {
+    max-width: none;
+}
+
+
+
+.web-header .gnb-large {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    z-index: 1;
+    margin-left: 0;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.15);
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    vertical-align: top;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .gnb-large {
+        display: inline-block;
+        position: relative;
+        position: -webkit-sticky;
+        position: static;
+        margin-left: 24px;
+        box-shadow: none;
+        width: auto;
+    }
+}
+
+
+.web-header .web-header-simple .header-container .gnb-large {
+    display: none;
+    position: absolute;
+    right: 80px;
+    left: auto;
+    color: #495057;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .web-header-simple .header-container .gnb-large {
+        display: block;
+    }
+}
+li, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.web-header .gnb-large li {
+    width: 100%;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .gnb-large li {
+        float: left;
+        width: auto;
+    }
+}
+
+.web-header .gnb-large .item {
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 2px;
+    text-align: center;
+    text-decoration: none;
+    color: #495057;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .gnb-large .item {
+        padding: 0 16px;
+    }
+}
+
+.web-header .web-header-simple .header-container .gnb-large .item {
+    margin-left: 16px;
+    padding: 0;
+}
+
+.web-header .gnb-large .item span {
+    display: block;
+    line-height: 16px;
+    font-size: 10px;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header .gnb-large .item span {
+        padding-top: 1px;
+        line-height: 55px;
+        color: #000;
+        font-size: 19px;
+        font-weight: 700;
+    }
+}
+
+.web-header .web-header-simple .header-container .gnb-large .item span {
+    font-size: 15px;
+    font-weight: 400;
+}

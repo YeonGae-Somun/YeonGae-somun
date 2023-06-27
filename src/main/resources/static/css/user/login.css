@@ -1,3 +1,7 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
 div {
     display: block;
 }
@@ -133,114 +137,6 @@ input, optgroup, select, textarea {
     background: #000;
 }
 
-#wz-header {
-    position: static;
-    top: 0;
-    z-index: 99;
-}
-
-.web-header {
-    position: static;
-    top: 0;
-    transition: top .25s;
-    z-index: 99;
-    width: 100%;
-}
-
-.web-header-large {
-    display: block;
-}
-
-.web-header, .web-header-simple {
-    display: block;
-    position: relative;
-    text-align: cdenter;
-}
-
-.web-header, .header-wrapper {
-    position: relative;
-    border-bottom: 1px solid #f2f4f6;
-    padding: 0;
-    height: 56px;
-    text-align: left;
-    top: 0;
-    z-index: 9998;
-    background-color: #fff;
-    width: 100%;
-}
-
-.web-header .header-wrapper .header-container {
-    padding: 0 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 1440px;
-    height: 100%;
-}
-
-.web-header .wadiz-logo>a {
-    padding: 14px 0 18px;
-    display: block;
-}
-
-.web-header .wadiz-logo .label {
-    display: block;
-    position: absolute;
-    left: -9999px;
-    visibility: none;
-    height: 1px;
-}
-
-
-.web-header .web-header-simple .header-container .gnb-large {
-    display: block;
-    position: absolute;
-    right: 80px;
-    left: auto;
-    color: #495057;
-}
-
-.web-header .gnb-large {
-    margin-left: 24px;
-    box-shadow: none;
-    width: auto;
-}
-
-.web-header .gnb-large li {
-    float: left;
-    width: auto;
-}
-
-.web-header, .web-header-simple, .header-container, .gnb-large, .item {
-    margin-left: 16px;
-    padding: 0;
-}
-
-.web-header, .gnb-large, .item {
-    display: block;
-    padding-top: 7px;
-    padding-bottom: 2px;
-    text-align: center;
-    text-decoration: none;
-    color: #495057;
-}
-
-.web-header .web-header-simple .header-container .gnb-large .item span {
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.web-header, .web-header-simple, .header-container, .gnb-large, .item span {
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.web-header .gnb-large, .item span {
-    padding-top: 1px;
-    line-height: 55px;
-    color: #000;
-}
 
 .PreviewOverlay_container__3Q3h2 {
     line-height: 20px;
@@ -403,6 +299,7 @@ em.wz.text, h1.wz.text, h2.wz.text, h3.wz.text, h4.wz.text, h5.wz.text, h6.wz.te
     transition-duration: .2s,0s;
     outline: none;
     border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
     background: #fff;
     padding: 0 0.94118em;
     width: 100%;
@@ -501,7 +398,7 @@ iframe {
 }
 
 .Button_button__2_6-I.Button_lg__2Kv4b {
-    padding: 9px 24px;
+    padding: 9px 23px;
     line-height: 1.75;
     font-size: 16px;
 }
@@ -545,7 +442,7 @@ button:not(:disabled) {
 .Button_button__2_6-I span {
     display: inline-flex;
     align-items: center;
-    vertical-align: text-top;
+
 }
 
 .Button_button__2_6-I, .Button_children__weH0H {
@@ -709,4 +606,469 @@ input::placeholder {
     height: 449px;
     pointer-events: none;
     content: "";
+}
+
+@media (hover: hover) {
+    .wz.input > input:hover, .wz.input > textarea:hover {
+        border-color: rgba(0, 0, 0, 0.54);
+    }
+}
+
+.wz.input > input:focus, .wz.input > input.active, .wz.input > textarea:focus, .wz.input > textarea.active {
+    border-color: #00c4c4;
+}
+.KeyVisualBanner_container__37DZf {
+    position: relative;
+    background: #babdc0;
+    overflow: hidden;
+}
+
+
+.Main_categoryMargin__1RWGF {
+    height: 16px;
+}
+
+
+@media screen and (min-width: 1097px) {
+    .Main_categoryMargin__1RWGF {
+        height: 32px;
+    }
+}
+
+
+body>#root, #wadizTopBanner, #page-container {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+
+.black-bg-wrap {
+    opacity: .6;
+    z-index: 9999;
+    background: #000;
+}
+
+.black-bg-wrap, .lypop-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.user-sign-container {
+    position: relative;
+}
+
+@media screen and (min-width: 769px) {
+    .user-sign-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-45%);
+        padding-right: 50%;
+        width: 100%;
+    }
+}
+
+.account-intro-login .user-sign-container {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    padding-right: 0;
+    width: 100%;
+    max-width: 400px;
+}
+.account-intro-login .form-container {
+    padding-top: 32px;
+}
+@media screen and (min-width: 769px) {
+    .account-intro-login .form-container {
+        padding-top: 80px;
+    }
+
+}
+.wz.container {
+    position: relative;
+    padding: 40px 16px;
+    box-sizing: border-box;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.84);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.wz.container.form-container {
+    margin: 0 auto;
+    padding-bottom: 96px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.wz.container .wz.text.display2, .wz.container .wz.text.subtext1 {
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.wz.container .wz.text.display2 {
+    margin-bottom: 12px;
+}
+
+.user-sign-container .wz.container.form-container.form-login .wz.form {
+    margin-top: 24px;
+}
+
+.wz.form .field {
+    margin: 24px 0;
+}
+
+.user-sign-container .wz.container.form-container.form-login .wz.form .field {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.wz.input {
+    display: block;
+    position: relative;
+    font-size: 17px;
+}
+
+.wz.input > input, .wz.input > textarea, .wz.input.icon > i.icon {
+    color: rgba(0, 0, 0, 0.84);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+}
+.wz.input > input, .wz.input > textarea {
+    transition-property: border-color, height, padding-right, color;
+    transition-duration: 0.2s, 0s;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background: #fff;
+    padding: 0 0.9411764706em;
+    width: 100%;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.84);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.wz.input > input {
+    height: 48px;
+    line-height: 1.2em;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.wz.input::after {
+    display: inline-block;
+    margin-top: -0.2em;
+    vertical-align: middle;
+    text-transform: none;
+    line-height: 1;
+    font-family: "wadizicon" !important;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;
+    content: "\e934";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0);
+    transition-property: transform, opacity;
+    transition-duration: 0.2s;
+    opacity: 0;
+    margin-top: 0;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    pointer-events: none;
+    color: #00c4c4;
+    font-size: 1.4117647059em;
+}
+
+.wz.form .field .helper {
+    display: block;
+    margin-top: 4px;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+}
+.wz.form .field .helper.error, .wz.form .field.error .helper.wz.input {
+    color: #f25555;
+}
+
+.wz.container.form-container .wz.form .error-text, .wz.container.form-container .wz.form .complete-text {
+    display: none;
+}
+.wz.form .field {
+    margin: 24px 0;
+}
+.user-sign-container .wz.container.form-container.form-login .wz.form .field {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+.user-sign-container .wz.container.form-container.form-login .login-action .forgot {
+    color: #adb5bd;
+    float: right;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.account-intro-login .wz.text {
+    color: #0000008a;
+}
+
+.user-sign-container .wz.container.form-container.form-login .login-action:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.wz.button {
+    transition-property: background-color, border-color, color, opacity;
+    transition-duration: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.4117647059em;
+    height: 48px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box !important;
+    -webkit-appearance: none;
+}
+
+.wz.button {
+    display: inline-block;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+.Button_button__3MO4n {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    background-color: #0000;
+    cursor: pointer;
+    padding: 8px 15px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+}
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
+}
+
+.SNSButtonList_spacer__38ac5 {
+    margin-top: 12px;
+}
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.Button_button__3MO4n.Button_block__3npc4 {
+    width: 100%;
+}
+
+.Button_button__3MO4n.Button_lg__D7OVb {
+    padding: 9px 23px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+.Button_button__3MO4n span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+.Button_button__3MO4n span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+.Button_button__3MO4n .Button_children__raEW4 {
+    vertical-align: top;
+}
+
+.withIcon_icon__2KxnX {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.SNSButtonList_appleIcon__e42Y0, .SNSButtonList_googleIcon__1DgBx, .SNSButtonList_naverIcon__3TjPM, .SNSButtonList_kakaoIcon__1s6gw {
+    position: absolute;
+    left: 16px;
+    width: 22px;
+    height: 22px;
+}
+.Button_button__3MO4n span svg {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+.wz.button.block, .wz.button.fluid {
+    width: 100%;
+    text-align: center;
+}
+
+.wz.button.primary, .wz.button.primary-outline {
+    border-color: #00c4c4;
+}
+.wz.button.primary {
+    background-color: #00c4c4;
+    color: #fff;
+}
+
+.wz.container.form-container .wz.form .submit-button {
+    display: block;
+    margin: 32px 0 0;
+}
+
+
+.SNSButtonList_naverButton__1rzZ_ {
+    border-color: #00d337;
+    background-color: #00d337;
+    color: #fff;
+}
+
+.SNSButtonList_circularButtonWrapper__hZCKN {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+@media screen and (min-width: 1201px) {
+    .SNSButtonList_circularButtonWrapper__hZCKN {
+        margin-top: 56px;
+    }
+}
+
+.SNSButtonList_googleButton__1u6eV {
+    border-color: #ced4da;
+    background-color: #fff;
+}
+
+.SNSButtonList_circularButton__2WsLD {
+    margin-left: 12px;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+}
+.Button_button__3MO4n.Button_circular__2OlVa {
+    border-radius: 999em;
+}
+.SNSButtonList_circularButton__2WsLD:first-child {
+    margin-left: 0;
+}
+
+.Button_button__3MO4n span svg {
+    display: inline-block;
+}
+.SNSButtonList_facebookButton__2el51 {
+    border-color: #1877f2;
+    background-color: #1877f2;
+    color: #fff;
+}
+
+.SNSButtonList_appleButton__1rA1b {
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+}
+
+.user-sign-container .wz.container.form-container.form-login .bottom-message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -1px #0000000f;
+    background: #fff;
+    width: 100%;
+    height: 82px;
+    text-align: center;
+    line-height: 82px;
+    font-size: 14px;
+}
+@media screen and (min-width: 769px) {
+    .user-sign-container .wz.container.form-container.form-login .bottom-message {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 12px;
+        box-shadow: none;
+        background: none;
+        height: 56px;
+        line-height: 56px;
+    }
+}
+.user-sign-container .wz.container.form-container.form-login .bottom-message a {
+    margin-left: 6px;
+    text-decoration: underline;
+    color: #00c4c4;
+}
+
+@media screen and (min-width: 769px) {
+    .user-sign-container:before, .user-sign-container:after {
+        position: absolute;
+        top: 0;
+        left: calc(50% + 54px);
+        transition: .4s;
+        opacity: 0;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        max-width: 340px;
+        height: 449px;
+        pointer-events: none;
+        content: "";
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .user-sign-container:after {
+        background-image: url(https://static.wadiz.kr/account/media/regist-intro-equity@2x.680dff76.png);
+    }
+}
+
+.Button_button__3MO4n.Button_lg__D7OVb {
+    padding: 9px 23px;
+    line-height: 1.75;
+    font-size: 16px;
 }
