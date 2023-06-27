@@ -19,4 +19,9 @@ public class UserController {
     public void register(){
 
     }
+
+    @GetMapping("find-password")
+    public void goToFindPassword(){
+
+    }
 }

@@ -721,3 +721,21 @@ input::placeholder {
 .wz.input > input:focus, .wz.input > input.active, .wz.input > textarea:focus, .wz.input > textarea.active {
     border-color: #00c4c4;
 }
+.KeyVisualBanner_container__37DZf {
+    position: relative;
+    background: #babdc0;
+    overflow: hidden;
+}
+
+
+.Main_categoryMargin__1RWGF {
+    height: 16px;
+}
+
+
+@media screen and (min-width: 1097px) {
+    .Main_categoryMargin__1RWGF {
+        height: 32px;
+    }
+}
+
