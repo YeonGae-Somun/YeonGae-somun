@@ -24,4 +24,9 @@ public class UserController {
     public void goToFindPassword(){
 
     }
+
+    @GetMapping("new-password")
+    public void goToNewPassword(){
+        
+    }
 }
