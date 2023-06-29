@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/main/*")
 public class MainController {
     @GetMapping("main-page")
-    public void login(){
+    public void mainPage(){
 
     }
 
+    @GetMapping("mypage-supporter")
+    public void myPageSupporter(){
+
+    }
 }
