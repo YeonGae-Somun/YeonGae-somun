@@ -544,3 +544,8 @@ a, button {
 .FooterInfo_info__1aB0e{
     display: flex;
 }
+
+a {
+    text-decoration: none;
+}
+

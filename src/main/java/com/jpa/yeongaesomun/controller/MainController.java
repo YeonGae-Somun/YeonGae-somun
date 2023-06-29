@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 @RequestMapping("/main/*")
 public class MainController {
-    @GetMapping("main-page")
-    public void mainPage(){
+
+    @GetMapping("main")
+    public void goToMain(){
 
     }
 
-    @GetMapping("mypage-supporter")
-    public void myPageSupporter(){
+    @GetMapping("search-result")
+    public void goToSearchResult(){
 
     }
 }
