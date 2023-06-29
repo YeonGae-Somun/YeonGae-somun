@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 @RequestMapping("/main/*")
 public class MainController {
-    @GetMapping("main-page")
+    @GetMapping("main")
     public void login(){
 
     }
