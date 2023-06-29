@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/main/*")
 public class MainController {
     @GetMapping("main")
-    public void login(){
+    public void goToMain(){
 
     }
 
+    @GetMapping("search-result")
+    public void goToSearchResult(){
+
+    }
 }
