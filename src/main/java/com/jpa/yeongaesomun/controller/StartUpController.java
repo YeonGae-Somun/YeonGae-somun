@@ -11,9 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/start-up/*")
 public class StartUpController {
 
-    @GetMapping("start-up-list")
-    public void goToStartUpList(){
+    @GetMapping("start-up-intro")
+    public void goToStartUpIntro(){
 
     }
+
+    @GetMapping("start-up-experience")
+    public void goToStartUpExperience(){
+
+    }
+
+    @GetMapping("start-up-experience-detail")
+    public void goToStartUpExperienceDetail(){
+
+    }
+
+
 
 }

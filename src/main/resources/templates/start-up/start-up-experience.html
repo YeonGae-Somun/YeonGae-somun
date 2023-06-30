@@ -2,64 +2,22 @@
 <html lang="ko" class="show-recent scroll-half-screen" style="--scrollbar-width: 17px;000">
 <head>
     <meta charset="UTF-8">
-    <link href="/css/start-up.css" rel="stylesheet">
+    <link href="/css/start-up/start-up.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header-footer/main-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
+    <link rel="stylesheet" href="/css/modal/easy-modal.css">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,viewport-fit=cover">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,viewport-fit=cover">
     <meta name="description" content="창업기업 리스트를 확인해보세요.">
-    <meta property="fb:app_id" content="190622721088710">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="와디즈">
-    <meta property="og:logo" content="https://static.wadiz.kr/assets/icon/logo-150x150.png" size="150x150">
-    <meta property="og:logo" content="https://static.wadiz.kr/assets/icon/logo-250x250.png" size="250x250">
-    <meta property="og:logo" content="https://static.wadiz.kr/assets/icon/logo-500x500.png" size="500x500">
-    <meta property="og:url" content="https://www.wadiz.kr">
-    <meta property="og:title" content="와디즈">
-    <meta property="og:description" content="창업기업 리스트를 확인해보세요.">
-    <meta property="og:image" content="https://static.wadiz.kr/assets/og/share.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="naver-site-verification" content="bee718c14a77c283448ac836bb76286cb6fee07d">
-    <meta name="google-site-verification" content="ImxSgkeWRWd9gGjHqk2t4LI3JZbQXktlH0wH5TRRFA0">
     <title>창업상품 체험 목록</title>
 </head>
 
 <body style="overflow: auto;">
 <div id="page-container">
     <main id="main-app">
-        <div class="web-header">
-            <div class="web-header-mobile">
-                <header class="header-wrapper">
-                    <div calss="header-container" style="display: flex;">
-                        <button class="HeaderMobile_button__3V4yt HeaderMobile_back__mSo62">
-                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation"
-                                 class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true"
-                                 style="width: 24px; height: 24px;">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z">
-                                </path>
-                            </svg>
-                        </button>
-                        <button class="HeaderMobile_button__3V4yt HeaderMobile_home__1oUFL">
-                            <a class="" href="/web/main">
-                                <svg viewBox="0 0 40 40" focusable="false" role="presentation"
-                                     class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true"
-                                     style="width: 24px; height: 24px;">
-                                    <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
-                                    <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
-                                    <path fill="none" d="M0 0h40v40H0z"></path>
-                                </svg>
-                            </a>
-                        </button>
-                        <div class="TitleField_container__KPCmF">
-                            <p class="TitleField_title__3MvYO">창업상품 체험 목록</p>
-                        </div>
-                    </div>
-                </header>
-            </div>
-        </div>
+        <!-- 헤더 -->
+        <header class="header" th:replace="~{/header-footer/main-header :: .main-header}"></header>
+
         <div class="MainWrapper_content__GZkTa">
             <div class="KeyVisualBanner_container__37DZf">
                 <div class="slick-slider slick-initialized" dir="ltr">
