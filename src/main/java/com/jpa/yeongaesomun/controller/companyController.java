@@ -1,12 +1,22 @@
-package com.jpa.yeongaesomun.controller.company;
+package com.jpa.yeongaesomun.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/company/*")
 @RequiredArgsConstructor
 public class companyController {
-//    private final
+
+    @GetMapping("company-intro")
+    public void companyIntro(){
+
+    }
+
+    @GetMapping("dayExperience")
+    public void dayExperience(){
+
+    }
 }
