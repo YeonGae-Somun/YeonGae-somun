@@ -1,3 +1,7 @@
+input,button{
+    border: none;
+}
+
 .web-header {
     position: relative;
     position: -webkit-sticky;

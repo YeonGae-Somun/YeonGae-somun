@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 @RequestMapping("/mypage/*")
 public class MypageController {
-    @GetMapping("mypage-supporter")
+    @GetMapping("supporter")
     public void goToMypageSupporter(){
 
     }

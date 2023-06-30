@@ -441,6 +441,9 @@ a, button {
 
 
 
+input,button{
+    border: none;
+}
 
 
 
