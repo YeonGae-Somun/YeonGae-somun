@@ -516,7 +516,7 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-path[Attributes Style] {
+path {
     fill: none;
     d: path("M 0 0 h 40 v 40 H 0 Z");
 }
@@ -1356,6 +1356,91 @@ a.Button_button__2FuOU {
     align-items: center;
     vertical-align: top;
 }
+
+.SupportSignatureSignDesktop_container__1ArXO {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px;
+    border: 1px solid #dde2e6;
+    border-radius: 8px;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.SupportSignatureSignDesktop_container__1ArXO .SupportSignatureSignDesktop_contentWrapper__15t_u {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.SupportSignatureSignDesktop_container__1ArXO .SupportSignatureSignDesktop_contentWrapper__15t_u .SupportSignatureSignDesktop_content__fldtx {
+    display: flex;
+    flex-direction: column;
+    color: #495057;
+}
+
+.SupportSignatureSignDesktop_container__1ArXO .SupportSignatureSignDesktop_contentWrapper__15t_u .SupportSignatureSignDesktop_content__fldtx .SupportSignatureSignDesktop_count__2Mlhh {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.SupportSignatureSignDesktop_container__1ArXO .SupportSignatureSignDesktop_contentWrapper__15t_u .SupportSignatureSignDesktop_content__fldtx .SupportSignatureSignDesktop_highlight__DA7_t {
+    color: #00c4c4;
+    font-weight: 700;
+}
+
+.SupportSignatureSignDesktop_container__1ArXO .SupportSignatureSignDesktop_contentWrapper__15t_u .SupportSignatureSignDesktop_content__fldtx .SupportSignatureSignDesktop_message__3SDRj {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.SupportSignatureSignDesktop_container__1ArXO .SupportSignatureSignDesktop_contentWrapper__15t_u .SupportSignatureSignDesktop_content__fldtx .SupportSignatureSignDesktop_linkText__87LUE {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #495057;
+}
+
+.AvatarSlider_recents__RNsue {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 0;
+    height: 36px;
+}
+
+.SupportSignatureSignDesktop_container__1ArXO .SupportSignatureSignDesktop_footer__2TCSq {
+    font-size: 16px;
+}
+
+.Button_button__2FuOU.Button_lg__1Dftp.Button_startIcon__3p6wN {
+    padding-left: 18px;
+}
+
+.Button_button__2FuOU span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__2FuOU.Button_lg__1Dftp svg.Button_icon__t6yp6:first-child {
+    margin-right: 6px;
+}
+
+.Button_button__2FuOU.Button_lg__1Dftp svg.Button_icon__t6yp6 {
+    width: 20px;
+    height: 20px;
+}
+
+.Button_button__2FuOU .Button_children__ilFun {
+    vertical-align: top;
+}
+
 
 
 
