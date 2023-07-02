@@ -2,7 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <link rel="icon" href="https://static.wadiz.kr/assets/icon/favicon-32x32.png">
-    <link rel="stylesheet" href="/css/mypage/mypage-supporter.css">
+    <link rel="stylesheet" href="/css/mypage/supporter.css">
+    <link rel="stylesheet" href="/css/header-footer/login-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <title>와디즈 - 마이와디즈</title>
 </head>
@@ -10,7 +12,7 @@
     <div id="page-container">
         <main id="main-app">
             <!-- 헤더 -->
-            <div></div>
+            <header class="header" th:replace="~{/header-footer/login-header :: .login-header}"></header>
 
             <!-- body -->
             <div class="MainWrapper_content__GZkTa">
@@ -40,11 +42,11 @@
                         </div>
                         <div class="MyWadizPage_contentsWrapper__1JOIj">
                             <div class="MyWadizSupporter_supporterMode__2ZEem" role="tabpanel" id="myWadizPanel_supporter" aria-labelledby="myWadizTab_supporter">
-                                
+
                                 <!-- 프로필 레이아웃 -->
                                 <div class="MyWadizSupporterProfile_profileContainer__1Aqi-">
                                     <h3 class="BlindText_textHidden__ovQb4">나의 프로필</h3>
-                                    
+
                                     <!-- 프로필 그림 레이아웃 -->
                                     <div class="MyWadizSupporterProfile_profileImage__11ISs">
                                         <button class="MyWadizSupporterProfile_detailProfile__JoIEU" aria-label="프로필 상세 보기" style="background-image: url('https://static.wadiz.kr/assets/icon/profile-icon-5.png');"></button>
@@ -190,7 +192,7 @@
                                                 <div class="MyWadizSupporterClubLinkButton_message__3xRb-">
                                                     <p>
                                                         <span class="MyWadizSupporterClubLinkButton_highlight__dK7Qz">배송비 3,000원 무제한 할인</span>
-                                                        과 
+                                                        과
                                                         <span class="MyWadizSupporterClubLinkButton_highlight__dK7Qz">쿠폰팩</span>
                                                         을 만나보세요.
                                                     </p>
@@ -428,7 +430,7 @@
                         </div>
                     </div>
                 </section>
-                <footer></footer>
+                <footer class="footer" th:replace="~{/header-footer/main-footer :: .main-footer}"></footer>
             </div>
             <div></div>
         </main>

@@ -516,10 +516,8 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-path {
-    fill: none;
-    d: path("M 0 0 h 40 v 40 H 0 Z");
-}
+
+
 
 :not(svg) {
     transform-origin: 0px 0px;
