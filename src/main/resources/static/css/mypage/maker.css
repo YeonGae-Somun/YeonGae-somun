@@ -1109,10 +1109,33 @@ a.Button_button__1HNjI.Button_block__3-IpL {
     text-align: center;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .Button_button__1HNjI.Button_contained__1Lx6c.Button_hover__2ME7l, .Button_button__1HNjI.Button_contained__1Lx6c:hover {
+        border-color: #cdd3d8;
+        background-color: #cdd3d8;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .Button_button__1HNjI.Button_primary__2kq3x.Button_hover__2ME7l, .Button_button__1HNjI.Button_primary__2kq3x:hover {
+        border-color: #00c4c4;
+        background-color: #e7f9f9;
+    }
+}
+
+
 .Button_button__1HNjI.Button_primary__2kq3x.Button_contained__1Lx6c {
     border-color: #00c4c4;
     background-color: #00c4c4;
     color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .Button_button__1HNjI.Button_primary__2kq3x.Button_contained__1Lx6c.Button_hover__2ME7l, .Button_button__1HNjI.Button_primary__2kq3x.Button_contained__1Lx6c:hover {
+        border-color: #00b2b2;
+        background-color: #00b2b2;
+        color: #fff;
+    }
 }
 
 .MyWadizMyProject_infoBox__13ijv {
