@@ -17,6 +17,12 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     vertical-align: baseline;
 }
 
+.action-input {
+    display: flex;
+    position: relative;
+    outline: none;
+}
+
 a, button {
     outline: none;
     -webkit-appearance: none;
@@ -28,6 +34,10 @@ input, textarea {
 
 a, button {
     color: inherit;
+}
+
+a {
+    text-decoration: none;
 }
 
 a, input, optgroup, select, textarea {
@@ -301,6 +311,15 @@ article, main, section {
     width: 100%;
 }
 
+.waffle.select {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    width: 100%;
+    height: 48px;
+    line-height: 24px;
+}
+
 .MakerRegistrationForm_section__2UoGG div:last-child {
     margin-bottom: 0;
 }
@@ -366,6 +385,175 @@ article, main, section {
     vertical-align: top;
 }
 /* 메이커 유형 선택 레이아웃 끝 */
+
+
+/* 기본정보 입력하기 레이아웃 */
+.waffle.input>input[readonly], .waffle.input>input[disabled] {
+    border-color: #00000026;
+    background-color: #0000000f;
+    cursor: default;
+    pointer-events: none;
+}
+
+
+.waffle.input>input[disabled] {
+    opacity: .45;
+}
+
+.action-input .input-container {
+    flex: 1;
+}
+
+.CompanyOpenDateFiled_calenderButton__2LJig {
+    margin-left: 8px;
+}
+
+.CompanyHeadOfficeField_searchButton__SCSiA {
+    margin-left: 8px;
+}
+
+.CompanyHomepageField_linkButton__DcWSw {
+    margin-left: 8px;
+}
+
+.waffle.button {
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .2s;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.41176em;
+    height: 48px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1;
+    color: #0000008a;
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+}
+
+.waffle.button {
+    display: inline-block;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+.waffle.button.disabled, .waffle.button:disabled {
+    opacity: .45;
+    cursor: default;
+    color: #000000b3;
+    pointer-events: none;
+}
+
+.waffle.button.icon>[class*=icon], .waffle.button[class*=icon] {
+    line-height: 46px;
+}
+
+.waffle.button.icon {
+    padding: 0;
+    width: 48px;
+    overflow: hidden;
+    font-size: 32px;
+    box-sizing: border-box;
+}
+
+.CompanyOpenDateFiled_calenderButton__2LJig svg {
+    width: 24px;
+    fill: #495057;
+}
+
+.waffle.select.disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.waffle.select .value {
+    display: block;
+    z-index: 1;
+    border: 1px solid #dadce0;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 12px 16px;
+    height: 48px;
+    min-height: 24px;
+    font-weight: 400;
+    pointer-events: none;
+}
+
+.waffle.select .placeholder {
+    color: #0000004d;
+}
+
+.waffle.select .value>svg {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 2em;
+    height: auto;
+    color: #000000d6;
+    font-size: 14px;
+    font-weight: 400;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+.waffle.select>select {
+    padding-right: 20px;
+    line-height: 24px;
+    color: #000000de;
+    font-size: 15px;
+}
+
+.waffle.select select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    margin: 0;
+    outline: none;
+    border: 0;
+    background: none;
+    padding: 0 20px 0 0;
+    width: 100%;
+    height: 100%;
+    line-height: inherit;
+    -webkit-appearance: none;
+}
+
+.waffle.input>input[readonly] {
+    color: #000000d6;
+}
+
+.CompanyHeadOfficeField_readOnlyInput__3mq8h:not([class=error])>input[readonly] {
+    background-color: #fff;
+}
+
+.waffle.button.primary, .waffle.button.primary-outline {
+    border-color: #00c4c4;
+}
+
+.waffle.button.primary {
+    background-color: #00c4c4;
+    color: #fff;
+}
+
+.waffle.button.primary.disabled, .waffle.button.primary:disabled {
+    color: #ffffffb3;
+}
+
+
+.CompanyHomepageField_linkButton__DcWSw svg {
+    width: 24px;
+    fill: #495057;
+}
+
+/* 기본정보 입력하기 레이아웃 끝*/
 
 
 /* 관리자 요청하기 레이아웃 */
@@ -459,6 +647,37 @@ address, cite, dfn, em, var {
 .MobileField_helperMessage__YDEHg {
     color: #60656a;
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .Button_button__2DC9w.Button_hover__1xp00, .Button_button__2DC9w:hover {
+        border-color: #adb5bd;
+        background-color: #f2f4f6;
+        color: #343a40;
+    }
+}
+
+.CompanyRegistrationFile_button__cGv9S {
+    position: relative!important;
+    width: 100%;
+}
+
+.CompanyRegistrationFile_inputFile__5G2Kw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.CompanyRegistrationFile_info__nyaKr {
+    margin-top: -20px;
+    line-height: 1.67;
+    color: #868e96;
+    font-size: 12px;
+}
 /* 관리자 요청하기 레이아웃 끝 */
 
 
@@ -515,6 +734,25 @@ address, cite, dfn, em, var {
     vertical-align: middle;
 }
 
+.Checkbox_checkbox__3047k .Checkbox_input__XNKrE:checked+.Checkbox_icon__1KTiH, .Checkbox_checkbox__3047k .Checkbox_input__XNKrE:indeterminate+.Checkbox_icon__1KTiH {
+    border: solid 1px #00b2b2;
+    background-color: #00c4c4;
+}
+
+@media (hover: hover) {
+    .Checkbox_checkbox__3047k:hover .Checkbox_input__XNKrE:not(:disabled)+.Checkbox_icon__1KTiH {
+        border-color: #adb5bd;
+        background-color: #f2f4f6;
+    }
+}
+
+@media (hover: hover){
+    .Checkbox_checkbox__3047k:hover .Checkbox_input__XNKrE:checked+.Checkbox_icon__1KTiH, .Checkbox_checkbox__3047k:hover .Checkbox_input__XNKrE:indeterminate+.Checkbox_icon__1KTiH {
+        border-color: #00a2a2;
+        background-color: #00b2b2;
+    }
+}
+
 .Checkbox_checkbox__3047k.Checkbox_sm__N2Hzc .Checkbox_icon__1KTiH {
     font-size: 16px;
 }
@@ -533,6 +771,15 @@ address, cite, dfn, em, var {
 
 .Checkbox_checkbox__3047k.Checkbox_sm__N2Hzc .Checkbox_removeIcon__2HQZw {
     width: 8px;
+}
+
+.Checkbox_checkbox__3047k .Checkbox_input__XNKrE:checked+.Checkbox_icon__1KTiH .Checkbox_checkIcon__zOAt0 {
+    opacity: 1;
+}
+
+.Checkbox_checkbox__3047k .Checkbox_input__XNKrE:checked+.Checkbox_icon__1KTiH svg, .Checkbox_checkbox__3047k .Checkbox_input__XNKrE:indeterminate+.Checkbox_icon__1KTiH svg {
+    fill: #fff;
+    
 }
 
 .Checkbox_checkbox__3047k .Checkbox_input__XNKrE+.Checkbox_icon__1KTiH .Checkbox_checkIcon__zOAt0, .Checkbox_checkbox__3047k .Checkbox_input__XNKrE+.Checkbox_icon__1KTiH .Checkbox_removeIcon__2HQZw {
