@@ -1,0 +1,585 @@
+:root {
+    --scrollbar-width: 0;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body, button, input, select, textarea {
+    font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+a, button {
+    outline: none;
+    -webkit-appearance: none;
+}
+
+input, textarea {
+    background: none;
+}
+
+a, button {
+    color: inherit;
+}
+
+a, input, optgroup, select, textarea {
+    color: inherit;
+}
+
+button {
+    background-color: transparent;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #cac8c6
+}
+
+body, table th {
+    font-weight: 400;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: inherit;
+    color: inherit;
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+}
+
+canvas, img, picture, video {
+    max-width: 100%;
+}
+
+iframe, img, video {
+    vertical-align: top;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#page-container, #wadizTopBanner, body>#root {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+#page-container, #wadizTopBanner, body>#root {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+body>#root, #wadizTopBanner, #page-container {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+
+article, aside, figcaption, figure, footer, header, nav, section {
+    display: block;
+}
+
+article, main, section {
+    display: block;
+}
+
+#startup-registration-app {
+    margin: 0;
+    padding: 0;
+}
+
+/* 바탕 청록색쪽 레이아웃 */
+.MakerPageIntroduction_container__2c8TO {
+    position: relative;
+    background-color: #00c4c4;
+    padding: 24px;
+    width: 100%;
+    height: calc(100vh - 105px);
+}
+
+@media screen and (min-width: 769px) {
+    .MakerPageIntroduction_container__2c8TO {
+        height: inherit;
+    }
+}
+
+.MakerPageIntroduction_titleWrapper__V2ZTT {
+    position: relative;
+    height: 30%;
+}
+
+@media screen and (min-width: 769px) {
+    .MakerPageIntroduction_titleWrapper__V2ZTT {
+        margin: 36px auto 0;
+        max-width: 448px;
+        height: inherit;
+    }
+}
+
+.MakerPageIntroduction_title__1jsVJ {
+    line-height: 38px;
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .MakerPageIntroduction_title__1jsVJ {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        line-height: 48px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+}
+
+.MakerPageIntroduction_title__1jsVJ span {
+    color: #fff;
+}
+
+.MakerPageIntroduction_contentsWrapper__NmMfC {
+    position: relative;
+    height: 70%;
+}
+
+@media screen and (min-width: 769px) {
+    .MakerPageIntroduction_contentsWrapper__NmMfC {
+        margin: 60px auto 48px;
+        height: inherit;
+        max-width: 448px;
+    }
+}
+
+.MakerPageIntroduction_cardsWrapper__2OjYo {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .MakerPageIntroduction_cardsWrapper__2OjYo {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+.MakerPageIntroduction_card__1DI7z {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px 24px;
+    width: 100%;
+    color: #495057;
+}
+
+.MakerPageIntroduction_card__1DI7z .MakerPageIntroduction_area__3YYMZ {
+    max-width: 263px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.MakerPageIntroduction_card__1DI7z img {
+    margin-right: 16px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 8px;
+    width: 58px;
+    height: 58px;
+}
+
+.MakerPageIntroduction_button__1ac2b {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+    .MakerPageIntroduction_button__1ac2b {
+        position: relative;
+        bottom: auto;
+    }
+}
+
+.withIcon_icon__1Tc_k {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.MakerPageIntroduction_button__1ac2b svg {
+    width: 40px;
+    height: 40px;
+    fill: #495057;
+}
+/* 바탕 청록색쪽 레이아웃 끝*/
+
+.MakerRegistrationForm_form__1SjAo {
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 480px;
+}
+
+
+/* 메이커 유형 선택 레이아웃  */
+.MakerRegistrationForm_section__2UoGG {
+    padding-top: 40px;
+}
+
+.MakerRegistrationForm_sectionTitle__1_NeS {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.MakerRegistrationForm_sectionDescription__2-b0J {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: #495057;
+}
+
+.MakerRegistrationForm_makerType__3g7_j {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+}
+
+.AgreementCheckbox_checkboxWrapper__3J4e7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.MakerRegistrationForm_section__2UoGG div:last-child {
+    margin-bottom: 0;
+}
+
+.Button_button__2DC9w {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    background-color: #0000;
+    cursor: pointer;
+    padding: 8px 15px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-appearance: none;
+}
+
+.MakerRegistrationForm_makerTypeButton__1uDLB {
+    width: calc(50% - 4px);
+}
+
+.MakerRegistrationForm_registButton__2QT1N {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.Button_button__2DC9w.Button_disabled__1nMZF, .Button_button__2DC9w:disabled, .Button_button__2DC9w[disabled] {
+    opacity: .45;
+    cursor: default;
+    pointer-events: none;
+}
+
+.Button_button__2DC9w.Button_contained__1UNgG {
+    border-color: #495057;
+    background-color: #495057;
+    color: #fff;
+}
+
+.Button_button__2DC9w.Button_primary__3p1fP {
+    border-color: #00c4c4;
+    color: #00c4c4;
+}
+
+.Button_button__2DC9w.Button_lg__3z3Wr {
+    padding: 9px 23px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__2DC9w span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__2DC9w .Button_children__3kyD_ {
+    vertical-align: top;
+}
+/* 메이커 유형 선택 레이아웃 끝 */
+
+
+/* 관리자 요청하기 레이아웃 */
+.waffle.field {
+    margin-bottom: 20px;
+}
+
+.waffle.field .label {
+    margin-bottom: 4px;
+}
+
+.waffle.input {
+    display: block;
+    position: relative;
+    height: 48px;
+    font-size: 15px;
+}
+
+.waffle.input>input, .waffle.input.icon>svg {
+    width: 2em;
+    height: auto;
+    color: #000000d6;
+    font-size: 15px;
+    font-weight: 400;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+.waffle.input>input {
+    transition-property: border-color,height,padding-right,color;
+    transition-duration: .2s,0s;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    background: #fff;
+    padding: 0 1.06667em;
+    width: 100%;
+    vertical-align: middle;
+    color: #000000d6;
+    font-family: Pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.waffle.input>input {
+    height: 48px;
+    line-height: 1.2em;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+address, cite, dfn, em, var {
+    font-weight: inherit;
+    font-style: normal;
+}
+
+.waffle.helper {
+    display: block;
+    margin-top: 6px;
+    line-height: 20px;
+    color: #60656a;
+    font-size: 12px;
+}
+
+.MobileField_container__2bV0z {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    position: relative;
+}
+
+.MobileField_container__2bV0z>div {
+    width: 100%;
+}
+
+.MobileField_searchButton__6WhzJ {
+    margin-left: 8px;
+    height: 48px;
+}
+
+.HelperMessage_helperMessage__2Hx5X {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    margin-top: 4px;
+    color: #868e96;
+    font-style: normal;
+}
+
+.MobileField_helperMessage__YDEHg {
+    color: #60656a;
+}
+/* 관리자 요청하기 레이아웃 끝 */
+
+
+/* 체크박스 레이아웃 */
+.AgreementCheckbox_container__yFkWe {
+    display: flex;
+    align-items: center;
+    height: 54px;
+}
+
+.Checkbox_checkbox__3047k {
+    display: block;
+    position: relative;
+}
+
+.AgreementCheckbox_checkbox__1YQY2 {
+    vertical-align: top;
+}
+
+.Checkbox_checkbox__3047k.Checkbox_labeled__Ayu9G {
+    display: inline-flex;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.Checkbox_checkbox__3047k .Checkbox_input__XNKrE {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    border: none;
+    background-color: #0000;
+    padding: 0;
+}
+
+.Checkbox_checkbox__3047k .Checkbox_icon__1KTiH {
+    display: block;
+    position: relative;
+    transition-property: opacity,border-color,background-color;
+    transition-duration: .15s;
+    opacity: 1;
+    z-index: 1;
+    border: 1px solid #cdd3d8;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 1em;
+    height: 1em;
+}
+
+.Checkbox_checkbox__3047k.Checkbox_labeled__Ayu9G .Checkbox_icon__1KTiH {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.Checkbox_checkbox__3047k.Checkbox_sm__N2Hzc .Checkbox_icon__1KTiH {
+    font-size: 16px;
+}
+
+.Checkbox_checkbox__3047k .Checkbox_icon__1KTiH svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition-property: opacity,width,fill;
+    transition-duration: .15s;
+    width: 0.7791666667em;
+    height: 0.7791666667em;
+    fill: #fff;
+}
+
+.Checkbox_checkbox__3047k.Checkbox_sm__N2Hzc .Checkbox_removeIcon__2HQZw {
+    width: 8px;
+}
+
+.Checkbox_checkbox__3047k .Checkbox_input__XNKrE+.Checkbox_icon__1KTiH .Checkbox_checkIcon__zOAt0, .Checkbox_checkbox__3047k .Checkbox_input__XNKrE+.Checkbox_icon__1KTiH .Checkbox_removeIcon__2HQZw {
+    opacity: 0;
+}
+
+.Checkbox_checkbox__3047k.Checkbox_labeled__Ayu9G .Checkbox_content__2pdlR {
+    display: inline-block;
+    color: #495057;
+}
+
+.Checkbox_checkbox__3047k.Checkbox_labeled__Ayu9G.Checkbox_sm__N2Hzc .Checkbox_content__2pdlR, .Checkbox_checkbox__3047k.Checkbox_labeled__Ayu9G.Checkbox_md__1eKeo .Checkbox_content__2pdlR {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.AgreementCheckbox_button__3d8Jl {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 20px;
+}
+
+.AgreementCheckbox_button__3d8Jl i:before, .AgreementCheckbox_button__3d8Jl svg {
+    font-size: 20px;
+}
+/* 체크박스 레이아웃 끝 */
+
+
+/* 버튼 레이아웃 */
+.Button_button__2DC9w.Button_xl__fi4Pu {
+    padding: 13px 27px;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.Button_button__2DC9w.Button_primary__3p1fP.Button_contained__1UNgG {
+    border-color: #00c4c4;
+    background-color: #00c4c4;
+    color: #fff;
+}
+
+.MakerRegistrationForm_notice__xeA-N {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+/* 버튼 레이아웃 끝 */

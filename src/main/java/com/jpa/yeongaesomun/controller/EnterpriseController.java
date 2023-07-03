@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class EnterpriseController {
 
     @GetMapping("intro")
-    public void goToIntro(){
+    public void goToIntro() {
 
     }
-
-
 }

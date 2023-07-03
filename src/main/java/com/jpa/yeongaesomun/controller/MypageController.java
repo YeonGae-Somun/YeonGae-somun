@@ -13,4 +13,15 @@ public class MypageController {
     public void goToMypageSupporter(){
 
     }
+
+    @GetMapping("maker")
+    public void goToMypageMaker(){
+
+    }
+
+    @GetMapping("enterprise-register")
+    public void goToEnterpriseRegister(){
+
+    }
+
 }
