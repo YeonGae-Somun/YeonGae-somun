@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'wadizicon';
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.eot?#iefix") format("embedded-opentype"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.woff2") format("woff2"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.woff") format("woff"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.ttf") format("truetype"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.svg#wadizicon") format("svg"); }
 :root {
     --scrollbar-width: 0;
 }
@@ -330,16 +339,15 @@ i.wadizicon, i.icon::before, [class*='icon-']::before {
     speak: none;
 }
 
-.social-account-wrap .facebook i, .social-account-big-wrap .facebook i {
-    background: url(https://assets.cdn.soomgo.com/icons/icon-login-facebook-btn.svg);
+i.wadizicon.wa-facebook::before, i.icon.facebook::before, .icon-facebook::before {
+    content: "";
+}
+i.wadizicon.wa-naver::before, i.icon.naver::before, .icon-naver::before {
+    content: "";
 }
 
-.social-account-wrap .naver i, .social-account-big-wrap .naver i {
-    background: url(https://cdn.comento.kr/icon/icon-naver-medium.svg);
-}
-
-.social-account-wrap .kakao i, .social-account-big-wrap .kakao i {
-    background: url(https://cdn.comento.kr/icon/icon-kakao-medium.svg);
+i.wadizicon.wa-kakao::before, i.icon.kakao::before, .icon-kakao::before {
+    content: "";
 }
 
 .social-account-wrap ul:after {
