@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'wadizicon';
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.eot?#iefix") format("embedded-opentype"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.woff2") format("woff2"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.woff") format("woff"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.ttf") format("truetype"),
+    url("https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.svg#wadizicon") format("svg"); }
 :root {
     --scrollbar-width: 0;
 }
@@ -230,11 +239,11 @@ i.wadizicon, i.icon::before, [class*='icon-']::before {
 
 
 .icon-radio-button-unchecked:before, .icon.radio-button-unchecked:before {
-    content: "○";
+    content: "";
 }
 
 i.wadizicon.wa-radio-button-unchecked::before, i.icon.radio-button-unchecked::before, .icon-radio-button-unchecked::before {
-    content: "○";
+    content: "";
 }
 
 .check-list-wrap ul li .input-check i {
@@ -433,5 +442,40 @@ input[type="checkbox"] {
     background-color: #00c4c4;
     color: #fff;
 }
+.wz.button {
+    transition-property: background-color, border-color, color, opacity;
+    transition-duration: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.4117647059em;
+    height: 48px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box !important;
+    -webkit-appearance: none;
+}
+.wz.button {
+    display: inline-block;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+
+.wz.button.primary, .wz.button.primary-outline {
+    border-color: #00c4c4;
+}
+
+
+.wz.button.primary {
+    background-color: #00c4c4;
+    color: #fff;
+}
+
 
 /* 버튼 끝 */
