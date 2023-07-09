@@ -1,0 +1,504 @@
+:root {
+    --scrollbar-width: 0;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body, button, input, select, textarea {
+    font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+body, table th {
+    font-weight: 400;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: inherit;
+    color: inherit;
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+}
+
+a, em, div {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+canvas, img, picture, video {
+    max-width: 100%;
+}
+
+iframe, img, video {
+    vertical-align: top;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
+li, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#page-container, #wadizTopBanner, body>#root {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+body>#root, #wadizTopBanner, #page-container {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+a, button {
+    outline: none;
+    -webkit-appearance: none;
+}
+
+a, button {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, input, optgroup, select, textarea {
+    color: inherit;
+}
+
+button {
+    background-color: transparent;
+}
+
+article, main, section {
+    display: block;
+}
+
+.MainWrapper_content__GZkTa {
+    transition: padding-top .25s;
+    padding-top: 0;
+}
+
+@media screen and (min-width: 1097px) {
+    .MainWrapper_content__GZkTa {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+html.scroll-top .MainWrapper_content__GZkTa, html.wadiz-app .MainWrapper_content__GZkTa, html.wadiz-app.scroll-top .MainWrapper_content__GZkTa {
+    padding-top: 0;
+}
+
+@media screen and (min-width: 1097px) {
+    html.scroll-top .MainWrapper_content__GZkTa {
+        padding-top: 0;
+    }
+}
+
+.App_containerWrapper__KiLM_.App_isWishDesktop__3RT6b {
+    background-color: #f9fafb;
+}
+
+.App_containerWrapper__KiLM_.App_isWishDesktop__3RT6b .App_container__1ciND {
+    max-width: 554px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+}
+
+/* 타이틀 css */
+.App_titleBox__GffUu {
+    line-height: 44px;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 48px 16px 16px;
+    display: flex;
+    gap: 6px;
+}
+
+.App_titleBox__GffUu img {
+    width: 32px;
+}
+
+/* 타이틀 css 끝 */
+
+
+/* 카테고리 필터 css */
+.CategoryFilter_container__QCU1Y {
+    padding: 8px 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.App_categoryFilter__W8TI0 {
+    background-color: #fff;
+    position: sticky;
+    top: 0px;
+    z-index: 9998;
+}
+
+@media screen and (min-width: 1097px) {
+    .App_categoryFilter__W8TI0 {
+        z-index: 9000;
+    }
+}
+
+.CategoryFilter_container__QCU1Y .CategoryFilter_hideScrollbar__5kdyj::-webkit-scrollbar {
+    display: none;
+}
+
+.CategoryFilter_container__QCU1Y .CategoryFilter_categoryfilterList__2WMA0 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 16px;
+}
+
+.CategoryFilter_container__QCU1Y .CategoryFilter_hideScrollbar__5kdyj {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.CategoryFilter_container__QCU1Y .CategoryFilter_categoryfilterList__2WMA0 .CategoryFilter_filterItem__1-_sW {
+    flex-shrink: 0;
+}
+
+.Button_button__2FuOU {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    padding: 8px 15px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-appearance: none;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+button[class*=Button_button] {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.Button_button__2FuOU.Button_contained__2SIAT {
+    border-color: #495057;
+    background-color: #495057;
+    color: #fff;
+}
+
+.Button_button__2FuOU.Button_tertiaryGrey__3jJV7 {
+    border-color: #f2f4f6;
+    color: #495057;
+}
+
+.Button_button__2FuOU.Button_md__46Ai- {
+    padding: 9px 15px;
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+.Button_button__2FuOU.Button_tertiaryGrey__3jJV7.Button_contained__2SIAT {
+    border-color: #f2f4f6;
+    background-color: #f2f4f6;
+    color: #495057;
+}
+
+.CategoryFilter_container__QCU1Y .CategoryFilter_categoryfilterList__2WMA0 .CategoryFilter_filterItem__1-_sW .CategoryFilter_button__U4yZv {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 9px 11px;
+    background-color: #f9fafb;
+    border: 1px solid #f9fafb;
+    color: #212529;
+}
+
+.CategoryFilter_container__QCU1Y .CategoryFilter_categoryfilterList__2WMA0 .CategoryFilter_filterItem__1-_sW .CategoryFilter_button__U4yZv.CategoryFilter_current__3lUyE {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #212529;
+    color: #fff;
+    border: 1px solid #212529;
+}
+
+.Button_button__2FuOU span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__2FuOU .Button_children__ilFun {
+    vertical-align: top;
+}
+
+/* 카테고리 필터 css 끝 */
+
+
+/* 목록 css */
+.ContentsContainer_container__32V3E {
+    height: 100%;
+}
+
+.WishCard_container__18waD {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #f2f4f6;
+    position: relative;
+}
+
+.WishCard_container__18waD .WishCard_caption__tA8mK {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #868e96;
+    margin-bottom: 12px;
+}
+
+.HorizentalCard_container__1Rk50 {
+    position: relative;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_buttonWrapper__K2wmz {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.WishButton_button__1ZqbG {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    outline: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.withIcon_icon__3VTbq {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.WishButton_button__1ZqbG * {
+    pointer-events: none;
+}
+
+.WishButton_button__1ZqbG svg {
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.WishButton_button__1ZqbG path {
+    stroke: #f2f4f6;
+    stroke-width: 2px;
+    fill: rgba(33,37,41,.4);
+    transition: fill .25s ease-in-out;
+}
+
+.WishButton_button__1ZqbG[aria-pressed=true] path {
+    fill: #f25555;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp {
+    display: flex;
+    gap: 12px;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_thumbnailContainer__1O-dl {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f2f4f6;
+    flex-shrink: 0;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_thumbnailContainer__1O-dl .HorizentalCard_thumbnailPlaceholder__3l0yP {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+}
+
+.CardThumbnail_thumbnail__3bDBJ {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: .25s;
+    background: no-repeat 50%/cover border-box;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 10px;
+    opacity: 0;
+}
+
+.CardThumbnail_visible__343f4 {
+    opacity: 1;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_detailWrapper__oS4Wf {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    max-height: 148px;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_detailWrapper__oS4Wf .HorizentalCard_detail__5ch7U {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_detailWrapper__oS4Wf .HorizentalCard_detail__5ch7U .HorizentalCard_archive__2M3g8 {
+    line-height: 28px;
+    font-size: 16px;
+    color: #00c4c4;
+    font-weight: 700;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_detailWrapper__oS4Wf .HorizentalCard_detail__5ch7U .HorizentalCard_title__1AhKb {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #212529;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_detailWrapper__oS4Wf .HorizentalCard_detail__5ch7U .HorizentalCard_makerName__1jQEW {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #868e96;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.HorizentalCard_container__1Rk50 .HorizentalCard_card__qglkp .HorizentalCard_detailWrapper__oS4Wf .HorizentalCard_detailBadges__1xtfF {
+    margin-top: 8px;
+}
+
+.RewardBadge_container__3AVaM {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.Badge_container__9G9PS {
+    position: relative;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.Badge_container__9G9PS.Badge_visible__3LNXv {
+    display: inline-flex;
+}
+
+.Badge_container__9G9PS .Badge_badge__ovUKI {
+    display: inline-flex;
+    padding: 0;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.Badge_container__9G9PS .Badge_badge__ovUKI.Badge_sm__1OBNp {
+    line-height: 1.4;
+    font-size: 10px;
+}
+
+.Badge_container__9G9PS .Badge_badge__ovUKI.Badge_label__2Rft2 {
+    border-radius: 3px;
+    background-color: #00c4c4;
+    padding: 2px 6px;
+}
+
+.Badge_container__9G9PS .Badge_badge__ovUKI.Badge_label__2Rft2.Badge_sm__1OBNp {
+    border-radius: 3px;
+    padding: 2px 4px;
+    height: 18px;
+}
+
+.Badge_container__9G9PS .Badge_badge__ovUKI.Badge_label__2Rft2.Badge_secondary__UV-TU.Badge_tertiary__3uYKh {
+    border: solid 1px #f2f4f6;
+    background-color: #f2f4f6;
+    color: #495057;
+}
+
+/* 목록 css 끝 */
+
+.SafeArea_container__19KXQ {
+    height: 57px;
+}

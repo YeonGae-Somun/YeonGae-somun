@@ -54,4 +54,19 @@ public class MypageController {
     public void goToSettingAlarm(){
 
     }
+
+    @GetMapping("wishlist")
+    public void goToWishList(){
+
+    }
+
+    @GetMapping("event")
+    public void goToEvent(){
+
+    }
+
+    @GetMapping("delete-account")
+    public void goToDeleteAccount(){
+
+    }
 }
