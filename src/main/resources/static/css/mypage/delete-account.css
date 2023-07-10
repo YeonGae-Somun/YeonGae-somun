@@ -302,9 +302,8 @@ address, cite, dfn, em, var {
     -moz-osx-font-smoothing: grayscale;
     font-style: normal;
     font-variant: normal;
-    content: 'v';
+    content: "\e94e";
 }
-
 .account-drop .reason-text {
     margin-top: 40px;
     max-width: 350px;
