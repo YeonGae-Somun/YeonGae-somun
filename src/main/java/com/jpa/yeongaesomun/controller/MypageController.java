@@ -24,4 +24,49 @@ public class MypageController {
 
     }
 
+
+    @GetMapping("setting")
+    public void goToSetting(){
+
+    }
+
+    @GetMapping("profile-setting")
+    public void goToProfileSetting(){
+
+    }
+
+    @GetMapping("info-setting")
+    public void goToInfoSetting(){
+
+    }
+
+    @GetMapping("check-password")
+    public void goToCheckPassWord(){
+
+    }
+
+    @GetMapping("setting-password")
+    public void goToSettingPassWord(){
+
+    }
+
+    @GetMapping("setting-alarm")
+    public void goToSettingAlarm(){
+
+    }
+
+    @GetMapping("wishlist")
+    public void goToWishList(){
+
+    }
+
+    @GetMapping("event")
+    public void goToEvent(){
+
+    }
+
+    @GetMapping("delete-account")
+    public void goToDeleteAccount(){
+
+    }
 }
