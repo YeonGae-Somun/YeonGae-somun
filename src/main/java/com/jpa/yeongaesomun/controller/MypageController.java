@@ -70,4 +70,9 @@ public class MypageController {
     public void goToDeleteAccount(){
 
     }
+
+    @GetMapping("write")
+    public void goToWrite(){
+        
+    }
 }
