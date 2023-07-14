@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleag.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.wadiz.kr/assets/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/mypage/enterprise-register.css">
+    <link rel="stylesheet" href="/css/header-footer/login-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <title>와디즈 기업 신청</title>
+</head>
+<body style="overflow: auto;">
+    <div id="page-container">
+        <!-- 헤더 -->
+        <header class="header" th:replace="~{/header-footer/login-header :: .login-header}"></header>
+
+        <main id="startup-registration-app">
+
+            <!-- 바탕 청록색쪽 레이아웃 -->
+            <section class="MakerPageIntroduction_container__2c8TO">
+                <div class="MakerPageIntroduction_titleWrapper__V2ZTT">
+                    <h2 class="MakerPageIntroduction_title__1jsVJ">
+                        <span>메이커 페이지</span>
+                        채우고
+                        <br>
+                        더 많은 기회를 얻으세요
+                    </h2>
+                </div>
+                <div class="MakerPageIntroduction_contentsWrapper__NmMfC">
+                    <div class="MakerPageIntroduction_cardsWrapper__2OjYo">
+                        <div class="MakerPageIntroduction_card__1DI7z">
+                            <div class="MakerPageIntroduction_area__3YYMZ">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIvPgogICAgICAgIDxwYXRoIGQ9Ik01IDI0aDlsMS41NzEgOC42NDJBMiAyIDAgMCAxIDEzLjYwNCAzNUgxMS4xYTMgMyAwIDAgMS0yLjgyLTEuOTc1TDUgMjR6IiBmaWxsPSIjMDBBMkEyIi8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA0KSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik02IDZjLTMuOTE2IDAtNiAzLjM1OC02IDcuNUMwIDE3LjY0MiAyLjA4NCAyMSA2IDIxIiBmaWxsPSIjMDBBMkEyIi8+CiAgICAgICAgICAgIDxwYXRoIGQ9Im02IDYgNy4zNTgtLjI4QTI2LjEwMiAyNi4xMDIgMCAwIDAgMjQgM3YyMWEyNS41MTIgMjUuNTEyIDAgMCAwLTEwLjQ4MS0yLjcwN0w2IDIxVjZ6IiBmaWxsPSIjOEJFNEU0Ii8+CiAgICAgICAgICAgIDxyZWN0IGZpbGw9IiMwMEEyQTIiIHg9IjI0IiB3aWR0aD0iNiIgaGVpZ2h0PSIyNyIgcng9IjIuNSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cmVjdCBmaWxsPSIjQURCNUJEIiB4PSIzNCIgeT0iMTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiLz4KICAgICAgICA8cmVjdCBmaWxsPSIjQURCNUJEIiB0cmFuc2Zvcm09InJvdGF0ZSgyNSAzNSAyNS41KSIgeD0iMzIiIHk9IjI0IiB3aWR0aD0iNiIgaGVpZ2h0PSIzIiByeD0iMS41Ii8+CiAgICAgICAgPHJlY3QgZmlsbD0iI0FEQjVCRCIgdHJhbnNmb3JtPSJyb3RhdGUoLTI0IDM1IDkuNSkiIHg9IjMyIiB5PSI4IiB3aWR0aD0iNiIgaGVpZ2h0PSIzIiByeD0iMS41Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" alt>
+                                프로젝트를 오픈하면
+                                <br>
+                                팔로워에게 알림이 가요
+                            </div>
+                        </div>
+                        <div class="MakerPageIntroduction_card__1DI7z">
+                            <div class="MakerPageIntroduction_area__3YYMZ">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMTI5IDUuNSkiPgogICAgICAgICAgICA8cGF0aCBkPSJNOC4zOTUgMjguMTUyYy4yNjkgMCAuNTE3LS4wNjcuNzQ1LS4yLjIyNy0uMTM0LjUwMy0uMzUyLjgyOC0uNjU1bDMuNzg3LTMuNDYzYy0uMzcyLS4yOTQtLjY5Mi0uNzEtLjk2LTEuMjQ4LS4yNy0uNTM4LS40MDUtMS4zMy0uNDA1LTIuMzhWMTEuMzFjMC0xLjM1MS4yNjctMi41MTIuOC0zLjQ4MkE1LjQwMiA1LjQwMiAwIDAgMSAxNS40NjggNS42Yy45ODQtLjUxNSAyLjE1OC0uNzcyIDMuNTIyLS43NzJoOS4zNDJsLS4wMTQtLjQ1NkMyOC4yMDYgMy4wNTcgMjcuNzIgMiAyNi44NjIgMS4yIDI2LjAwNC40IDI0LjgwNCAwIDIzLjI2MyAwSDUuMDY4Yy0xLjU0MSAwLTIuNzcuNDMyLTMuNjkgMS4yOTdDLjQ2IDIuMTYgMCAzLjM3OSAwIDQuOTUyVjE3Ljg5YzAgMS41NjMuNDU3IDIuODAyIDEuMzcxIDMuNzE3LjkxNC45MTUgMi4xMzMgMS4zNzIgMy42NTUgMS4zNzJoMi4xNTh2My43OTNjMCAuNDIzLjEwNi43NTkuMzIgMS4wMDcuMjEzLjI0OS41MS4zNzMuODkuMzczeiIgZmlsbD0iIzAwQTJBMiIvPgogICAgICAgICAgICA8cGF0aCBkPSJNMzAuMTEzIDMwYy4zOSAwIC42OTEtLjEyNi45MDUtLjM4LjIxMy0uMjUyLjMyLS41ODYuMzItMXYtMy44MDZoMS4zNzhjMS41MjIgMCAyLjc0LS40NTggMy42NTUtMS4zNzMuOTE0LS45MTUgMS4zNy0yLjE0OSAxLjM3LTMuNzAzdi04LjExYzAtMS41NzMtLjQ2LTIuNzkxLTEuMzg0LTMuNjU2LS45MjQtLjg2NC0yLjE1Ni0xLjI5Ni0zLjY5Ny0xLjI5NkgxOS4zMjNjLTEuNjA1IDAtMi44NTEuNDMyLTMuNzM4IDEuMjk2LS44ODYuODY1LTEuMzMgMi4wODgtMS4zMyAzLjY3djguMDk2YzAgMS41NjMuNDQ0IDIuOCAxLjMzIDMuNzEuODg3LjkxIDIuMTMzIDEuMzY2IDMuNzM4IDEuMzY2aDQuNDE0bDQuODAzIDQuMzNjLjMyNC4yODYuNi41LjgyOC42NDIuMjI3LjE0My40NzYuMjE0Ljc0NS4yMTR6IiBmaWxsPSIjOEJFNEU0Ii8+CiAgICAgICAgICAgIDxyZWN0IGZpbGw9IiNGOUZBRkIiIHg9IjE4LjM3MSIgeT0iMTEuNSIgd2lkdGg9IjE0IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiLz4KICAgICAgICAgICAgPHJlY3QgZmlsbD0iI0Y5RkFGQiIgeD0iMTguMzcxIiB5PSIxNi41IiB3aWR0aD0iMTAiIGhlaWdodD0iMyIgcng9IjEuNSIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==" alt>
+                                수많은 투자자, 제휴처와
+                                <br>
+                                소통할 수 있는 기회를 얻어요
+                            </div>
+                        </div>
+                        <div class="MakerPageIntroduction_card__1DI7z">
+                            <div class="MakerPageIntroduction_area__3YYMZ">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cmVjdCBpZD0iN2NmZGppc3NhYSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE2LjIiIGhlaWdodD0iMTYuMiIgcng9IjIuNCIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS44IDMuNikiPgogICAgICAgICAgICA8bWFzayBpZD0icjRxM2kzbnJ0YiIgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiM3Y2Zkamlzc2FhIi8+CiAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgPHVzZSBmaWxsPSIjOEJFNEU0IiB4bGluazpocmVmPSIjN2NmZGppc3NhYSIvPgogICAgICAgICAgICA8cGF0aCBmaWxsPSIjMDBBMkEyIiBtYXNrPSJ1cmwoI3I0cTNpM25ydGIpIiBkPSJNMCAwaDE5LjJ2My42SDB6Ii8+CiAgICAgICAgICAgIDxnIG1hc2s9InVybCgjcjRxM2kzbnJ0YikiIGZpbGw9IiNGOUZBRkIiPgogICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS44IC45KSI+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iLjkiIGN5PSIuOSIgcj0iMSIvPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjMuNiIgY3k9Ii45IiByPSIxIi8+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iNi4zIiBjeT0iLjkiIHI9IjEiLz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjRjlGQUZCIiB4PSIxLjgiIHk9IjYuNiIgd2lkdGg9IjguNCIgaGVpZ2h0PSIxLjgiIHJ4PSIuOSIvPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjRjlGQUZCIiB4PSIxLjgiIHk9IjkuNiIgd2lkdGg9IjYiIGhlaWdodD0iMS44IiByeD0iLjkiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEuNDkgMTAuNzI3KSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjkzIDcuODcgMTIuMDYyIDExYS42LjYgMCAwIDEgMCAuODQ5bC0uMjEyLjIxMmEuNi42IDAgMCAxLS44NDkgMEw3Ljg3IDguOTNsMS4wNi0xLjA2eiIgZmlsbD0iIzAwQTJBMiIgZmlsbC1ydWxlPSJub256ZXJvIi8+CiAgICAgICAgICAgIDxjaXJjbGUgZmlsbD0iI0ZGRiIgY3g9IjUuNCIgY3k9IjUuNCIgcj0iNC44Ii8+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01LjQgMGE1LjQgNS40IDAgMSAxIDAgMTAuOEE1LjQgNS40IDAgMCAxIDUuNCAwem0wIDEuNWEzLjkgMy45IDAgMSAwIDAgNy44IDMuOSAzLjkgMCAwIDAgMC03Ljh6IiBmaWxsPSIjMDBBMkEyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" alt>
+                                포털 검색 결과에
+                                <br>
+                                페이지를 노출할 수 있어요
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="MakerPageIntroduction_button__1ac2b">
+                    <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1Tc_k" aria-hidden="true">
+                        <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- 메이커 유형 선택 쪽 레이아웃 -->
+            <form class="MakerRegistrationForm_form__1SjAo" autocomplete="off">
+                
+                <!-- 메이커 유형 선택 레이아웃 -->
+                <section class="MakerRegistrationForm_section__2UoGG">
+                    <h3 class="MakerRegistrationForm_sectionTitle__1_NeS">메이커 유형 선택</h3>
+                    <p class="MakerRegistrationForm_sectionDescription__2-b0J">
+                        사업자 등록 없이 개인으로 메이커 페이지를
+                        <br>
+                        만들 수 있어요. 사업자 번호가 있다면
+                        <br>
+                        사업자로 만들기를 선택해주세요.
+                    </p>
+                    <div class="MakerRegistrationForm_makerType__3g7_j">
+                        <button class="Button_button__2DC9w Button_primary__3p1fP Button_lg__3z3Wr MakerRegistrationForm_makerTypeButton__1uDLB" type="button">
+                            <span>
+                                <span class="Button_children__3kyD_">사업자로 만들기</span>
+                            </span>
+                        </button>
+                        <button class="Button_button__2DC9w Button_lg__3z3Wr MakerRegistrationForm_makerTypeButton__1uDLB" type="button">    
+                            <span>
+                                <span class="Button_children__3kyD_">개인으로 만들기</span>
+                            </span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- 기본정보 입력하기 -->
+                <section class="MakerRegistrationForm_section__2UoGG">
+                    <h3 class="MakerRegistrationForm_sectionTitle__1_NeS">기본 정보 입력하기</h3>
+                    <p class="MakerRegistrationForm_sectionDescription__2-b0J">
+                        사업자 등록 번호만 입력하면
+                        <br>
+                        편하게 기본 정보를 불러올 수 있어요
+                    </p>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>사업자등록번호</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input name="businessRegNumber" placeholder="사업자등록번호 10자리 입력" maxlength="12" autocomplete="new-password" value>
+                            </div>
+                            <em class="waffle helper">10자리 숫자를 (-)없이 정확히 입력하세요.</em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>상호/법인명</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input placeholder="사업자등록증에 표시된 상호/법인명 입력" autocomplete="new-password" disabled value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>설립일</label>
+                        </div>
+                        <div class="action-input">
+                            <div class="input-container">
+                                <div class="waffle input">
+                                    <input name="businessOpenDate" placeholder="ex.20190101" maxlength="8" autocomplete="new-password" disabled value>
+                                </div>
+                                <em class="waffle helper"></em>
+                            </div>
+                            <button class="waffle button CompanyOpenDateFiled_calenderButton__2LJig icon" disabled type="button">
+                                <svg viewBox="0 0 32 32">
+                                    <path d="M24 4V1.6h-1.6V4H9.6V1.6H8V4H3.2v25.6h25.6V4zm3.2 24H4.8V5.6h22.4z"></path>
+                                    <path d="M8 8.8h3.2V12H8zm6.4 3.2h3.2V8.8h-3.2zm6.4 0H24V8.8h-3.2zM8 18.4h3.2v-3.2H8zm6.4 0h3.2v-3.2h-3.2zm6.4 0H24v-3.2h-3.2zM8 24.8h3.2v-3.2H8zm6.4 0h3.2v-3.2h-3.2zm6.4 0H24v-3.2h-3.2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>기업형태</label>
+                        </div>
+                        <div class="waffle select disabled">
+                            <div class="value placeholder" aria-hidden="true">
+                                선택
+                                <svg viewBox="0 0 32 32">
+                                    <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
+                                </svg>
+                            </div>
+                            <select name="corporationShape">
+                                <option value>선택</option>
+                                <option value="CORP">주식회사</option>
+                                <option value="UNLIMITED">합명회사</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>업종</label>
+                        </div>
+                        <div class="waffle select disabled">
+                            <div class="value placeholder" aria-hidden="true">
+                                선택
+                                <svg viewBox="0 0 32 32">
+                                    <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
+                                </svg>
+                            </div>
+                            <select name="corporationShape">
+                                <option value>선택</option>
+                                <option value="CORP">주식회사</option>
+                                <option value="UNLIMITED">합명회사</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>대표자</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input placeholder="대표자명 입력" autocomplete="new-password" disabled value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>소재지</label>
+                        </div>
+                        <div class="action-input">
+                            <div class="input-container">
+                                <div class="waffle input CompanyHeadOfficeField_readOnlyInput__3mq8h">
+                                    <input name="headOfficeLocation1" placeholder="주소검색" autocomplete="new-password" disabled readonly value>
+                                </div>
+                                <em class="waffle helper"></em>
+                            </div>
+                            <button class="waffle button CompanyHeadOfficeField_searchButton__SCSiA primary" disabled type="button">주소검색</button>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input placeholder="상세주소" autocomplete="new-password" disabled value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                        <input name="headOfficePostCode" style="display: none;">
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>대표 번호</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input name="phoneNumber" type="tel" placeholder="대표 번호 입력" maxlength="20" autocomplete="new-password" disabled value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>대표 이메일</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input name="email" type="email" placeholder="대표 이메일 입력" autocomplete="new-password" disabled value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>기업규모 (선택)</label>
+                        </div>
+                        <div class="waffle select disabled">
+                            <div class="value placeholder" aria-hidden="true">
+                                선택
+                                <svg viewBox="0 0 32 32">
+                                    <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
+                                </svg>
+                            </div>
+                            <select name="corporationScale">
+                                <option value>선택</option>
+                                <option value="CORP">주식회사</option>
+                                <option value="UNLIMITED">합명회사</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>임∙직원수 (선택)</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input name="workforce" placeholder="임∙직원수 입력" maxlength="10" autocomplete="new-password" disabled value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>홈페이지 (선택)</label>
+                        </div>
+                        <div class="action-input">
+                            <div class="input-container">
+                                <div class="waffle input">
+                                    <input disabled name="homepageUrl" placeholder="URL 입력" autocomplete="new-password" value>
+                                </div>
+                                <em class="waffle helper"></em>
+                            </div>
+                            <button class="waffle button CompanyHomepageField_linkButton__DcWSw icon" disabled type="button">
+                                <svg viewBox="0 0 40 40">
+                                    <path d="M33.6 5.2a9 9 0 010 12.7L29 22.5l-.6.5a11 11 0 00-.4-2.4l4.1-4.1a7 7 0 00-9.9-9.9l-4.6 4.6a7 7 0 004.7 11.9 5 5 0 01-.2 2 8.9 8.9 0 01-7.8-5.4 9.1 9.1 0 01-.3-6.5 8.9 8.9 0 012.1-3.4l4.6-4.6a9 9 0 0112.9 0zm-15.7 9.5a5 5 0 00-.2 2 6.9 6.9 0 016.3 4.2 7 7 0 01-1.5 7.7l-5.7 5.7a7 7 0 01-9.9-9.9l5.2-5.2a11 11 0 01-.4-2.4l-.6.5-5.6 5.6a9 9 0 1012.7 12.8l5.7-5.7a8.9 8.9 0 002.1-3.4 9.1 9.1 0 00-.3-6.5 8.9 8.9 0 00-7.8-5.4z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 관리자 요청하기 레이아웃 -->
+                <section class="MakerRegistrationForm_section__2UoGG">
+                    <h3 class="MakerRegistrationForm_sectionTitle__1_NeS">관리자 요청하기</h3>
+                    <p class="MakerRegistrationForm_sectionDescription__2-b0J">
+                        우리 기업 페이지를 더 멋지게 만들고
+                        <br>
+                        매력적인 투자 네트워킹을 해보세요.
+                    </p>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>이름</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input name="username" placeholder="메이커명 입력" maxlength="40" value readonly disabled>
+                            </div>
+                            <em class="waffle helper">
+                                회원 계정의 닉네임 또는 실명정보를 불러옵니다.
+                                <br>
+                                수정은 
+                                <a href="https://www.wadiz.kr/web/waccount/wAccountUpdateBasicInfo">회원정보설정</a>
+                                에서 진행하세요.
+                            </em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>직급</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input name="username" placeholder="ex) 사원, 팀장, 실장, 대표" autocomplete="new-password" value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>주요역할</label>
+                        </div>
+                        <div class="input-container">
+                            <div class="waffle input">
+                                <input name="username" placeholder="ex) 마케팅 총괄" autocomplete="new-password" value>
+                            </div>
+                            <em class="waffle helper"></em>
+                        </div>
+                    </div>
+                    <div class="waffle field">
+                        <div class="waffle label">
+                            <label>휴대폰 번호</label>
+                        </div>
+                        <div class="MobileField_container__2bV0z">
+                            <div class="input-container">
+                                <div class="waffle input MobileField_readOnlyInput__3YrjI">
+                                    <input name="mobileFieldDoNotVerify" placeholder="휴대폰 번호" maxlength="13" autocomplete="new-password">
+                                </div>
+                                <em class="waffle helper">인증 받을 전화 번호를 정확히 입력하세요</em>
+                            </div>
+                            <button class="Button_button__2DC9w Button_disabled__1nMZF MobileField_searchButton__6WhzJ" type="button" disabled>
+                                <span>
+                                    <span class="Button_children__3kyD_">인증하기</span>
+                                </span>
+                            </button>
+                        </div>
+                        <em class="HelperMessage_helperMessage__2Hx5X MobileField_helperMessage__YDEHg">휴대폰 번호로 기업 페이지와 관련된 주요 메시지를 보내드립니다. 해당 휴대폰 번호는 계정과 연결되어 있습니다.</em>
+                        <input type="hidden" name="isMobileVerified" value="false">
+                    </div>
+                    <div>
+                        <div class="waffle field">
+                            <div class="waffle label">
+                                <label>사업자등록증</label>
+                            </div>
+                            <button class="Button_button__2DC9w CompanyRegistrationFile_button__cGv9S" type="button">
+                                <span>
+                                    <span class="Button_children__3kyD_">
+                                        <input class="CompanyRegistrationFile_inputFile__5G2Kw" type="file" name="registrationFile" accept="application/pdf,image/jpg,image/jpeg,image/png">
+                                        등록
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                        <p class="CompanyRegistrationFile_info__nyaKr">10MB 이내 pdf,jpeg,png 파일을 등록하세요.</p>
+                    </div>
+                </section>
+
+                <!-- 체크박스 레이아웃 -->
+                <section class="MakerRegistrationForm_section__2UoGG">
+                    <div class="AgreementCheckbox_container__yFkWe">
+                        <div class="AgreementCheckbox_checkboxWrapper__3J4e7">
+                            <label class="Checkbox_checkbox__3047k Checkbox_sm__N2Hzc Checkbox_labeled__Ayu9G AgreementCheckbox_checkbox__1YQY2">
+                                <input name="makerPagePrivacy" type="checkbox" class="Checkbox_input__XNKrE">
+                                <span class="Checkbox_icon__1KTiH">
+                                    <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__1Tc_k Checkbox_removeIcon__2HQZw" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
+                                    </svg>
+                                    <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__1Tc_k Checkbox_checkIcon__zOAt0" aria-hidden="true">
+                                        <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
+                                    </svg>
+                                </span>
+                                <span class="Checkbox_content__2pdlR">
+                                    <span>메이커 페이지 서비스 약관 동의 (필수)</span>
+                                </span>
+                            </label>
+                            <button class="AgreementCheckbox_button__3d8Jl" type="button" title="약관확인">
+                                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__1Tc_k" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="AgreementCheckbox_container__yFkWe">
+                        <div class="AgreementCheckbox_checkboxWrapper__3J4e7">
+                            <label class="Checkbox_checkbox__3047k Checkbox_sm__N2Hzc Checkbox_labeled__Ayu9G AgreementCheckbox_checkbox__1YQY2">
+                                <input name="makerPagePrivacy" type="checkbox" class="Checkbox_input__XNKrE">
+                                <span class="Checkbox_icon__1KTiH">
+                                    <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__1Tc_k Checkbox_removeIcon__2HQZw" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
+                                    </svg>
+                                    <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__1Tc_k Checkbox_checkIcon__zOAt0" aria-hidden="true">
+                                        <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
+                                    </svg>
+                                </span>
+                                <span class="Checkbox_content__2pdlR">
+                                    <span>개인정보 수집 및 이용 동의 (필수)</span>
+                                </span>
+                            </label>
+                            <button class="AgreementCheckbox_button__3d8Jl" type="button" title="약관확인">
+                                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__1Tc_k" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 버튼 레이아웃 -->
+                <button class="Button_button__2DC9w Button_primary__3p1fP Button_contained__1UNgG Button_xl__fi4Pu Button_disabled__1nMZF MakerRegistrationForm_registButton__2QT1N" type="button" disabled>
+                    <span>
+                        <span class="Button_children__3kyD_">등록하기</span>
+                    </span>
+                </button>
+                <p class="MakerRegistrationForm_notice__xeA-N">* 잘못된 정보를 등록하시면 요청이 반려될 수 있습니다.</p>
+            </form>
+        </main>
+
+        <!-- 푸터 레이아웃-->
+        <footer class="footer" th:replace="~{/header-footer/main-footer :: .main-footer}"></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleag.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.wadiz.kr/assets/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/mypage/setting-alarm.css">
+    <link rel="stylesheet" href="/css/header-footer/login-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <title>알림 설정</title>
+</head>
+<body>
+    <div id="page-container">
+        <main id="main-app">
+            <!-- 헤더 -->
+            <header class="header" th:replace="~{/header-footer/login-header :: .login-header}"></header>
+
+            <!-- body -->
+            <div class="MainWrapper_content__GZkTa">
+                <div class="MarketingNotificationSettingsPage_container__2chD7">
+                    <div class="MarketingNotificationSettingsHeader_header__2sz-C">
+                        <h1 class="MarketingNotificationSettingsHeader_title__tqZVG">알림 설정</h1>
+                    </div>
+                    
+                    <!-- 알림 동의 레이아웃 -->
+                    <div class="MarketingNotificationSettingsList_container__24St9">
+                        <h2 class="MarketingNotificationSettingsList_title__3sp3-">
+                            <div class="MarketingNotificationSettingsItem_row__2vdY9">
+                                <label for="funding_allow">회원・서비스 이벤트 혜택 알림 동의</label>
+                                <div class="MarketingNotificationSettingsToggle_toggle__2y1ZQ">
+                                    <label for="funding_allow" class="MarketingNotificationSettingsToggle_switch__3huq- MarketingNotificationSettingsToggle_active__3F6b3"></label>
+                                    <input type="checkbox" id="funding_allow" name="funding_allow" class="MarketingNotificationSettingsToggle_input__3BGIj" checked>
+                                </div>
+                            </div>
+                        </h2>
+                        <div class="MarketingNotificationSettingsList_description__o6mO_">다양한 혜택, 소식을 알려드려요.</div>
+                        <ul>
+                            <li>
+                                <div class="MarketingNotificationSettingsItem_row__2vdY9">
+                                    <label for="funding_EMAIL">이메일</label>
+                                    <div class="MarketingNotificationSettingsToggle_toggle__2y1ZQ">
+                                        <label for="funding_EMAIL" class="MarketingNotificationSettingsToggle_switch__3huq- MarketingNotificationSettingsToggle_active__3F6b3"></label>
+                                        <input type="checkbox" id="funding_EMAIL" name="funding_EMAIL" class="MarketingNotificationSettingsToggle_input__3BGIj" checked>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="MarketingNotificationSettingsItem_row__2vdY9">
+                                    <label for="funding_EMAIL">SMS</label>
+                                    <div class="MarketingNotificationSettingsToggle_toggle__2y1ZQ">
+                                        <label for="funding_EMAIL" class="MarketingNotificationSettingsToggle_switch__3huq-"></label>
+                                        <input type="checkbox" id="funding_EMAIL" name="funding_EMAIL" class="MarketingNotificationSettingsToggle_input__3BGIj">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div aria-atomic="true" aria-live="assertive" class="MarketingNotificationSettingsLoading_loading__qM6P9 MarketingNotificationSettingsList_loading__3zZJP">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="MarketingNotificationSettingsLoading_circle__hypWY" width="60" height="60" viewBox="0 0 60 60">
+                                <circle class="MarketingNotificationSettingsLoading_stroke__3dSeI" cx="50%" cy="50%" r="16"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="MarketingNotificationSettingsContainer_lightCaption__1ZttV">이벤트, 혜택 등에 대한 정보를 이메일, SMS, 앱 알림(앱 사용 시)으로 받아 볼 수 있습니다. (동의 철회시까지)</div>
+
+                    <!-- 활동 알림 레이아웃 -->
+                    <div class="MerketingNotificationSettingsSection_container__2Oagz">
+                        <h1 class="MerketingNotificationSettingsSection_title__K8Lyj">활동 알림</h1>
+                        <div class="MarketingNotificationSettingsLink_row__13ua4">
+                            새소식 알림 설정
+                            <span class="MarketingNotificationSettingsLink_arrowIcon__UAMvX">
+                                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="MarketingNotificationSettingsLink_row__13ua4">
+                            팔로잉 메이커 알림 설정
+                            <span class="MarketingNotificationSettingsLink_arrowIcon__UAMvX" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 찾기 알림 레이아웃 -->
+                    <div class="MerketingNotificationSettingsSection_container__2Oagz">
+                        <h1 class="MerketingNotificationSettingsSection_title__K8Lyj">와디즈 투자, 스타트업 찾기 알림</h1>
+                        <div class="MarketingNotificationSettingsLink_row__13ua4">
+                            투자, 스타트업 이벤트 혜택 알림
+                            <span class="MarketingNotificationSettingsLink_arrowIcon__UAMvX">
+                                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="MarketingNotificationSettingsContainer_bottomGuide__3RJuv">수신거부 설정이 시스템에 실시간 반영되지 않은 경우 알림이 발송 될 수 있습니다. (1시간 내 반영)</div>
+                </div>
+                <!-- 푸터 레이아웃-->
+                <footer class="footer" th:replace="~{/header-footer/main-footer :: .main-footer}"></footer>
+            </div>
+            <div class="FloatingButtons_container__2E5Fl"></div>
+        </main>
+    </div>
+</body>
+</html>

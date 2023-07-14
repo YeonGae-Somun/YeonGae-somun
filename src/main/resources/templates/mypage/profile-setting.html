@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleag.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.wadiz.kr/assets/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/mypage/profile-setting.css">
+    <link rel="stylesheet" href="/css/header-footer/login-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <title>프로필 정보 설정: 와디즈 my 정보 설정</title>
+</head>
+<body>
+    <div id="page-container">
+        <!-- 헤더 -->
+        <header class="header" th:replace="~{/header-footer/login-header :: .login-header}"></header>
+
+        <!-- body -->
+        <div id="waccountWrap">
+            <div class="waccount-wrap">
+                <div id="waccountContainer">
+                    <h3>프로필 정보 설정</h3>
+                    <div id="tabContent1" class="tab-content">
+                        <h5>프로필 사진</h5>
+                        <div class="profileimg-wrap">
+                            <button type="button" id="resultProfileImg" class="profileimg" onclick="$('#uploadProfileImg').click();">
+                                <em style="background-image:url(https://static.wadiz.kr/assets/icon/profile-icon-5.png)"></em>
+                            </button>
+                            <p class="setting-profileimg">
+                                <button type="button" onclick="$('#uploadProfileImg').click()" id="btn_updatePhoto">
+                                    <span>바꾸기</span>
+                                </button>
+                                <button type="button" onclick="deletePhoto()" id="btn_deletePhoto">삭제</button>
+                            </p>
+                        </div>
+                        <h5>관심사</h5>
+                        <p class="sub-text">최소 5개 이상 관심사를 선택해주세요.</p>
+                        
+                        <!-- 체크박스 -->
+                        <div class="check-list-wrap">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1"><!--
+                                        --><i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1">
+                                        <i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1">
+                                        <i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1">
+                                        <i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1">
+                                        <i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1">
+                                        <i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1">
+                                        <i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                    <label class="input-check" for="interest_1">
+                                        <i class="icon-radio-button-unchecked unchecked"></i>
+                                        <i class="icon-check-circle checked"></i>
+                                        교육∙키즈
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <h5>회사 / 직책</h5>
+                        <ul class="input-div2">
+                            <li>
+                                <input type="text" class="input-text" maxlength="50" id="belongsTo" placeholder="회사" value>
+                            </li>
+                            <li>
+                                <input type="text" class="input-text" maxlength="50" id="position" placeholder="직책" value>
+                            </li>
+                        </ul>
+                        <h5>학교 / 전공</h5>
+                        <ul class="input-div2">
+                            <li>
+                                <input type="text" class="input-text" maxlength="50" id="belongsTo" placeholder="학교" value>
+                            </li>
+                            <li>
+                                <input type="text" class="input-text" maxlength="50" id="position" placeholder="전공" value>
+                            </li>
+                        </ul>
+                        <h5>간단한 한 마디로 나를 소개해주세요</h5>
+                        <div class="textarea-wrap">
+                            <textarea id="introduceme" maxlength="80"></textarea>
+                        </div>
+
+                        <!-- 버튼 레이아웃 -->
+                        <div class="btn-bottom">
+                            <ul class="btn-div2">
+                                <li>
+                                    <button type="button" class="wz button gray btn-darkgray" onclick="cancelModify()">취소</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="wz button primary btn-mint" onclick="modify()">확인</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 레이아웃-->
+        <footer class="footer" th:replace="~{/header-footer/main-footer :: .main-footer}"></footer>
+    </div>
+</body>
+</html>

@@ -6,17 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/company/*")
-@RequiredArgsConstructor
-public class companyController {
+@RequestMapping("/enterprise/*")
+public class EnterpriseController {
 
-    @GetMapping("company-intro")
-    public void companyIntro(){
-
-    }
-
-    @GetMapping("dayExperience")
-    public void dayExperience(){
+    @GetMapping("intro")
+    public void goToIntro() {
 
     }
 }

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleag.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.wadiz.kr/assets/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/mypage/maker.css">
+    <link rel="stylesheet" href="/css/header-footer/login-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <title>와디즈 마이 와디즈</title>
+</head>
+<body>
+    <div id="page-container">
+        <main id="main-app">
+            <!-- 헤더 -->
+            <header class="header" th:replace="~{/header-footer/login-header :: .login-header}"></header>
+
+            <!-- body -->
+            <div class="MainWrapper_content__GZkTa">
+                <section class="MyWadizPage_myWadizPage__GLuZU">
+                    <div class="MyWadizPage_profileBackground__3pq-5" aria-hidden="true"></div>
+                    <h2 class="BlindText_textHidden__ovQb4">마이와디즈</h2>
+                    <div class="MyWadizPage_inner__3-l11">
+                        <div class="MyWadizPage_popperBox__GoAia">
+
+                            <!-- 서포터 메이커 헤더 레이아웃 -->
+                            <div class="MyWadizHeader_wadizHeader__385kM">
+                                <div class="MyWadizUserTypeSwitch_container__lHAHv MyWadizUserTypeSwitch_isMaker__13Nf1 MyWadizHeader_switch__2_G0w" role="tablist">
+                                    <a role="tab" id="myWadizTab_supporter" aria-controls="myWadizPanel_supporter" aria-selected="false" aria-label="supporter" class="MyWadizUserTypeSwitch_button__dkJF1 MyWadizUserTypeSwitch_supporter__2J4jt" href="https://www.wadiz.kr/web/mywadiz/supporter"></a>
+                                    <a role="tab" id="myWadizPanel_maker" aria-controls="myWadizPanel_maker" aria-selected="true" aria-label="maker" class="MyWadizUserTypeSwitch_button__dkJF1 MyWadizUserTypeSwitch_maker__3FLkc MyWadizUserTypeSwitch_active__1FZP6" href="https://www.wadiz.kr/web/mywadiz/maker"></a>
+                                </div>
+                            </div>
+
+                            <!-- 서포터 메이커 밑에 글씨 -->
+                            <div class="PopperRenew_container__1PprA PopperRenew_hasOutsideChildren__3F_zW">
+                                <div class="PopperRenew_popperContainer__2aDcn MyWadizPage_popperContent__2acU0 PopperRenew_bottom-right__3C1jr PopperRenew_fixed__295ce">
+                                    <div class="PopperRenew_popperBox__14vki PopperRenew_whiteMode__1YNfF">
+                                        <div class="PopperRenew_arrow__1XC5N" aria-hidden="true"></div>
+                                        <div class="PopperRenew_popperContent__1wOqH" role="tooltip" id="Popper_12">
+                                            서포터 ↔ 메이커 모드를 전환해서
+                                            <br>
+                                            사용해 보세요
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MyWadizPage_contentsWrapper__1JOIj">
+                            <div class="MyWadizMaker_makerMode__2pZ7W" role="tabpanel" id="myWadizPanel_maker" aria-labelledby="myWadizTab_maker">
+                                
+                                <!-- 프로파일 레이아웃 -->
+                                <div class="MyWadizMakerProfile_profileContainer__Yinrm">
+                                    <div class="MyWadizMakerProfile_baseInfoSection__2rOPQ">
+                                        <div class="MyWadizMakerProfile_profileImage__2wvP5">
+                                            <button class="MyWadizMakerProfile_detailProfile__19qEg MyWadizMakerProfile_noLogo__18j9M" aria-label="메이커 등록하기"></button>
+                                        </div>
+                                        <div class="MyWadizMakerProfile_profileUser__N-ZrV">
+                                            <button class="MyWadizMakerProfile_makerName__KW3xX" aria-label="메이커 정보 수정하기">
+                                                <b class="MyWadizMakerProfile_text__1dNB_">
+                                                    <span>와디즈 메이커님</span>
+                                                </b>
+                                            </button>
+                                            <button class="MyWadizMakerProfile_myFollower__3fedO">
+                                                <span>내 팔로워</span><!--
+                                                --><span class="MyWadizMakerProfile_value__3ilcV">0</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button class="MyWadizMakerPageCompletion_container__3gU4n">
+                                        <strong class="BlindText_textHidden__ovQb4">페이지 만들기</strong>
+                                        <div class="MyWadizMakerPageCompletion_content__3gPOJ">
+                                            <div class="MyWadizMakerPageCompletion_header__3Xpyp">
+                                                <div class="MyWadizMakerPageCompletion_titleWrapper__19DoT">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNyAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiByeD0iNCIgZmlsbD0iI0NERDNEOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjkzNCkiLz4KICAgICAgICA8ZyBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cGF0aCBkPSJNOC45MzQgOGExLjk5NSAxLjk5NSAwIDAgMS0yLTIuMDI4YzAtMS4wNzcuODk4LTEuOTcyIDItMS45NzIgMS4xMDIgMCAyIC44OTUgMiAxLjk3MiAwIDEuMTYtLjg5OCAyLjAzNS0yIDIuMDI4ek0xMi40NzUgMTJINS4zOTNjLS4zMTYgMC0uNDU5LS4yMDEtLjQ1OS0uNDg0IDAtLjgzNCAxLjI3OC0zLjAxNiA0LTMuMDE2czQgMi4xODIgNCAzLjAxNmMwIC4yODMtLjE0My40ODQtLjQ1OS40ODR6Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt class="MyWadizMakerPageCompletion_profileIcon__1MQHJ" aria-hidden="true">
+                                                    <span class="MyWadizMakerPageCompletion_title__3gokY">메이커 페이지</span>
+                                                </div>
+                                                <span class="Badge_container__9G9PS Badge_visible__3LNXv">
+                                                    <span class="Badge_badge__ovUKI Badge_label__2Rft2 Badge_sm__1OBNp Badge_secondary__UV-TU Badge_circular__imzqr Badge_outlined__3DYIX">없음</span>
+                                                </span>
+                                            </div>
+                                            <p class="MyWadizMakerPageCompletion_description__14AJK">메이커 페이지 만들고 팔로워를 늘려보세요</p>
+                                        </div>
+                                        <div class="MyWadizMakerPageCompletion_button__33swQ">
+                                            <span class="MyWadizMakerPageCompletion_text__2n-W_">페이지 만들기</span>
+                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq MyWadizMakerPageCompletion_arrowIcon___ti83" aria-hidden="true">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="MyWadizMakerProfile_setting__1hVfx">
+                                        <p class="MyWadizLoginMode_loginMode__1o8tN">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path d="M0.8 0.645H15.600000000000001V15.355H0.8z"></path>
+                                                        <path fill="#4285F4" d="M13.471 6.598c.085.388.129.79.129 1.202 0 .204-.01.405-.032.603-.158 1.478-.89 2.79-1.976 3.727L9.65 10.575c.568-.393 1.01-.944 1.257-1.587h-3.27v-2.39h5.834z"></path>
+                                                        <path fill="#34A853" d="M7.4 11.61c.82 0 1.573-.29 2.161-.773l1.89 1.515C10.404 13.372 8.975 14 7.4 14c-2.35 0-4.373-1.397-5.284-3.406L4.1 9.061c.381 1.466 1.714 2.549 3.3 2.549z"></path>
+                                                        <path fill="#FBBC05" d="M2.385 5.187l1.734 1.58c-.188.435-.294.92-.294 1.433 0 .408.067.799.19 1.161l-1.773 1.585c-.177-.354-.321-.73-.428-1.124l-.206-1.95c.051-.98.329-1.894.777-2.685z"></path>
+                                                        <path fill="#EA4335" d="M7.6 2c1.662 0 3.166.653 4.253 1.708L10.11 5.405C9.47 4.778 8.582 4.39 7.6 4.39c-1.66 0-3.051 1.108-3.427 2.6L2.126 5.421C3.066 3.404 5.163 2 7.6 2z"></path>
+                                                    </g>
+                                                </svg>
+                                            </span><!--
+                                            -->구글로 로그인 중
+                                        </p>
+                                        <button class="Button_button__1HNjI Button_md__2Tyci Button_circular__3BLWf Button_block__3-IpL" type="button">
+                                            <span>
+                                                <span class="Button_children__lqBGI">로그아웃</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="MyWadizMaker_contents__1B20N">
+
+                                    <!-- 펀딩 프리오더 레이아웃 -->
+                                    <div class="MyWadizSection_section__1ykXL">
+                                        <div>
+                                            <div class="Tabs_tabsWrapper__u9leV">
+                                                <ul class="Tabs_tabs__TdwOl MyWadizMyProject_tab__6XUFB">
+                                                    <li>
+                                                        <button type="button" class="Tab_tab__1n-pz Tab_first__2rF3w Tab_active__1ZWPp">
+                                                            <span>
+                                                                펀딩·프리오더
+                                                            </span>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="Tab_tab__1n-pz">
+                                                            <span>스토어</span>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="Tab_tab__1n-pz">
+                                                            <span>투자</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- 펀딩프리오더 밑에 and 문의관리 레이아웃-->
+                                            <div class="TabPanels_tabPanels__3fp_a">
+                                                
+                                                <!-- 펀딩프리오더 밑에 레이아웃 -->
+                                                <div class="MyWadizMyProject_projectListContainer__IPOrA MyWadizMyProject_empty__v4-Fx">
+                                                    <div class="MyWadizMyProject_empty__v4-Fx">
+                                                        <div class="MyWadizMyProject_icon__16i67">
+                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill="none" d="M0 0h40v40H0z"></path>
+                                                                <path d="M28.83 11a4.59 4.59 0 0 0 1.78-2 4 4 0 0 0 0-3.33 3.62 3.62 0 0 0-2.22-2c-1.51-.46-3.1 0-4.7 1.37A17.77 17.77 0 0 0 20 9.85a17.77 17.77 0 0 0-3.73-4.79c-1.6-1.38-3.19-1.84-4.7-1.37a3.6 3.6 0 0 0-2.22 2A4 4 0 0 0 9.39 9a4.59 4.59 0 0 0 1.78 2H3.3v25.15h2.4V13.38h28.6v22.77h2.4V11zM25 6.57c1.42-1.21 2.28-1.13 2.82-1a1.68 1.68 0 0 1 1 .91 2 2 0 0 1 0 1.68c-.63 1.41-3.26 2.35-7 2.58A16.06 16.06 0 0 1 25 6.57zm-13.83-.06a1.68 1.68 0 0 1 1-.91 2 2 0 0 1 .59-.09A3.56 3.56 0 0 1 15 6.57a16.06 16.06 0 0 1 3.25 4.2c-3.75-.23-6.37-1.17-7-2.58a2 2 0 0 1-.08-1.68z"></path>
+                                                                <path d="M18.8 16.57h2.4v19.4h-2.4z"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <p class="MyWadizMyProject_title__16WYB">
+                                                                새로운 도전을
+                                                                <br>
+                                                                시작해 보세요
+                                                            </p>
+                                                            <p class="MyWadizMyProject_discription__1ncqm">개인 후원부터 제품・콘텐츠・서비스 출시, 성장까지 와디즈가 함께할게요</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="https://www.wadiz.kr/web/waccount/wAccountLogin?returnURL=%2Fstudio%2Fcorporation%2FrewardRegistration" class="Button_button__1HNjI Button_primary__2kq3x Button_contained__1Lx6c Button_lg__37Mrj Button_block__3-IpL MyWadizMyProject_button__1lTYg">
+                                                        <span>
+                                                            <span class="Button_children__lqBGI">프로젝트 만들기</span>
+                                                        </span>
+                                                    </a>
+                                                    <div class="MyWadizMyProject_infoBox__13ijv">
+                                                        <a class="MyWadizMyProject_info__2ltiR" href="https://www.wadiz.kr/web/wterms/funding_plan_policy">
+                                                            요금제 안내 
+                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill="none" d="M0 0h40v40H0z"></path>
+                                                                <path d="M20 39a19 19 0 1 1 19-19 19.06 19.06 0 0 1-19 19zm0-36a17 17 0 1 0 17 17A17 17 0 0 0 20 3z"></path>
+                                                                <path d="M20 10.4a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 1 0 0-3.6zm-1.04 6.43h2.08v13h-2.08z"></path>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 문의 관리 레이아웃 -->
+                                                <div class="MyWadizSection_section__1ykXL">
+                                                    <h4 class="MyWadizSection_title__dWRmW">문의 관리</h4>
+                                                    <div>
+                                                        <ul>
+                                                            <li class="MyWadizMenu_menu__3TRMx">
+                                                                <a href="https://www.wadiz.kr/web/board/personalMessage/inbox">
+                                                                    <span class="MyWadizMenu_icon__pwW81">
+                                                                        <svg viewBox="0 0 39.98 39.98" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                            <g>
+                                                                                <path fill="none" d="M0 0h39.98v39.98H0z"></path>
+                                                                                <path d="M36.89 6.66H3.61a2 2 0 0 0-1.94 1.95v23.26a1.94 1.94 0 0 0 1.94 1.95h33.28a2 2 0 0 0 2-1.95V8.61a2 2 0 0 0-2-1.95zM3.67 31.87V8.66l33.17-.05v23.21z"></path>
+                                                                                <path d="M21.15 22a1.33 1.33 0 0 1-1.8 0L8.07 11.69l-1.34 1.48L18 23.46a3.3 3.3 0 0 0 4.49 0l11.13-10.15-1.35-1.48z"></path>
+                                                                            </g>
+                                                                        </svg>
+                                                                    </span><!--
+                                                                    --><span class="MyWadizMenu_text__35T0C">서포터 문의</span>
+                                                                    <span class="MyWadizMenu_arrowIcon__2tZ9Y" aria-hidden="true">
+                                                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 광고 레이아웃 -->
+                                    <div class="MyWadizEventBanner_pare__24Txb">
+                                        <div class="banner_eventBanner__cLcyF MyWadizEventBanner_banner__1VF2p MyWadizEventBanner_banner__1VF2p" style="background-color: rgb(165, 229, 230);">
+                                            <div class="banner_adBadge__2iyux">AD</div>
+                                            <a href="https://www.wadiz.kr/web/campaign/detail/216577?acid=10032964&_refer_section_st=ME4_0" class="banner_link__11Ogl">
+                                                <div class="banner_inner__1Pn-n">
+                                                    <div class="banner_contents__1rLTm" style="background-image: url('https://cdn1.wadiz.kr/images/20230629/1688003363414.png/wadiz/optimize');">
+                                                        <div class="banner_text__ROckl">
+                                                            <p>쓰고 맛없는 술 말고</p>
+                                                            <strong>달콤한 탄산 톡톡 체리술</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="banner_eventBanner__cLcyF MyWadizEventBanner_banner__1VF2p MyWadizEventBanner_banner__1VF2p" style="background-color: rgb(165, 229, 230);">
+                                            <a href="https://ad.wadiz.kr/?_refer_section_st=MY3_0/" class="banner_link__11Ogl">
+                                                <div class="banner_inner__1Pn-n">
+                                                    <div class="banner_contents__1rLTm" style="background-image: url('https://static.wadiz.kr/main/media/group-23@3x.1afee7f0.png');">
+                                                        <div class="banner_text__ROckl">
+                                                            <p>와디즈 광고센터에서</p>
+                                                            <strong>프로젝트 홍보를 시작하세요!</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- 메이커 팁 레이아웃 -->
+                                    <div class="MyWadizSection_section__1ykXL">
+                                        <h4 class="MyWadizSection_title__dWRmW">메이커 팁</h4>
+                                        <div>
+                                            <ul>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://www.wadiz.kr/web/wnewsletter/main">
+                                                        <span class="MyWadizMenu_icon__pwW81">
+                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <g>
+                                                                    <path d="M23.49 13.11h6.19v1.98h-6.19zm0 6.53h6.19v1.98h-6.19zm-13.18 7.07h19.37v1.98H10.31zm2.6-5.57l1.8-5.37 1.74 5.37h1.97l2.59-7.93h-1.75l-1.85 5.61-1.81-5.61h-1.7l-1.86 5.57-1.79-5.57h-1.9l2.6 7.93h1.96z"></path>
+                                                                    <path d="M35.19 3.59a2 2 0 0 0-2 .11l-3.09 2-3.93-2.45a2 2 0 0 0-2.21 0L20 5.73l-3.93-2.48a2 2 0 0 0-2.2 0l-4 2.5-3.04-1.94a2 2 0 0 0-3.09 1.67v26.64a5 5 0 0 0 5 5h22.55a5 5 0 0 0 5-5V5.36a2 2 0 0 0-1.1-1.77zm-1.07 28.53A2.83 2.83 0 0 1 31.29 35H8.71a2.83 2.83 0 0 1-2.83-2.83V5.74l2.9 1.83a2 2 0 0 0 2.2 0l4-2.5 3.91 2.49a2 2 0 0 0 2.2 0l4-2.5L29 7.56a2 2 0 0 0 2.21 0l3-1.95z"></path>
+                                                                    <path fill="none" d="M0 0h40v40H0z"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">메이커 뉴스레터</span>
+                                                        <span class="MyWadizMenu_hint__m4WF2">구독 신청하기</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://www.wadiz.kr/web/wnewsletter/main">
+                                                        <span class="MyWadizMenu_icon__pwW81">
+                                                            <svg viewBox="0 0 130 130" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <g>
+                                                                    <path d="M106.7 15.69L91.27 31.12l-4.08 4.08-62.03 62.03v23.3h23.3l62.03-62.03 4.08-4.08L130 38.98l-23.3-23.29zM46.13 114.7H30.99V99.56l60.28-60.28 15.14 15.14-60.28 60.28zm64.36-64.36L95.35 35.2l11.36-11.36 15.14 15.14-11.36 11.36zm7.75 52.53v17.3h-17.3v-17.3h17.3m5-5h-27.3v27.3h27.3v-27.3zM15.21 46.18c5.63 0 10.21 4.58 10.21 10.21S20.84 66.6 15.21 66.6 5 62.03 5 56.4s4.58-10.22 10.21-10.22m0-5C6.81 41.18 0 47.99 0 56.4s6.81 15.21 15.21 15.21S30.43 64.8 30.43 56.4s-6.81-15.22-15.22-15.22zM53.08 10l7.4 12.81h-14.8L53.08 10m0-10L37.02 27.81h32.11L53.08 0z"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">콘텐츠 제작 서비스</span>
+                                                        <span class="MyWadizMenu_hint__m4WF2">서비스 구경하기</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://www.wadiz.kr/web/wnewsletter/main">
+                                                        <span class="MyWadizMenu_icon__pwW81">
+                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <g>
+                                                                    <path d="M7.46 27.17a4 4 0 1 0-3.95-4 4 4 0 0 0 3.95 4zm0-6a2 2 0 1 1-2 2 2.05 2.05 0 0 1 2-2zm0 7.65a6.6 6.6 0 0 0-6.59 6.6v2.48h1.9v-2.48a4.69 4.69 0 1 1 9.38 0V38h1.9v-2.58a6.6 6.6 0 0 0-6.59-6.6zm31.67 6.6a6.59 6.59 0 1 0-13.18 0V38h1.9v-2.58a4.69 4.69 0 1 1 9.38 0v2.48h1.9v-2.48zm-6.59-8.25a4 4 0 1 0-3.95-4 4 4 0 0 0 3.95 4zm0-6a2 2 0 1 1-2.05 2 2.05 2.05 0 0 1 2.05-2zm2.65-18.12H5.67v13.03h9.96v-1.9H7.57V4.95h25.72v9.23H21.72l-5.7 5.99 1.37 1.31 5.15-5.4h12.65V3.05z"></path>
+                                                                    <path fill="none" d="M0 0h40v40H0z"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">와디즈 파트너 서비스</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://www.wadiz.kr/web/wnewsletter/main">
+                                                        <span class="MyWadizMenu_icon__pwW81">
+                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <g>
+                                                                    <path fill="none" d="M0 0h40v40H0z"></path>
+                                                                    <path d="M17.37 25.75v-2.14h-4.2v-2.12a6.57 6.57 0 0 0-13.17 0v12.77h2.18V21.49a4.42 4.42 0 0 1 8.84 0v4.26zM6.6 13.49a3.88 3.88 0 1 0-3.87-3.87 3.88 3.88 0 0 0 3.87 3.87zm0-5.84a2 2 0 1 1-2 2 2 2 0 0 1 2-2z"></path>
+                                                                    <path d="M14.12 5.8v2.14h23.7v24.02h-23.7v2.14h25.84V5.8H14.12z"></path>
+                                                                    <path d="M18.69 11.98h15.04v2.14H18.69zm0 5.5h15.04v2.14H18.69z"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">와디즈 스쿨</span>
+                                                        <span class="MyWadizMenu_hint__m4WF2">수강 신청하기</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://www.wadiz.kr/web/wnewsletter/main">
+                                                        <span class="MyWadizMenu_icon__pwW81">
+                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <g>
+                                                                    <path fill="none" d="M0 0h40v40H0z"></path>
+                                                                    <path d="M37.68 23.89a9.24 9.24 0 0 0-9.23-9.24c-3.89 0-7.54 2.53-10.58 7.33l-.25.4a25.55 25.55 0 0 0-2.91 5.53c-1.16 3.43-.41 7.92 3.24 9.5a5.22 5.22 0 0 0 2 .43 5.22 5.22 0 0 0 2-.43c3.65-1.58 4.4-6.07 3.24-9.5A22.42 22.42 0 0 0 23 23.37l-1.3 1.84a17.68 17.68 0 0 1 1.63 3.36c.86 2.55.41 5.85-2.11 6.94a2.94 2.94 0 0 1-2.46 0c-2.52-1.09-3-4.39-2.11-6.94a24.56 24.56 0 0 1 2.7-5.08l.26-.41c1.84-2.9 4.86-6.37 8.83-6.37a7.18 7.18 0 0 1 7.17 7.18v12.4h2.06v-2zm-26.12-11.2a5.27 5.27 0 1 0-5.27-5.27 5.28 5.28 0 0 0 5.27 5.27zm0-8.47a3.21 3.21 0 1 1-3.21 3.2 3.21 3.21 0 0 1 3.21-3.2zm5.13 14.52l1.3-1.6c-.25-.21-.52-.41-.78-.6a9.75 9.75 0 0 0-5.65-1.89 9.24 9.24 0 0 0-9.24 9.24v12.4h2.06v-12.4a7.19 7.19 0 0 1 7.18-7.18A7.71 7.71 0 0 1 16 18.23c.25.16.47.33.69.51zM28 12.69a5.27 5.27 0 1 0-5.3-5.27 5.27 5.27 0 0 0 5.3 5.27zm0-8.47a3.21 3.21 0 1 1-3.2 3.2 3.21 3.21 0 0 1 3.2-3.2z"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">협력 프로그램</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://www.wadiz.kr/web/wnewsletter/main">
+                                                        <span class="MyWadizMenu_icon__pwW81">
+                                                            <svg viewBox="0 0 18 18" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path d="M0 0v18h18V0H0zm17.02 17.02H.98V3.91h16.04v13.11zm0-14.09H.98V.98h16.04v1.95z"></path>
+                                                                <path d="M6.82 12.64c.31.31.5.67.5.94v2.19h3.36v-2.19c0-.26.19-.63.49-.94.58-.58.9-1.35.9-2.18 0-.83-.32-1.59-.9-2.18-1.2-1.2-3.15-1.2-4.35 0-.58.58-.9 1.35-.9 2.18 0 .83.32 1.59.9 2.17v.01zm2.88 2.14H8.3v-.49h1.4v.49zm-2.18-5.8c.82-.82 2.15-.82 2.96 0 .4.4.61.92.61 1.48 0 .56-.22 1.09-.62 1.48-.21.21-.65.73-.76 1.36H8.27c-.1-.61-.5-1.1-.76-1.36-.4-.4-.61-.92-.61-1.48 0-.56.22-1.09.61-1.48h.01zm6.85 1.05H13v.98h1.37v-.98zm-9.36 0H3.64v.98h1.37v-.98zm7.662-3.623l-.97.97.694.692.969-.968-.693-.694zM9.49 5.12h-.98v1.37h.98V5.12zM5.326 6.413l-.693.693.968.969.693-.693-.968-.97z"></path>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">메이커 센터</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://www.wadiz.kr/web/wnewsletter/main">
+                                                        <span class="MyWadizMenu_icon__pwW81">
+                                                            <svg viewBox="0 0 32.7 32.7" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path d="M23.7 24.6H9V9.8h14.7v14.8zm-12.9-1.8H22V11.6H10.8v11.2z"></path>
+                                                                <path d="M16.4 12L12 7.6l1.2-1.3 3.2 3.1 3.1-3.1 1.2 1.3z"></path>
+                                                                <path d="M15.5 10.5h1.8v13.1h-1.8zM7.8 32.7H0v-7.8h1.8v6h6z"></path>
+                                                                <path d="M.27 31.134l5.941-5.938 1.273 1.273-5.942 5.938zM32.7 7.8h-1.8v-6h-6V0h7.8z"></path>
+                                                                <path d="M25.22 6.253l6.01-6.01 1.273 1.272-6.01 6.011zM1.8 7.8H0V0h7.8v1.8h-6z"></path>
+                                                                <path d="M.303 1.55L1.576.276l5.94 5.94-1.273 1.272zM32.7 32.7h-7.8v-1.8h6v-6h1.8z"></path>
+                                                                <path d="M25.177 26.506l1.273-1.273 6.01 6.01-1.273 1.273z"></path>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">wadiz TRADERS</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- 고객센터 레이아웃 -->
+                                    <div class="MyWadizSection_section__1ykXL">
+                                        <h4 class="MyWadizSection_title__dWRmW">고객센터</h4>
+                                        <div>
+                                            <ul>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <button>
+                                                        <span class="MyWadizMenu_icon__pwW81" aria-hidden="true">
+                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill="none" d="M0 0h40v40H0z"></path>
+                                                                <path d="M10.62 38.33V29H2.87V1.67h34.26v27.79H18.92zM5 27h7.7v6.11l5.3-5.73h17V3.75H5z"></path>
+                                                                <path d="M12.84 13.28a1.87 1.87 0 1 0 0 3.74 1.87 1.87 0 1 0 0-3.74zm7.16 0a1.87 1.87 0 1 0 0 3.74 1.87 1.87 0 1 0 0-3.74zm7.16 0a1.87 1.87 0 1 0 0 3.74 1.87 1.87 0 1 0 0-3.74z"></path>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">1:1 채팅 상담</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx" target="_blank" rel="noreferer noopener">
+                                                    <a href="https://makercenter.wadiz.kr/menu/25">
+                                                        <span class="MyWadizMenu_icon__pwW81" aria-hidden="true">
+                                                            <i class="MyWadizServiceCenter_guideIcon__8k3Zb"></i>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">이용가이드</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- 마지막줄 레이아웃 -->
+                                    <div class="MyWadizSection_section__1ykXL">
+                                        <div>
+                                            <ul class="MyWadizOtherMenu_otherMenu__2XqYR">
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://makercenter.wadiz.kr/menu/17" target="_blank" rel="noreferer noopener">
+                                                        <span class="MyWadizMenu_icon__pwW81" aria-hidden="true">
+                                                            <i class="MyWadizOtherMenu_noticeIcon__NTHHd"></i>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">공지사항</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y" aria-hidden="true">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="MyWadizMenu_menu__3TRMx">
+                                                    <a href="https://makercenter.wadiz.kr/menu/17" target="_blank" rel="noreferer noopener">
+                                                        <span class="MyWadizMenu_icon__pwW81" aria-hidden="true">
+                                                            <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path d="M17.84 3.2l.4 2.56.16.88.88.32a9.55 9.55 0 0 1 2.893 1.691l.707.549.88-.32 2.4-.88L28 11.2l-2 1.68-.72.56.16.88a9.022 9.022 0 0 1-.009 3.336l-.151.824.72.56 2 1.76-1.84 3.2-3.28-1.2-.72.56a9.485 9.485 0 0 1-2.814 1.658l-.946.342-.16.88-.4 2.56h-3.68l-.4-2.56-.16-.88-.88-.32a9.55 9.55 0 0 1-2.893-1.691L9.12 22.8l-.88.32-2.4.88L4 20.8l2-1.68.72-.56-.16-.88a9.022 9.022 0 0 1 .009-3.336l.151-.824-.72-.56-2-1.76L5.84 8l3.28 1.2.72-.56a9.485 9.485 0 0 1 2.814-1.658l.946-.342.16-.88.4-2.56h3.68zM16 21.6a5.6 5.6 0 1 0 0-11.2 5.6 5.6 0 0 0 0 11.2zm2.56-20h-5.136a.8.8 0 0 0-.783.635L12.08 5.44a11.21 11.21 0 0 0-3.292 2.011L5.76 6.24h-.267a.798.798 0 0 0-.691.397L2.24 10.961a.798.798 0 0 0 .238 1.038l2.562 2.082a10.647 10.647 0 0 0 .01 3.906l-2.57 2.014a.8.8 0 0 0-.158 1.044L4.8 25.362a.8.8 0 0 0 .693.4h.347l2.96-1.2c.956.798 2.07 1.448 3.282 1.895l.638 3.225c.077.368.399.64.784.64h5.072a.8.8 0 0 0 .783-.635l.561-3.205a11.212 11.212 0 0 0 3.296-1.934l3.024 1.134h.347a.798.798 0 0 0 .691-.397l2.562-4.404a.8.8 0 0 0-.159-1.039l-2.561-2.081a10.647 10.647 0 0 0-.01-3.906l2.41-1.854a.8.8 0 0 0 .158-1.044L27.2 6.64a.8.8 0 0 0-.693-.4h-.347l-2.96 1.2a11.163 11.163 0 0 0-3.282-1.895L19.28 2.32a.801.801 0 0 0-.784-.64h-.017zM16 20a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"></path>
+                                                            </svg>
+                                                        </span><!--
+                                                        --><span class="MyWadizMenu_text__35T0C">설정</span>
+                                                        <span class="MyWadizMenu_arrowIcon__2tZ9Y" aria-hidden="true">
+                                                            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="MyWadizOtherMenu_btnWrapper__2-p-V">
+                                                <div class="MyWadizOtherMenu_loginMode__enpaO">
+                                                    <p class="MyWadizLoginMode_loginMode__1o8tN">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <path d="M0.8 0.645H15.600000000000001V15.355H0.8z"></path>
+                                                                    <path fill="#4285F4" d="M13.471 6.598c.085.388.129.79.129 1.202 0 .204-.01.405-.032.603-.158 1.478-.89 2.79-1.976 3.727L9.65 10.575c.568-.393 1.01-.944 1.257-1.587h-3.27v-2.39h5.834z"></path>
+                                                                    <path fill="#34A853" d="M7.4 11.61c.82 0 1.573-.29 2.161-.773l1.89 1.515C10.404 13.372 8.975 14 7.4 14c-2.35 0-4.373-1.397-5.284-3.406L4.1 9.061c.381 1.466 1.714 2.549 3.3 2.549z"></path>
+                                                                    <path fill="#FBBC05" d="M2.385 5.187l1.734 1.58c-.188.435-.294.92-.294 1.433 0 .408.067.799.19 1.161l-1.773 1.585c-.177-.354-.321-.73-.428-1.124l-.206-1.95c.051-.98.329-1.894.777-2.685z"></path>
+                                                                    <path fill="#EA4335" d="M7.6 2c1.662 0 3.166.653 4.253 1.708L10.11 5.405C9.47 4.778 8.582 4.39 7.6 4.39c-1.66 0-3.051 1.108-3.427 2.6L2.126 5.421C3.066 3.404 5.163 2 7.6 2z"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                        구글로 로그인 중
+                                                    </p>
+                                                    <button class="Button_button__2FuOU Button_md__46Ai- Button_block__1-g8w" type="button">
+                                                        <span>
+                                                            <span class="Button_children__ilFun">로그아웃</span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+               <footer class="footer" th:replace="~{/header-footer/main-footer :: .main-footer}"></footer>
+            </div>
+            <div></div>
+        </main>
+    </div>
+</body>
+</html>
