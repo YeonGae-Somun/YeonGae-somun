@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body{
+overflow-x: hidden;
+line-height: inherit;
+color: inherit;
+font-size: 15px;
+-webkit-tap-highlight-color: transparent;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-o-text-size-adjust: none;
+}
+
+body>#root, #wadizTopBanner, #page-container {
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+
+
+.black-bg-wrap, .lypop-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.black-bg-wrap {
+  opacity: .6;
+  z-index: 9999;
+  background: #000;
+}
+
+@media screen and (min-width: 1097px)
+{
+#wz-header {
+  position: static;
+}
+
+}
+
+/* @media screen and (min-width: 1097px) */
+
+
+.web-header {
+  position: static;
+  top: 0;
+  transition: top .25s;
+  z-index: 99;
+  width: 100%;
+}
+
+.web-header .header-wrapper {
+  position: relative;
+  border-bottom: 1px solid #f2f4f6;
+  padding: 0;
+  height: 56px;
+  text-align: left;
+  top: 0;
+    z-index: 9998;
+    background-color: #fff;
+    width: 100%;
+}
+
+script {
+  display: none;
+}
+
+
+#ch-plugin {
+  position: relative !important;
+  display: block !important;
+  color-scheme: normal !important;
+  white-space: normal !important;
+  z-index: 10000000 !important;
+}
+
+iframe, img, video {
+  vertical-align: top;
+}
+
+.WadizModal_portal__2ne3B {
+  display: block;
+  position: relative;
+  height: 0;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
