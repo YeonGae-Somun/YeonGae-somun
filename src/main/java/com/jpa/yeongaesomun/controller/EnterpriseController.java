@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/enterprise/*")
 public class EnterpriseController {
 
-    @GetMapping("intro")
+    @GetMapping("list")
     public void goToIntro() {
 
     }
