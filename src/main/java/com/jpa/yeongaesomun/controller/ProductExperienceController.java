@@ -22,4 +22,9 @@ public class ProductExperienceController {
     public void goToNewItem(){
 
     }
+
+    @GetMapping("store")
+    public void goToStore(){
+
+    }
 }

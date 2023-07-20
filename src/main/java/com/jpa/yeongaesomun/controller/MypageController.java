@@ -75,4 +75,9 @@ public class MypageController {
     public void goToWrite(){
         
     }
+
+    @GetMapping("post-write")
+    public void goToPostWrite(){
+
+    }
 }
