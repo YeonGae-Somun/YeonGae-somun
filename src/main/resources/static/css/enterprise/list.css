@@ -1400,7 +1400,7 @@ body, button, html, input, textarea {
 
 @media screen and (min-width: 769px){
     .CommonCard_container__e_ebQ.CommonCard_squareSmall__1Cdkn {
-        padding-bottom: 18px;
+        /*padding-bottom: 18px;*/
         min-height: auto;
     }
 }
@@ -1570,6 +1570,7 @@ strong {
 
 .ProjectCardInfo_maker__2EK-a {
     margin-top: 4px;
+    color: #00c4c4;
 }
 
 .MakerName_container__3-NVB {

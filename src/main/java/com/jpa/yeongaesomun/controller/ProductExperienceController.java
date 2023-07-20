@@ -17,4 +17,9 @@ public class ProductExperienceController {
     public void goToDetail(){
 
     }
+
+    @GetMapping("newItem")
+    public void goToNewItem(){
+
+    }
 }
