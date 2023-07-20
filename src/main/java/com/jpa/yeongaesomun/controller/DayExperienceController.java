@@ -14,6 +14,11 @@ public class DayExperienceController {
 
     }
 
+    @GetMapping("detail")
+    public void goToDetail(){
+
+    }
+
     @GetMapping("review")
     public void goToReview(){
 

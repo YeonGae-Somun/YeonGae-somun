@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/start-up/*")
 public class StartUpController {
 
-    @GetMapping("intro")
+    @GetMapping("list")
     public void goToStartUpIntro(){
 
     }
