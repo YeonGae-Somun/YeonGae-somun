@@ -13,4 +13,9 @@ public class EnterpriseController {
     public void goToIntro() {
 
     }
+
+    @GetMapping("enterpriseDeTail")
+    public void goToEnterpriseDeTail() {
+
+    }
 }
