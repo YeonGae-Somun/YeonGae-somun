@@ -23,8 +23,13 @@ public class ProductExperienceController {
 
     }
 
-    @GetMapping("store")
-    public void goToStore(){
+    @GetMapping("reviewList")
+    public void goToReivewList(){
+
+    }
+
+    @GetMapping("reviewDetail")
+    public void goToReviewDetail(){
 
     }
 }

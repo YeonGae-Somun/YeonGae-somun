@@ -16,6 +16,11 @@ public class StartUpController {
 
     }
 
+    @GetMapping("startUpDetail")
+    public void goToStartUpDetail(){
+
+    }
+
 
 
 
