@@ -1,13 +1,14 @@
-package com.jpa.yeongaesomun.controller;
+package com.jpa.yeongaesomun.controller.productExperience;
 
-import org.springframework.stereotype.Controller;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping("/product-experience/*")
-public class ProductExperienceController {
-
+@RestController
+@Slf4j
+@RequestMapping("/product-experiences/*")
+public class ProductExperienceRestController {
     @GetMapping("list")
     public void goToList(){
 

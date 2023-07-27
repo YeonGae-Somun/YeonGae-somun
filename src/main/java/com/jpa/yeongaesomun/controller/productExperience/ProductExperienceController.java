@@ -1,13 +1,12 @@
-package com.jpa.yeongaesomun.controller;
-
+package com.jpa.yeongaesomun.controller.productExperience;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/day-experience/*")
-public class DayExperienceController {
+@RequestMapping("/product-experience/*")
+public class ProductExperienceController {
 
     @GetMapping("list")
     public void goToList(){
@@ -19,8 +18,13 @@ public class DayExperienceController {
 
     }
 
-    @GetMapping("review")
-    public void goToReview(){
+    @GetMapping("newItem")
+    public void goToNewItem(){
+
+    }
+
+    @GetMapping("reviewList")
+    public void goToReivewList(){
 
     }
 
