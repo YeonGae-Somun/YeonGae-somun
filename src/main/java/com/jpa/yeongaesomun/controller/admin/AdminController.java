@@ -1,4 +1,4 @@
-package com.jpa.yeongaesomun.controller;
+package com.jpa.yeongaesomun.controller.admin;
 
 
 import lombok.extern.slf4j.Slf4j;
