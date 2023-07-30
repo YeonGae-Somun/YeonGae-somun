@@ -1,10 +1,12 @@
 package com.jpa.yeongaesomun.entity.member;
 
+import com.jpa.yeongaesomun.entity.dayexperience.DayExperienceFile;
+import com.jpa.yeongaesomun.entity.dayexperience.DayExperiencePartipant;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -23,4 +25,7 @@ public class StartUp extends User{
     private String sEmail;
     private String sHomepage;
     private String sCreationDate;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "startUp")
+    private List<DayExperiencePartipant> dayExperiencePartipants = new ArrayList<>();
 }
