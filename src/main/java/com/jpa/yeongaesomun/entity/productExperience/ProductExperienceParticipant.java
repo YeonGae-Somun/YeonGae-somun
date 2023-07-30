@@ -1,6 +1,6 @@
 package com.jpa.yeongaesomun.entity.productExperience;
 
-import com.jpa.yeongaesomun.entity.User;
+import com.jpa.yeongaesomun.entity.member.User;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,7 +22,6 @@ public class ProductExperienceParticipant {
     private ProductExperience productExperience;
 
     @Builder
-
     public ProductExperienceParticipant(User user, ProductExperience productExperience) {
         this.user = user;
         this.productExperience = productExperience;

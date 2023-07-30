@@ -1,8 +1,11 @@
 package com.jpa.yeongaesomun.entity.member;
 
+import com.jpa.yeongaesomun.entity.StartUpEnterprise;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter @ToString
@@ -18,5 +21,8 @@ public class Enterprise extends User{
     private String eMajorBusiness;
     private String eCapital;
     private String eHomepage;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "enterprise")
+    private List<StartUpEnterprise> startUpEnterprises = new ArrayList<>();
 
 }

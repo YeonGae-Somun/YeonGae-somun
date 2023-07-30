@@ -1,6 +1,7 @@
 package com.jpa.yeongaesomun.entity;
 
 import com.jpa.yeongaesomun.entity.member.StartUp;
+import com.jpa.yeongaesomun.entity.member.User;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,7 +20,7 @@ public class Apply {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
-    
+
     @ManyToOne(fetch = FetchType.LAZY)
     private StartUp startUp;
 
