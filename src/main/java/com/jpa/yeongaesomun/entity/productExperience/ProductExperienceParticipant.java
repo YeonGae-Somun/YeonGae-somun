@@ -1,5 +1,6 @@
-package com.jpa.yeongaesomun.entity;
+package com.jpa.yeongaesomun.entity.productExperience;
 
+import com.jpa.yeongaesomun.entity.User;
 import lombok.*;
 
 import javax.persistence.*;

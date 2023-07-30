@@ -1,11 +1,9 @@
 package com.jpa.yeongaesomun.entity;
 
+import com.jpa.yeongaesomun.entity.member.StartUp;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "TBL_APPLY")
@@ -18,4 +16,18 @@ public class Apply {
     @EqualsAndHashCode.Include
     private Long id;
     private String applyStatusType;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    private StartUp startUp;
+
+    @Builder
+
+    public Apply(String applyStatusType, User user, StartUp startUp) {
+        this.applyStatusType = applyStatusType;
+        this.user = user;
+        this.startUp = startUp;
+    }
 }
