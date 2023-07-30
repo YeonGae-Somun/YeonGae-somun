@@ -1,11 +1,17 @@
 package com.jpa.yeongaesomun.entity.member;
 
 import com.jpa.yeongaesomun.audit.Period;
+import com.jpa.yeongaesomun.entity.notice.Notice;
+import com.jpa.yeongaesomun.entity.qna.QNA;
+import com.jpa.yeongaesomun.entity.qna.QNAResponse;
+import com.jpa.yeongaesomun.entity.review.Review;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "TBL_USER")
@@ -26,4 +32,15 @@ public class User extends Period {
     private String UserRole;
     private String UserStatus;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
+    private List<Review> reviews = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
+    private List<Notice> notices = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
+    private List<QNA> qnas = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
+    private List<QNAResponse> qnaResponses = new ArrayList<>();
 }
