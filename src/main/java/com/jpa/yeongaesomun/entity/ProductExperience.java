@@ -25,10 +25,15 @@ public class ProductExperience {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,mappedBy = "productExperience")
     private List<ProductExperienceFile> productExperienceFiles = new ArrayList<>();
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private StartUp startUp;
+
     @Builder
-    public ProductExperience(@NotNull String productExperienceName, @NotNull String productExperiencePrice, String productExperienceExplanation) {
+    public ProductExperience(@NotNull String productExperienceName, @NotNull String productExperiencePrice, String productExperienceExplanation,StartUp startUp ) {
         this.productExperienceName = productExperienceName;
         this.productExperiencePrice = productExperiencePrice;
         this.productExperienceExplanation = productExperienceExplanation;
+        this.startUp = startUp;
     }
+
 }
