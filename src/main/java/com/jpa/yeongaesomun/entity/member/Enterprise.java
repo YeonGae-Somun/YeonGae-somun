@@ -1,22 +1,22 @@
-package com.jpa.yeongaesomun.entity;
+package com.jpa.yeongaesomun.entity.member;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Getter @ToString
 @Table(name = "TBL_ENTERPRISE")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Enterprise {
-    @Id
-    @GeneratedValue
-    @EqualsAndHashCode.Include
-    private Long id;
+@PrimaryKeyJoinColumn
+public class Enterprise extends User{
 
-
+    private String eBusinessNumber;
+    private String eEmployNumber;
+    private String eCreationDate;
+    private String eAddress;
+    private String eMajorBusiness;
+    private String eCapital;
+    private String eHomepage;
 
 }
