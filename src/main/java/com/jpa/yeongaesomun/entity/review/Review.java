@@ -1,5 +1,6 @@
 package com.jpa.yeongaesomun.entity.review;
 
+import com.jpa.yeongaesomun.audit.Period;
 import com.jpa.yeongaesomun.entity.file.ReviewFile;
 import com.jpa.yeongaesomun.entity.member.User;
 import lombok.Getter;
@@ -15,17 +16,18 @@ import java.util.List;
 @Entity
 @Getter @Setter @ToString
 @Table(name = "TBL_REVIEW_BOARD")
-public class Review {
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "RIVIEW_TYPE")
+public class Review extends Period {
     @Id
     @GeneratedValue
     private Long id;
 
     @NotNull private String reviewTitle;
     @NotNull private String reviewContent;
-    private LocalDateTime reviewRegisterDateTime;
+    @NotNull private String experienceDate;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "review")
-    private List<ReviewFile> reviewFiles = new ArrayList<>();
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
