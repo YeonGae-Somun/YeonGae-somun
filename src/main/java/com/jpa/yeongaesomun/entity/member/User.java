@@ -5,6 +5,9 @@ import com.jpa.yeongaesomun.entity.notice.Notice;
 import com.jpa.yeongaesomun.entity.qna.QNA;
 import com.jpa.yeongaesomun.entity.qna.QNAResponse;
 import com.jpa.yeongaesomun.entity.review.Review;
+import com.jpa.yeongaesomun.entity.Apply;
+import com.jpa.yeongaesomun.entity.UserProfileFile;
+import com.jpa.yeongaesomun.entity.productExperience.ProductExperienceParticipant;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -43,4 +46,14 @@ public class User extends Period {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
     private List<QNAResponse> qnaResponses = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
+    private List<Apply> applies = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private ProductExperienceParticipant productExperienceParticipant;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,mappedBy = "user")
+    private List<UserProfileFile> userProfileFiles = new ArrayList<>();
+
 }
