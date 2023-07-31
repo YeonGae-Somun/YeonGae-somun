@@ -1,7 +1,9 @@
 package com.jpa.yeongaesomun.entity.qna;
 
+import com.jpa.yeongaesomun.audit.Period;
 import com.jpa.yeongaesomun.entity.member.User;
 import com.jpa.yeongaesomun.entity.review.Review;
+import com.jpa.yeongaesomun.enumType.ResponseStatus;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -15,19 +17,17 @@ import java.util.List;
 @Entity
 @Getter @Setter @ToString
 @Table(name = "TBL_QNA_BOARD")
-public class QNA {
+public class QNA extends Period {
     @Id
     @GeneratedValue
     private Long id;
 
-    @NotNull private String QNATitle;
-    @NotNull private String QNAContent;
-    private LocalDateTime CreateDate;
-    private LocalDateTime updateDate;
-    @NotNull private String responseStatus;
+    @NotNull private String qnaTitle;
+    @NotNull private String qnaContent;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "qna")
-    private List<QNAResponse> qnaResponses = new ArrayList<>();
+    @Enumerated(EnumType.STRING)
+    @NotNull private ResponseStatus responseStatus;
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;

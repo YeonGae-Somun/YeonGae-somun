@@ -1,4 +1,4 @@
-package com.jpa.yeongaesomun.entity;
+package com.jpa.yeongaesomun.entity.apply;
 
 import com.jpa.yeongaesomun.entity.member.StartUp;
 import com.jpa.yeongaesomun.entity.member.User;
@@ -7,11 +7,11 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TBL_APPLY")
+@Table(name = "TBL_STARTUP_APPLY_USER")
 @Getter
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Apply {
+public class StartupApplyUser {
     @Id
     @GeneratedValue
     @EqualsAndHashCode.Include
@@ -26,7 +26,7 @@ public class Apply {
 
     @Builder
 
-    public Apply(String applyStatusType, User user, StartUp startUp) {
+    public StartupApplyUser(String applyStatusType, User user, StartUp startUp) {
         this.applyStatusType = applyStatusType;
         this.user = user;
         this.startUp = startUp;

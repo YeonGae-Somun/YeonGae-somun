@@ -1,59 +1,48 @@
 package com.jpa.yeongaesomun.entity.member;
 
 import com.jpa.yeongaesomun.audit.Period;
-import com.jpa.yeongaesomun.entity.notice.Notice;
-import com.jpa.yeongaesomun.entity.qna.QNA;
-import com.jpa.yeongaesomun.entity.qna.QNAResponse;
-import com.jpa.yeongaesomun.entity.review.Review;
-import com.jpa.yeongaesomun.entity.Apply;
-import com.jpa.yeongaesomun.entity.UserProfileFile;
-import com.jpa.yeongaesomun.entity.productExperience.ProductExperienceParticipant;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.jpa.yeongaesomun.enumType.MemberLoginType;
+import com.jpa.yeongaesomun.enumType.MemberRole;
+import com.jpa.yeongaesomun.enumType.MemberStatus;
+import com.jpa.yeongaesomun.enumType.MemberType;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "TBL_USER")
-@Getter @Setter
+@Table(name = "TBL_USER",
+        uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"userEmail"}),
+        @UniqueConstraint(columnNames = {"userNickname"})})
+@Getter
 @ToString
-@Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class User extends Period {
 
     @Id
     @GeneratedValue
-    private long Id;
-    private String UserNickname;
-    private String UserPassword;
-    private String UserLoginType;
-    private String UserEmail;
-    private String UserType;
-    private String UserRole;
-    private String UserStatus;
+    @EqualsAndHashCode.Include
+    private Long Id;
+    @NotNull
+    private String userEmail;
+    @NotNull
+    private String userPassword;
+    @NotNull
+    private String userNickname;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
-    private List<Review> reviews = new ArrayList<>();
+    @Enumerated(EnumType.STRING)
+    private MemberLoginType userLoginType;
+    @Enumerated(EnumType.STRING)
+    private MemberRole userRole;
+    @Enumerated(EnumType.STRING)
+    private MemberStatus userStatus;
+    @Enumerated(EnumType.STRING)
+    private MemberType userType;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
-    private List<Notice> notices = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
-    private List<QNA> qnas = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
-    private List<QNAResponse> qnaResponses = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "user")
-    private List<Apply> applies = new ArrayList<>();
 
-    @OneToOne(fetch = FetchType.LAZY)
-    private ProductExperienceParticipant productExperienceParticipant;
-
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,mappedBy = "user")
-    private List<UserProfileFile> userProfileFiles = new ArrayList<>();
 
 }

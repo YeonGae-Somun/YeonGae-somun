@@ -1,5 +1,6 @@
 package com.jpa.yeongaesomun.entity.review;
 
+import com.jpa.yeongaesomun.entity.file.ReviewFile;
 import com.jpa.yeongaesomun.entity.member.User;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.jpa.yeongaesomun.entity;
+package com.jpa.yeongaesomun.entity.apply;
 
 import com.jpa.yeongaesomun.entity.member.Enterprise;
 import com.jpa.yeongaesomun.entity.member.StartUp;
@@ -7,11 +7,11 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TBL_STARTUP_ENTERPRISE")
+@Table(name = "TBL_ENTERPRISE_APPLY_STARTUP")
 @Getter
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class StartUpEnterprise {
+public class EnterpriseApplyStartUp {
     @Id
     @GeneratedValue
     @EqualsAndHashCode.Include

@@ -6,11 +6,11 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TBL_PRODUCT_EXPERIENCE_PARTICIPANT")
+@Table(name = "TBL_PRODUCT_E_PARTICIPANTS")
 @Getter
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ProductExperienceParticipant {
+public class ProductExperienceParticipants {
     @Id @GeneratedValue
     @EqualsAndHashCode.Include
     private Long id;
@@ -22,7 +22,7 @@ public class ProductExperienceParticipant {
     private ProductExperience productExperience;
 
     @Builder
-    public ProductExperienceParticipant(User user, ProductExperience productExperience) {
+    public ProductExperienceParticipants(User user, ProductExperience productExperience) {
         this.user = user;
         this.productExperience = productExperience;
     }

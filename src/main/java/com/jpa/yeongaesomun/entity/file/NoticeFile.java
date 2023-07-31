@@ -1,6 +1,7 @@
-package com.jpa.yeongaesomun.entity.notice;
+package com.jpa.yeongaesomun.entity.file;
 
 import com.jpa.yeongaesomun.entity.dayexperience.DayExperience;
+import com.jpa.yeongaesomun.entity.notice.Notice;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,13 +10,9 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter @ToString
+@Getter  @ToString
 @Table(name = "TBL_NOTICE_FILE")
-public class NoticeFile {
-    @Id
-    @GeneratedValue
-    @EqualsAndHashCode.Include
-    private Long id;
+public class NoticeFile extends File{
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Notice notice;

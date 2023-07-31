@@ -1,5 +1,6 @@
 package com.jpa.yeongaesomun.entity.productExperience;
 
+import com.jpa.yeongaesomun.entity.file.ProductExperienceFile;
 import com.jpa.yeongaesomun.entity.member.StartUp;
 import lombok.*;
 
@@ -20,11 +21,7 @@ public class ProductExperience {
     @NotNull private String productExperiencePrice;
     private String productExperienceExplanation;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,mappedBy = "productExperience")
-    private List<ProductExperienceParticipant> participants = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE,mappedBy = "productExperience")
-    private List<ProductExperienceFile> productExperienceFiles = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     private StartUp startUp;
