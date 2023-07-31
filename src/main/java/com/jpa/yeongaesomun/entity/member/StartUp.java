@@ -2,6 +2,8 @@ package com.jpa.yeongaesomun.entity.member;
 
 import com.jpa.yeongaesomun.entity.dayexperience.DayExperienceFile;
 import com.jpa.yeongaesomun.entity.dayexperience.DayExperiencePartipant;
+import com.jpa.yeongaesomun.entity.StartUpEnterprise;
+import com.jpa.yeongaesomun.entity.productExperience.ProductExperience;
 import lombok.*;
 
 import javax.persistence.*;
@@ -28,4 +30,11 @@ public class StartUp extends User{
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "startUp")
     private List<DayExperiencePartipant> dayExperiencePartipants = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "startUp")
+    private List<StartUpEnterprise> startUpEnterprises = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "startUp")
+    private List<ProductExperience> productExperiences = new ArrayList<>();
+
 }
