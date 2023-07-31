@@ -1,4 +1,4 @@
-package com.jpa.yeongaesomun.entity;
+package com.jpa.yeongaesomun.entity.file;
 
 import com.jpa.yeongaesomun.entity.member.User;
 import lombok.*;

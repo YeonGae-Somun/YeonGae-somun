@@ -1,40 +1,37 @@
 package com.jpa.yeongaesomun.entity.member;
 
-import com.jpa.yeongaesomun.entity.dayexperience.DayExperienceFile;
-import com.jpa.yeongaesomun.entity.dayexperience.DayExperiencePartipant;
-import com.jpa.yeongaesomun.entity.StartUpEnterprise;
-import com.jpa.yeongaesomun.entity.productExperience.ProductExperience;
+import com.jpa.yeongaesomun.audit.Period;
+import com.jpa.yeongaesomun.entity.embeddable.Address;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Getter @Setter
+@Getter
 @ToString
 @Table(name = "TBL_STARTUP")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@PrimaryKeyJoinColumn
-public class StartUp extends User{
+public class StartUp extends Period {
 
+    @Id
+    @GeneratedValue
+    @EqualsAndHashCode.Include
+    private Long Id;
+
+    @NotNull
+    @Column(unique = true)
     private String sBusinessNumber;
-    private String sIntroduction;
-    private String sService;
+    private String sMajor;
     private String sManager;
-    private String sEmployNumber;
-    private String sAddress;
-    private String sEmail;
+    private Long sEmployeeCount;
+    @Embedded
+    private Address sAddress;
     private String sHomepage;
-    private String sCreationDate;
+    private String sFoundingDate;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "startUp")
-    private List<DayExperiencePartipant> dayExperiencePartipants = new ArrayList<>();
+    @OneToOne(fetch = FetchType.LAZY)
+    private User user;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "startUp")
-    private List<StartUpEnterprise> startUpEnterprises = new ArrayList<>();
-
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "startUp")
-    private List<ProductExperience> productExperiences = new ArrayList<>();
 
 }

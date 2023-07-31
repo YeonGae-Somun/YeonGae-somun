@@ -1,4 +1,4 @@
-package com.jpa.yeongaesomun.entity.review;
+package com.jpa.yeongaesomun.entity.file;
 
 
 import com.jpa.yeongaesomun.entity.review.Review;
@@ -9,12 +9,10 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter @ToString
+@Getter @ToString
 @Table(name = "TBL_REVIEW_FILE")
-public class ReviewFile {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class ReviewFile extends File{
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Review review;

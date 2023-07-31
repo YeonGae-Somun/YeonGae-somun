@@ -1,6 +1,7 @@
-package com.jpa.yeongaesomun.entity.productExperience;
+package com.jpa.yeongaesomun.entity.file;
 
 
+import com.jpa.yeongaesomun.entity.productExperience.ProductExperience;
 import lombok.*;
 
 import javax.persistence.*;
@@ -10,11 +11,8 @@ import javax.persistence.*;
 @Getter
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ProductExperienceFile {
-    @Id
-    @GeneratedValue
-    @EqualsAndHashCode.Include
-    private Long id;
+public class ProductExperienceFile extends File{
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     private ProductExperience productExperience;
