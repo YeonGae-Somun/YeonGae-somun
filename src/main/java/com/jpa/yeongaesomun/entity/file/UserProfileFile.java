@@ -9,12 +9,8 @@ import javax.persistence.*;
 @Table(name = "TBL_USER_PROFILE_FILE")
 @Getter
 @ToString
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class UserProfileFile {
-    @Id
-    @GeneratedValue
-    @EqualsAndHashCode.Include
-    private Long id;
+@PrimaryKeyJoinColumn(name = "FILE_ID")
+public class UserProfileFile extends File{
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;

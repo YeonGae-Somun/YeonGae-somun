@@ -1,4 +1,4 @@
-package com.jpa.yeongaesomun.entity.embeddable;
+package com.jpa.yeongaesomun.embeddable;
 
 import lombok.Getter;
 import lombok.ToString;

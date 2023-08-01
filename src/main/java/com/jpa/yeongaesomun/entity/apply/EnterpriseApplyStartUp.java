@@ -1,5 +1,6 @@
 package com.jpa.yeongaesomun.entity.apply;
 
+import com.jpa.yeongaesomun.audit.Period;
 import com.jpa.yeongaesomun.entity.member.Enterprise;
 import com.jpa.yeongaesomun.entity.member.StartUp;
 import lombok.*;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @Getter
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class EnterpriseApplyStartUp {
+public class EnterpriseApplyStartUp extends Period {
     @Id
     @GeneratedValue
     @EqualsAndHashCode.Include

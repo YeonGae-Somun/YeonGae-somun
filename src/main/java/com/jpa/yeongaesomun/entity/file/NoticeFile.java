@@ -10,8 +10,10 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Getter  @ToString
+@Getter
+@ToString
 @Table(name = "TBL_NOTICE_FILE")
+@PrimaryKeyJoinColumn(name = "FILE_ID")
 public class NoticeFile extends File{
 
     @ManyToOne(fetch = FetchType.LAZY)
