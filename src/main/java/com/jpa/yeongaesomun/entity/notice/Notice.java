@@ -1,5 +1,6 @@
 package com.jpa.yeongaesomun.entity.notice;
 
+import com.jpa.yeongaesomun.audit.Period;
 import com.jpa.yeongaesomun.entity.file.NoticeFile;
 import com.jpa.yeongaesomun.entity.member.User;
 import lombok.*;
@@ -15,7 +16,7 @@ import java.util.List;
 @ToString
 @Table(name = "TBL_NOTICE_BOARD")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Notice {
+public class Notice extends Period {
     @Id
     @GeneratedValue
     @EqualsAndHashCode.Include

@@ -3,6 +3,7 @@ package com.jpa.yeongaesomun.entity.review;
 import com.jpa.yeongaesomun.audit.Period;
 import com.jpa.yeongaesomun.entity.file.ReviewFile;
 import com.jpa.yeongaesomun.entity.member.User;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,6 +22,7 @@ import java.util.List;
 public class Review extends Period {
     @Id
     @GeneratedValue
+    @EqualsAndHashCode.Include
     private Long id;
 
     @NotNull private String reviewTitle;

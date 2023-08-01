@@ -1,7 +1,7 @@
 package com.jpa.yeongaesomun.entity.member;
 
 import com.jpa.yeongaesomun.audit.Period;
-import com.jpa.yeongaesomun.entity.embeddable.Address;
+import com.jpa.yeongaesomun.embeddable.Address;
 import lombok.*;
 
 import javax.persistence.*;

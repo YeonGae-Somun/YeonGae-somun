@@ -1,5 +1,6 @@
 package com.jpa.yeongaesomun.entity.productExperience;
 
+import com.jpa.yeongaesomun.audit.Period;
 import com.jpa.yeongaesomun.entity.member.User;
 import lombok.*;
 
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ProductExperienceParticipants {
+public class ProductExperienceParticipants extends Period {
     @Id @GeneratedValue
     @EqualsAndHashCode.Include
     private Long id;

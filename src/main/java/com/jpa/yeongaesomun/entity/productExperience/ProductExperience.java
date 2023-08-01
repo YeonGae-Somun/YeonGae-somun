@@ -1,5 +1,6 @@
 package com.jpa.yeongaesomun.entity.productExperience;
 
+import com.jpa.yeongaesomun.audit.Period;
 import com.jpa.yeongaesomun.entity.file.ProductExperienceFile;
 import com.jpa.yeongaesomun.entity.member.StartUp;
 import lombok.*;
@@ -13,7 +14,7 @@ import java.util.List;
 @Table(name = "TBL_PRODUCT_EXPERIENCE")
 @Getter @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ProductExperience {
+public class ProductExperience extends Period {
     @Id @GeneratedValue
     @EqualsAndHashCode.Include
     private Long id;
