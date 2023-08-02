@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleag.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.wadiz.kr/assets/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/mypage/message.css">
+    <link rel="stylesheet" href="/css/header-footer/login-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <title>연개소문 쪽지</title>
+</head>
+<body style="overflow: auto;">
+    <div id="page-container">
+        <!-- 헤더 -->
+        <header class="header" th:replace="~{/header-footer/login-header :: .login-header}"></header>
+
+        <!-- body -->
+        <div id="my-follow-app" style="min-height:100vh">
+            <div class="MyFollowAppContainer_container__3kyZM">
+                <div class="MyFollowAppContainer_contents__14hR7">
+                    <p class="MyFollowAppContainer_header__3NqJv">쪽지</p>
+                    
+                    <!-- 네이게이션 레이아웃 -->
+                    <div class="MyFollowAppContainer_tabsWrapper__2N8pO">
+                        <div class="Tabs_tabsWrapper__2ih_O">
+                            <ul class="Tabs_tabs__2bDmF MyFollowAppContainer_tabs__nLUsA">
+
+                                <li>
+                                    <button type="button" class="Tab_tab__zHnkO Tab_active__1KvvF" role="tab">
+                                        <span>
+                                            <p>
+                                                쪽지
+                                                <!--아직 안읽은 쪽지 갯수-->
+                                                <sup>2</sup>
+                                            </p>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="Tab_tab__zHnkO" role="tab">
+                                        <span>
+                                            <p>
+                                                차단 목록
+                                                <!--아직 안읽은 쪽지 갯수-->
+                                                <sup class="ignore-count">2</sup>
+                                            </p>
+                                        </span>
+                                    </button>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 팔로윙 레이아웃 -->
+                    <div>
+                        <div class="TabPanels_tabPanels__2QLWg">
+                            <div class="Page_container__2z8uO">
+                                <div class="FollowingCard_container__3lCRo">
+                                    <div class="FollowingCard_contents__SWcn2">
+                                        <div  class="FollowingCard_leftPanel__3oPiF">
+                                            <a href="" class="FollowingCard_avatarWrapper__3thMM">
+                                                <div class="Avatar_avatar__LZmeH Avatar_sm__apmKN FollowingCard_avatar__U6lAI">
+                                                    <span class="Avatar_hasImage__1330D" style="background-image: url('https://static.wadiz.kr/assets/icon/profile-icon-2.png');"></span>
+                                                </div>
+                                            </a>
+                                            <a href="" class="FollowingCard_info__1lPPw message-wrapper">
+                                                <p class="FollowingCard_name__MtTbm">나이수</p>
+                                                <p class="FollowingCard_detail__1t60_">
+                                                   안녕하세요
+                                                </p>
+                                            </a>
+                                            <div class="FollowingCard_rightPanel__3gkx3 message-right">
+                                                <div class="FollowingCard_info__1lPPw">
+                                                    <p class="last-date">
+                                                        오전 1:11
+                                                    </p>
+                                                    <p>
+                                                        <sup class="message-count">2</sup>
+                                                    </p>
+                                                  <div class="dosirack-wrap">
+                                                      <button type="button" class="dosirack">
+                                                      </button>
+                                                      <div class="btn-wrapper">
+                                                          <button type="button" class="message-delete">삭제</button>
+                                                          <button type="button" class="message-block">차단</button>
+                                                      </div>
+                                                  </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="FollowingCard_divider__2NaPM"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="footer" th:replace="~{/header-footer/main-footer :: .main-footer}"></footer>
+    </div>
+</body>
+</html>

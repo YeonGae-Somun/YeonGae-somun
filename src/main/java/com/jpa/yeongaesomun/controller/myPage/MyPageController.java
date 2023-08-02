@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/my-page/*")
+@RequestMapping("/mypage/*")
 public class MyPageController {
     @GetMapping("supporter")
     public void goToMypageSupporter(){
@@ -71,8 +71,8 @@ public class MyPageController {
 
     }
 
-    @GetMapping("write")
-    public void goToWrite(){
+    @GetMapping("message")
+    public void goToMessage(){
         
     }
 

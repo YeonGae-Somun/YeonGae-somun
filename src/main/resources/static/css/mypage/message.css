@@ -178,20 +178,29 @@ button:not(:disabled) {
     color: #495057;
 }
 
-.MyFollowAppContainer_container__3kyZM .MyFollowAppContainer_contents__14hR7 .MyFollowAppContainer_tabsWrapper__2N8pO ul li sup {
-    line-height: 18px;
+.MyFollowAppContainer_container__3kyZM .MyFollowAppContainer_contents__14hR7 .MyFollowAppContainer_tabsWrapper__2N8pO ul li sup, .message-count {
     font-size: 12px;
-    font-weight: 400;
-    color: #00b2b2;
+    color: #fff;
     font-weight: 500;
     line-height: 14px;
+    background-color: red;
+    padding: 0px 3px;
     vertical-align: text-top;
+    border-radius: 100%;
+}
+.MyFollowAppContainer_container__3kyZM .MyFollowAppContainer_contents__14hR7 .MyFollowAppContainer_tabsWrapper__2N8pO ul li sup.ignore-count{
+    background-color: #00b2b2;
+}
+
+.message-block,.message-delete{
+
 }
 
 .Tab_tab__zHnkO.Tab_active__1KvvF span {
     color: #212529;
     font-weight: 700;
 }
+
 
 .Tab_tab__zHnkO.Tab_active__1KvvF span:after {
     display: block;
@@ -206,6 +215,37 @@ button:not(:disabled) {
 }
 /* 네비게이션 css 끝 */
 
+.btn-wrapper {
+    width: 100px;
+    text-align: center;
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,.15));
+    border-radius: 4px;
+    outline: 0;
+    box-shadow: 1px 1px 1px #eee;
+    top: 13px;
+    right: -100px;
+    position: absolute;
+    border: 1px solid #eee;
+}
+
+.message-delete:hover,.message-block:hover{
+    background-color: rgba(0,0,0,.04);
+}
+
+.message-delete,.message-block{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.message-block{
+    border-top: 1px solid #eee;
+}
 
 /* 팔로윙 css */
 .TabPanels_tabPanels__2QLWg {
@@ -225,6 +265,30 @@ button:not(:disabled) {
 .FollowingCard_container__3lCRo .FollowingCard_contents__SWcn2 .FollowingCard_leftPanel__3oPiF {
     display: flex;
     width: 100%;
+    position: relative;
+}
+.dosirack {
+    background-image: url(https://www.wishbeen.co.kr/icn_more.2a8121444090e41c.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    right: -3px;
+}
+.dosirack-wrap{
+    position:relative;
+}
+
+.message-wrapper{
+    width:85%;
+}
+
+.message-right{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    text-align: right;
 }
 
 .FollowingCard_container__3lCRo .FollowingCard_contents__SWcn2 .FollowingCard_leftPanel__3oPiF .FollowingCard_avatarWrapper__3thMM {
@@ -272,7 +336,7 @@ button:not(:disabled) {
 .FollowingCard_container__3lCRo .FollowingCard_contents__SWcn2 .FollowingCard_leftPanel__3oPiF .FollowingCard_info__1lPPw .FollowingCard_name__MtTbm {
     line-height: 20px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 900;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -282,11 +346,15 @@ button:not(:disabled) {
     -webkit-box-orient: vertical;
 }
 
-.FollowingCard_container__3lCRo .FollowingCard_contents__SWcn2 .FollowingCard_leftPanel__3oPiF .FollowingCard_info__1lPPw .FollowingCard_detail__1t60_ {
+.FollowingCard_container__3lCRo .FollowingCard_contents__SWcn2 .FollowingCard_leftPanel__3oPiF .FollowingCard_info__1lPPw .FollowingCard_detail__1t60_, .last-date {
     line-height: 18px;
     font-size: 12px;
     font-weight: 400;
     margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 .FollowingCard_container__3lCRo .FollowingCard_contents__SWcn2 .FollowingCard_rightPanel__3gkx3 {
@@ -325,6 +393,10 @@ button:not(:disabled) {
 
 .Button_button__3MO4n.Button_md__3TvVa.Button_startIcon__3w2N9 {
     padding-left: 10px;
+    margin-right: 10px;
+}
+.Button_button__3MO4n.Button_md__3TvVa.Button_startIcon__3w2N9:hover{
+    background-color: #ffe9e9;
 }
 
 .Button_button__3MO4n span {
