@@ -15,7 +15,7 @@ spring:
   #jpa
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
       #ddl-auto: create #-> DROP 후 CREATE
       #ddl-auto: create-drop -> DROP 후 CREATE 후 DROP, DML 사용 시 DROP
       #ddl-auto: update -> Entity와 DB 스키마 비교 후 수정 사항 반영(컬럼 추가) -> update를 먼저 써라

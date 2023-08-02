@@ -19,7 +19,7 @@ public class Introduce extends Period {
     @Id
     @GeneratedValue
     @EqualsAndHashCode.Include
-    private Long Id;
+    private Long id;
     @NotNull
     private String introduceBoardTitle;
     @NotNull
