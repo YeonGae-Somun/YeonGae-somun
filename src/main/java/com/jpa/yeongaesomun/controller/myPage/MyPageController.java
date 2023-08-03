@@ -76,6 +76,11 @@ public class MyPageController {
         
     }
 
+    @GetMapping("message-detail")
+    public void goToMessageDetail(){
+
+    }
+
     @GetMapping("post-write")
     public void goToPostWrite(){
 

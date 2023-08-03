@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleag.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.wadiz.kr/assets/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/mypage/message-detail.css">
+    <link rel="stylesheet" href="/css/header-footer/login-header.css">
+    <link rel="stylesheet" href="/css/header-footer/main-footer.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <title>연개소문 쪽지</title>
+</head>
+<body style="overflow: auto;">
+<div id="page-container">
+    <!-- 헤더 -->
+    <header class="header" th:replace="~{/header-footer/login-header :: .login-header}"></header>
+
+    <!-- body -->
+    <div id="my-follow-app" style="min-height:100vh">
+        <div class="MyFollowAppContainer_container__3kyZM">
+            <div class="MyFollowAppContainer_contents__14hR7">
+                <p class="MyFollowAppContainer_header__3NqJv">나이수</p>
+
+
+
+
+
+                <div class="message-container">
+                    <!-- 상대톡 레이아웃 -->
+                    <div class="TabPanels_tabPanels__2QLWg">
+                        <div class="Page_container__2z8uO">
+                            <div class="FollowingCard_container__3lCRo">
+                                <div class="FollowingCard_contents__SWcn2">
+                                    <div class="FollowingCard_leftPanel__3oPiF">
+                                        <a href="" class="FollowingCard_avatarWrapper__3thMM">
+                                            <div class="Avatar_avatar__LZmeH Avatar_sm__apmKN FollowingCard_avatar__U6lAI">
+                                                <span class="Avatar_hasImage__1330D"
+                                                      style="background-image: url('https://static.wadiz.kr/assets/icon/profile-icon-2.png');"></span>
+                                            </div>
+                                        </a> <a class="FollowingCard_info__1lPPw message-wrapper">
+                                        <p class="FollowingCard_name__MtTbm">나이수</p>
+                                        <p class="FollowingCard_detail__1t60_">
+                                            안녕하세요 </p>
+                                    </a>
+                                        <div class="FollowingCard_rightPanel__3gkx3 message-right">
+                                            <div class="FollowingCard_info__1lPPw">
+                                                <p class="last-date">
+                                                    오전 1:11 </p>
+                                                <p>
+                                                    <sup class="message-count">확인</sup>
+                                                </p>
+                                                <div class="dosirack-wrap">
+                                                    <button type="button" class="dosirack"></button>
+                                                    <div class="btn-wrapper" style="display: none;">
+                                                        <button type="button" class="message-delete">삭제</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="FollowingCard_divider__2NaPM"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--내카톡 레이아웃-->
+                    <div class="TabPanels_tabPanels__2QLWg">
+                        <div class="Page_container__2z8uO">
+                            <div class="FollowingCard_container__3lCRo">
+                                <div class="FollowingCard_contents__SWcn2">
+                                    <div class="FollowingCard_leftPanel__3oPiF">
+                                        <a href="" class="FollowingCard_avatarWrapper__3thMM">
+                                            <div class="Avatar_avatar__LZmeH Avatar_sm__apmKN FollowingCard_avatar__U6lAI">
+                                                <span class="Avatar_hasImage__1330D"
+                                                      style="background-image: url('https://static.wadiz.kr/assets/icon/profile-icon-2.png');"></span>
+                                            </div>
+                                        </a> <a class="FollowingCard_info__1lPPw message-wrapper">
+                                        <p class="FollowingCard_name__MtTbm">나이수</p>
+                                        <p class="FollowingCard_detail__1t60_">
+                                            안녕하세요 </p>
+                                    </a>
+                                        <div class="FollowingCard_rightPanel__3gkx3 message-right">
+                                            <div class="FollowingCard_info__1lPPw">
+                                                <p class="last-date">
+                                                    오전 1:11 </p>
+                                                <p>
+                                                    <sup class="message-count">미확인</sup>
+                                                </p>
+                                                <div class="dosirack-wrap">
+                                                    <button type="button" class="dosirack"></button>
+                                                    <div class="btn-wrapper">
+                                                        <button type="button" class="message-delete">삭제</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="FollowingCard_divider__2NaPM"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer" th:replace="~{/header-footer/main-footer :: .main-footer}"></footer>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/message/message-detail.js"></script>
+</html>
