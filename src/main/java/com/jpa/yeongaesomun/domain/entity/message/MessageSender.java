@@ -22,5 +22,11 @@ public class MessageSender {
 
     @OneToOne(fetch = FetchType.LAZY)
     private Message message;
+
+    @Builder
+    public MessageSender(User sender, Message message){
+        this.sender=sender;
+        this.message=message;
+    }
 }
 

@@ -1,5 +1,5 @@
 package com.jpa.yeongaesomun.domain.enumType;
 
 public enum MemberRole {
-    USER,ROLE
+    USER,ADMIN
 }
