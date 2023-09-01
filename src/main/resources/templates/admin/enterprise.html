@@ -168,6 +168,9 @@
 
                 </div>
                 <!-- [E] 페이지 컨트롤러 -->
+                <div th:unless="${!pagination.content.isEmpty()}">
+                    <h1>게시글이 없습니다.</h1>
+                </div>
             </div>
         </div>
     </section>
