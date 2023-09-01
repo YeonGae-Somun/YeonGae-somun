@@ -8,6 +8,15 @@
     <link href="/css/admin/side-nav.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        ul.numb {
+            display: flex;
+            list-style: none;
+        }
+        .none {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -32,17 +41,16 @@
         <nav class="mainNav" th:replace="~{/admin/side-bar :: nav}"></nav>
         <!--mainScreen 회원관리-->
         <div class="mainContent">
-            <form action="#" class = "searchForm">
+            <form action="#" class = "searchForm" th:object="${search}">
                 <div class="memberSearch">
                     <div class="memberSearchInput">
-                        <select name = "type">
-                            <option>이름</option>
-                            <option>닉네임</option>
+                        <select name="type" th:field="*{type}">
+                            <option value="name">이름</option>
+                            <option value="nickname">닉네임</option>
                         </select>
                         <div>
-                            <input type="text" name ="keyword" placeholder="검색어를 입력하세요">
+                            <input type="text" name="keyword" th:field="*{keyword}" placeholder="검색어를 입력하세요">
                         </div>
-
 
                         <button class = "searchBtn">
                             <img src="/image/search.png">
@@ -64,7 +72,7 @@
                     <input type = "hidden" name = "keyword" value = "${criteria.keyword}">
                     <table class="userTable">
                         <thead>
-                        <tr class="tableTh" style="border-top:3px solid #6e6e6e;">
+                        <tr style="border-top:3px solid #6e6e6e;">
                             <td class = "inputCheckBoxAllBtn"><input class="inputCheckBoxAll"type="checkbox"></td>
                             <td>유저번호</td>
                             <td>이메일</td>
@@ -75,16 +83,28 @@
                             <td>생년월일</td>
                             <td>가입날짜</td>
                         </tr>
-                        <tr>
-                            <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox"></td>
-                            <td>1</td>
-                            <td>hds1234@naver.com</td>
-                            <td>지존동석</td>
-                            <td>한동석</td>
-                            <td>010-1234-1234</td>
-                            <td>여</td>
-                            <td>2013-01-01</td>
-                            <td>2022-01-01</td>
+<!--                        <tr>-->
+<!--                            <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox"></td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>hds1234@naver.com</td>-->
+<!--                            <td>지존동석</td>-->
+<!--                            <td>한동석</td>-->
+<!--                            <td>010-1234-1234</td>-->
+<!--                            <td>여</td>-->
+<!--                            <td>2013-01-01</td>-->
+<!--                            <td>2022-01-01</td>-->
+<!--                        </tr>-->
+                        <tr th:each="user:${pagination.content}">
+                            <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox" value="user.id"></td>
+                            <td th:text="${user.id}"></td>
+                            <td th:text="${user.userEmail}"></td>
+                            <td th:text="${user.userNickname}"></td>
+                            <td th:text="${user.userName}"></td>
+                            <td th:text="${user.userCellPhone}"></td>
+                            <td th:text="${user.userGender}"></td>
+                            <td th:text="${user.userBirthDate}"></td>
+                            <td th:text="${user.userReleaseDate}"></td>
+
                         </tr>
                         </thead>
 
@@ -92,22 +112,48 @@
                 </form>
                 <!-- [S] 페이지 컨트롤러 -->
                 <div class="page-controller-wrap">
-
                     <!-- 이전 페이지로 이동하기 -->
-                    <a class="page-list page-list-move page-before"> <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"
-                            alt="이전 페이지로 이동하기 아이콘"></a>
-                    <a class="page-list page-list-first list-on">1</a>
-                    <a class="page-list page-list-second">2</a>
-                    <a class="page-list page-list-third">3</a>
-                    <a class="page-list page-list-fourth">4</a>
-                    <a class="page-list page-list-fifth">5</a>
+                    <ul class="numb" th:with="
+                            nowPage = ${pagination.number + 1},
+                            pageSize = ${pagination.size},
+                            totalPages = ${pagination.totalPages},
+                            endPage = ${((nowPage - 1) / pageSize + 1) * pageSize},
+                            startPage = ${endPage - pageSize + 1},
+                            realEndPage = ${endPage < totalPages ? endPage : totalPages},
+                            first = ${pagination.first}, last = ${pagination.last}
+                        ">
+                        <li th:classappend="${startPage == 1} ? 'none'" class="prev">
+                            <a th:href="@{/admin/member(page=${startPage-2})}" th:text="＜＜"></a>
+                        </li>
+                        <li th:classappend="${first} ? 'none'" class="prev">
+                            <a th:href="@{/admin/member(page=${nowPage-2})}" th:text="＜"></a>
+                        </li>
+                        <li th:each="page : ${#numbers.sequence(startPage, realEndPage)}">
+                            <a th:if="${nowPage != page}" th:href="@{/admin/member(page=${page-1})}" th:text="${page}"></a>
+                            <span style="color: #ff0000" th:unless="${nowPage != page}" th:text="${page}"></span>
+                        </li>
+                        <li th:classappend="${last} ? 'none'" class="next">
+                            <a th:href="@{/admin/member(page=${nowPage})}" th:text="＞"></a>
+                        </li>
+                        <li th:classappend="${endPage >= totalPages} ? 'none'" class="prev">
+                            <a th:href="@{/admin/member(page=${endPage})}" th:text="＞＞"></a>
+                        </li>
+                    </ul>
+<!--                    <a class="page-list page-list-move page-before">-->
+<!--                        <img-->
+<!--                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"-->
+<!--                            alt="이전 페이지로 이동하기 아이콘"></a>-->
+<!--                    <a class="page-list page-list-first list-on">1</a>-->
+<!--                    <a class="page-list page-list-second">2</a>-->
+<!--                    <a class="page-list page-list-third">3</a>-->
+<!--                    <a class="page-list page-list-fourth">4</a>-->
+<!--                    <a class="page-list page-list-fifth">5</a>-->
 
                     <!-- 다음 페이지로 이동하기 -->
-                    <a class="page-list page-list-move page-after"> <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="
-                            alt="다음 페이지로 이동하기 아이콘">
-                    </a>
+<!--                    <a class="page-list page-list-move page-after"> <img-->
+<!--                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="-->
+<!--                            alt="다음 페이지로 이동하기 아이콘">-->
+<!--                    </a>-->
 
                 </div>
                 <!-- [E] 페이지 컨트롤러 -->
@@ -122,5 +168,9 @@
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script th:inline="javascript">
+let pagination = [[${pagination}]];
+    console.log([[${search}]])
+</script>
 <script src="/js/admin/side-bar.js"></script>
 </html>

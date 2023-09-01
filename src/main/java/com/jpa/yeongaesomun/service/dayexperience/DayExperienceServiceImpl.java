@@ -1,7 +1,7 @@
 package com.jpa.yeongaesomun.service.dayexperience;
 
 import com.jpa.yeongaesomun.domain.dto.dayexperience.DayExperienceDTO;
-import com.jpa.yeongaesomun.domain.dto.dayexperience.DayExperienceSearch;
+import com.jpa.yeongaesomun.domain.entity.dayexperience.DayExperience;
 import com.jpa.yeongaesomun.repository.dayexperienceRepository.DayExperienceReepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -15,9 +15,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class DayExperienceServiceImpl implements DayExperienceService {
     private final DayExperienceReepository dayExperienceReepository;
 
+
     @Override
-    public Page<DayExperienceDTO> getList(Pageable pageable, DayExperienceSearch dayExperienceSearch) {
-        return dayExperienceReepository.findAllWithReplyCount(pageable, dayExperienceSearch);
+    public Page<DayExperience> getList(Pageable pageable) {
+        return dayExperienceReepository.findAllWithPaging(pageable);
     }
 
     @Override

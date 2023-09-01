@@ -6,12 +6,14 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@ToString
+@ToString @Setter
 @Table(name = "TBL_NOTICE_BOARD")
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Notice extends Period {
     @Id
     @GeneratedValue
@@ -20,6 +22,9 @@ public class Notice extends Period {
 
     @NotNull private String noticeTitle;
     @NotNull private String noticeContent;
+    private String noticeWriter;
+    private LocalDateTime noticeReleaseDate;
+    private LocalDate noticeUpdateDate;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -27,9 +32,11 @@ public class Notice extends Period {
 
 
     @Builder
-    public Notice(@NotNull String noticeTitle, @NotNull String noticeContent) {
+    public Notice(@NotNull String noticeTitle, @NotNull String noticeContent, String noticeWriter, LocalDateTime noticeReleaseDate, LocalDate noticeUpdateDate) {
         this.noticeTitle = noticeTitle;
         this.noticeContent = noticeContent;
-
+        this.noticeWriter = noticeWriter;
+        this.noticeReleaseDate = noticeReleaseDate;
+        this.noticeUpdateDate = noticeUpdateDate;
     }
 }

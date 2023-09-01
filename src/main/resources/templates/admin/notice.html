@@ -8,6 +8,15 @@
     <link href="/css/admin/side-nav.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        ul.numb {
+            display: flex;
+            list-style: none;
+        }
+        .none {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -74,14 +83,24 @@
                             <td>수정일</td>
                             <td>수정하기</td>
                         </tr>
-                        <tr>
+<!--                        <tr>-->
+<!--                            <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox"></td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>스타트업 필수 요건</td>-->
+<!--                            <td>관리자1</td>-->
+<!--                            <td>2022-01-01</td>-->
+<!--                            <td>2022-01-03</td>-->
+<!--                            <td><a href="/admin/notice-update-form"><button type="button" class = "update_btn">수정하기</button></a></td>-->
+<!--                        </tr>-->
+                        <tr th:each="notice:${pagination.content}">
                             <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox"></td>
-                            <td>1</td>
-                            <td>스타트업 필수 요건</td>
-                            <td>관리자1</td>
-                            <td>2022-01-01</td>
-                            <td>2022-01-03</td>
-                            <td><a href="/admin/notice-update-form"><button type="button" class = "update_btn">수정하기</button></a></td>
+                            <td th:text="${notice.id}"></td>
+                            <td th:text="${notice.noticeTitle}"></td>
+                            <td th:text="${notice.noticeWriter}"></td>
+                            <td th:text="${notice.noticeReleaseDate}"></td>
+                            <td th:text="${notice.noticeUpdateDate}"></td>
+                            <td><a th:href="|/admin/notice-update-form?id=${notice.id}|"><button type="button" class = "update_btn">수정하기</button></a></td>
+
                         </tr>
                         </thead>
 
@@ -96,20 +115,46 @@
                 <div class="page-controller-wrap">
 
                     <!-- 이전 페이지로 이동하기 -->
-                    <a class="page-list page-list-move page-before"> <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"
-                            alt="이전 페이지로 이동하기 아이콘"></a>
-                    <a class="page-list page-list-first list-on">1</a>
-                    <a class="page-list page-list-second">2</a>
-                    <a class="page-list page-list-third">3</a>
-                    <a class="page-list page-list-fourth">4</a>
-                    <a class="page-list page-list-fifth">5</a>
+<!--                    <a class="page-list page-list-move page-before"> <img-->
+<!--                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"-->
+<!--                            alt="이전 페이지로 이동하기 아이콘"></a>-->
+<!--                    <a class="page-list page-list-first list-on">1</a>-->
+<!--                    <a class="page-list page-list-second">2</a>-->
+<!--                    <a class="page-list page-list-third">3</a>-->
+<!--                    <a class="page-list page-list-fourth">4</a>-->
+<!--                    <a class="page-list page-list-fifth">5</a>-->
 
-                    <!-- 다음 페이지로 이동하기 -->
-                    <a class="page-list page-list-move page-after"> <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="
-                            alt="다음 페이지로 이동하기 아이콘">
-                    </a>
+<!--                    &lt;!&ndash; 다음 페이지로 이동하기 &ndash;&gt;-->
+<!--                    <a class="page-list page-list-move page-after"> <img-->
+<!--                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="-->
+<!--                            alt="다음 페이지로 이동하기 아이콘">-->
+<!--                    </a>-->
+                    <ul class="numb" th:with="
+                            nowPage = ${pagination.number + 1},
+                            pageSize = ${pagination.size},
+                            totalPages = ${pagination.totalPages},
+                            endPage = ${((nowPage - 1) / pageSize + 1) * pageSize},
+                            startPage = ${endPage - pageSize + 1},
+                            realEndPage = ${endPage < totalPages ? endPage : totalPages},
+                            first = ${pagination.first}, last = ${pagination.last}
+                        ">
+                        <li th:classappend="${startPage == 1} ? 'none'" class="prev">
+                            <a th:href="@{/admin/notice(page=${startPage-2})}" th:text="＜＜"></a>
+                        </li>
+                        <li th:classappend="${first} ? 'none'" class="prev">
+                            <a th:href="@{/admin/notice(page=${nowPage-2})}" th:text="＜"></a>
+                        </li>
+                        <li th:each="page : ${#numbers.sequence(startPage, realEndPage)}">
+                            <a th:if="${nowPage != page}" th:href="@{/admin/notice(page=${page-1})}" th:text="${page}"></a>
+                            <span style="color: #ff0000" th:unless="${nowPage != page}" th:text="${page}"></span>
+                        </li>
+                        <li th:classappend="${last} ? 'none'" class="next">
+                            <a th:href="@{/admin/notice(page=${nowPage})}" th:text="＞"></a>
+                        </li>
+                        <li th:classappend="${endPage >= totalPages} ? 'none'" class="prev">
+                            <a th:href="@{/admin/notice(page=${endPage})}" th:text="＞＞"></a>
+                        </li>
+                    </ul>
 
                 </div>
                 <!-- [E] 페이지 컨트롤러 -->
@@ -124,5 +169,9 @@
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="/js/admin/side-bar.js"></script>
+<script th:inline="javascript">
+    let pagination = [[${pagination}]];
+    console.log([[${search}]])
+</script>
+<script src="/js/admin/notice.js"></script>
 </html>

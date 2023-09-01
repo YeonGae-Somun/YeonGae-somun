@@ -17,11 +17,12 @@ public class StartUp extends Period {
     @Id
     @GeneratedValue
     @EqualsAndHashCode.Include
-    private Long Id;
+    private Long id;
 
     @NotNull
     @Column(unique = true)
     private String sBusinessNumber;
+    private String sBusinessName;
     private String sMajor;
     private String sManager;
     private Long sEmployeeCount;
@@ -33,5 +34,16 @@ public class StartUp extends Period {
     @OneToOne(fetch = FetchType.LAZY)
     private User user;
 
-
+    @Builder
+    public StartUp(Long id, String sBusinessNumber, String sBusinessName, String sMajor, String sManager, Long sEmployeeCount, Address sAddress, String sHomepage, String sFoundingDate) {
+        this.id=id;
+        this.sBusinessNumber=sBusinessNumber;
+        this.sBusinessName=sBusinessName;
+        this.sMajor=sMajor;
+        this.sManager=sManager;
+        this.sEmployeeCount=sEmployeeCount;
+        this.sAddress=sAddress;
+        this.sHomepage=sHomepage;
+        this.sFoundingDate=sFoundingDate;
+    }
 }
