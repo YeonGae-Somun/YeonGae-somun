@@ -1,6 +1,9 @@
 const form = document.querySelector(".estimate-productForm");
 const permitBtn =document.querySelector(".permit");
 const rejectBtn =document.querySelector(".reject");
+const $title = document.querySelector(".ChangeTitle");
+const $sideList = document.querySelectorAll(".mainNav>li");
+const regiEstiBtn = document.querySelector(".register-estimate-btn")
 
 permitBtn.addEventListener("click", e=>{
     let inputTitle = document.querySelectorAll(".input-title")[0];
@@ -38,4 +41,20 @@ rejectBtn.addEventListener("click", e=>{
         form.submit();
     }
 
+})
+
+
+$sideList.forEach(el =>{
+    if(el.innerText == $title.innerText){
+        el.style.background="#7aab9a";
+        el.firstChild.style.color ="white";
+    }
+})
+
+regiEstiBtn.addEventListener('click', () => {
+    fetch("/admins/enterprise-estimate", {
+        method: "POST",
+        headers: {"Content-type": "application/json;charset=utf-8"},
+        body: JSON.stringify()
+    }).then(() => location.href = "/admin/enterprise");
 })

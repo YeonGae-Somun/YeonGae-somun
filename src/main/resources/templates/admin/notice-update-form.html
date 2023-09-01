@@ -8,6 +8,7 @@
     <link href="/css/admin/side-nav.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
 
@@ -37,18 +38,21 @@
             <div class="content-wrap">
 
                 <!-- [S] 공지사항 등록 -->
-                <form action="/admin/notice-update" method="post" class="submit-form">
+                <form th:action="@{/admin/notice-update}" method="post" class="submit-form" th:object="${notice}">
                     <div class="con-write-wrap">
                         <div class="notice-write">
                             <div class="write-title">공지사항 제목</div>
                             <div class="write-sec">
-                                <input class="write-text write-input" type="text" placeholder="공지사항 제목을 적어주세요." name = "title">
+                                <input th:value="${notice.noticeTitle}" class="write-text write-input" type="text" placeholder="공지사항 제목을 적어주세요." name = "noticeTitle">
+<!--                                    <td th:text="${pagination.id}"></td>-->
+
                             </div>
+                            <input th:value="${notice.id}" type="text" name = "id" hidden="hidden">
                         </div>
                         <div class="notice-write">
                             <div class="write-title">공지사항 내용</div>
                             <div class="write-sec">
-                                <textarea class="write-text write-notice" type="text" placeholder="공지사항 내용을 적어주세요." name ="content"></textarea>
+                                <textarea th:text="${notice.noticeContent}"class="write-text write-notice" type="text" placeholder="공지사항 내용을 적어주세요." name ="noticeContent"></textarea>
                             </div>
                         </div>
 
@@ -74,7 +78,7 @@
                     <!-- 작성하기 btn -->
                     <div class="write-btn-wrap">
                         <button type="button" class="btn btn-list"><a href="/admin/notice">공지 사항</a></button>
-                        <button type="button" class="btn btn-write">수정하기</button>
+                        <button type="submit" class="btn btn-write">수정하기</button>
                     </div>
                 </form>
 
@@ -92,6 +96,10 @@
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="/js/admin/side-bar.js"></script>
+<script th:inline="javascript">
+    console.log([[${pagination}]]);
+    console.log([[${search}]])
+</script>
+<script src="/js/admin/notice-update.js"></script>
 <script src="/js/admin/notice-form.js"></script>
 </html>
