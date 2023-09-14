@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="show-recent scroll-half-screen" style="--scrollbar-width: 17px;">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/start-up/list.css">
@@ -859,7 +859,9 @@
                                             </svg>
                                         </div>
                                     </a></div>
+                                    <div th:if"${!pagination.content.isEmpty()}">
 
+                                    </div>
                                 </div>
                                 <div>
                                     <div class="ProjectListMoreButton_container__1JFxX ProjectCardList_more__3AbzT">
@@ -886,4 +888,7 @@
 </div>
 
 </body>
+<script th:inline="javascript">
+    console.log([[${pageable}]])
+</script>
 </html>

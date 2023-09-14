@@ -40,21 +40,21 @@
                 <form action="start-up.html" method="post" class="estimate-form">
                     <div class="con-write-wrap">
                         <div class="notice-write">
-                            <div class="write-title">기업명</div>
-                            <div class="write-sec">
-                                <input class="write-text write-input" type="text" readonly>
+                            <div class="write-title" >기업명</div>
+                                <input th:value="${enterprise.eBusineesName}" class="write-text write-input" type="text" readonly>
                             </div>
-                        </div>
+                        <input th:value="${enterprise.id}" type="text" name = "id" hidden="hidden">
+                    </div>
                         <div class="notice-write">
-                            <div class="write-title">대표자 명</div>
+                                <div class="write-title">대표자 명</div>
                             <div class="write-sec">
-                                <input class="write-text write-input" type="text" readonly>
+                                <input th:value="${enterprise.eManager}" class="write-text write-input" type="text" readonly>
                             </div>
                         </div>
                         <div class="notice-write">
                             <div class="write-title">기업 소개</div>
                             <div class="write-sec">
-                                <textarea style="height: 120px;" class="write-text write-notice" type="text" readonly></textarea>
+                                <textarea th:text="${enterprise.eContent}" style="height: 120px;" class="write-text write-notice" type="text" readonly></textarea>
                             </div>
                         </div>
                         <div class="notice-write">
@@ -123,4 +123,8 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/js/admin/side-bar.js"></script>
+<script th:inline="javascript">
+    console.log([[${pagination}]])
+    console.log([[${userSearch}]])
+</script>
 </html>

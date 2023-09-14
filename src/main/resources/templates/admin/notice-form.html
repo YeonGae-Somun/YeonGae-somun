@@ -37,7 +37,7 @@
             <div class="content-wrap">
 
                 <!-- [S] 공지사항 등록 -->
-                <form action="/admin/notice" method="post"  class="submit-form">
+                <form th:action="@{/admin/notice-write}" method="post"  class="submit-form">
                     <div class="con-write-wrap">
                         <div class="notice-write">
                             <div class="write-title">공지사항 제목</div>
@@ -74,7 +74,7 @@
                     <!-- 작성하기 btn -->
                     <div class="write-btn-wrap">
                         <button type="button" class="btn btn-list"><a href="/admin/notice">공지 사항</a></button>
-                        <button type="button" class="btn btn-write">작성하기</button>
+                        <button type="submit" class="btn btn-write">작성하기</button>
                     </div>
                 </form>
 

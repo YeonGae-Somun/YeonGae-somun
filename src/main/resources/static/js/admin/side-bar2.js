@@ -1,7 +1,8 @@
 const $title = document.querySelector(".ChangeTitle");
 const $sideList = document.querySelectorAll(".mainNav>li");
+const delEBtn = document.querySelector(".deleteBtnEnterprise");
 const sideDelete = document.querySelectorAll(".inputCheckBox");
-const delBtn = document.querySelector(".deleteBtn");
+
 
 $sideList.forEach(el =>{
     if(el.innerText == $title.innerText){
@@ -10,20 +11,17 @@ $sideList.forEach(el =>{
     }
 })
 
-delBtn.addEventListener('click', () => {
+delEBtn.addEventListener('click', () => {
     let list = [];
     sideDelete.forEach((props, index) => {
-        console.log("test1===" + props.checked )
         if(props.checked) {
             list.push(pagination.content[index].id);
         }
     });
-    fetch("/admins/member/delete", {
+    fetch("/admins/enterprise/delete", {
         method: "POST",
         headers: {"Content-type": "application/json;charset=utf-8"},
         body: JSON.stringify(list)
-    }).then(() => location.href = "/admin/member");
+    }).then(() => location.href = "/admin/enterprise");
 
 });
-
-

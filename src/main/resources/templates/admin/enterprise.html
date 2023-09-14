@@ -8,6 +8,15 @@
     <link href="/css/admin/side-nav.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        ul.numb {
+            display: flex;
+            list-style: none;
+        }
+        .none {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,16 +42,16 @@
 
         <!--mainScreen 회원관리-->
         <div class="mainContent">
-            <form action="#" class = "searchForm">
+            <form action="#" class = "searchForm" th:object="${search}">
                 <div class="memberSearch">
                     <div class="memberSearchInput">
-                        <select name = "type">
-                            <option>기업명</option>
-                            <option>주력 산업</option>
-                            <option>위치</option>
+                        <select name = "type" th:field="*{type}">
+                            <option value="ebusinessname">기업명</option>
+                            <option value="emajor">주력 산업</option>
+                            <option value="elocation">위치</option>
                         </select>
                         <div>
-                            <input type="text" name ="keyword" placeholder="검색어를 입력하세요">
+                            <input type="text" name="keyword" th:field="*{keyword}" placeholder="검색어를 입력하세요">
                         </div>
 
 
@@ -57,7 +66,7 @@
                 <div id="root">
                     <div>
                         <span>총 개</span>
-                        <button class="deleteBtn">삭제</button>
+                        <button class="deleteBtnEnterprise">삭제</button>
                     </div>
                 </div>
                 <form action="#" class = "deleteForm">
@@ -80,18 +89,31 @@
 
                         </tr>
 
-                        <tr>
-                            <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox"></td>
-                            <td>1</td>
-                            <td>삼성</td>
-                            <td>이재용</td>
-                           <td>samsung@naver.com</td>
-                            <td>반도체</td>
-                            <td>강남구 역삼동</td>
-                            <!--신청중,모집중,모집종료,기각),신청중 상태에서만 버튼으로 만들어 신청서 볼수 있게 만들기 -->
-                            <td><a href="/admin/enterprise-estimate"><button type="button" class = "register-estimate-btn">심사 대기</button></a></td>
+<!--                        <tr>-->
+<!--                            <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox"></td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>삼성</td>-->
+<!--                            <td>이재용</td>-->
+<!--                           <td>samsung@naver.com</td>-->
+<!--                            <td>반도체</td>-->
+<!--                            <td>강남구 역삼동</td>-->
+<!--                            &lt;!&ndash;신청중,모집중,모집종료,기각),신청중 상태에서만 버튼으로 만들어 신청서 볼수 있게 만들기 &ndash;&gt;-->
+<!--                            <td><a href="/admin/enterprise-estimate"><button type="button" class = "register-estimate-btn">심사 대기</button></a></td>-->
 
-                            <td><a href="/admin/enterprise-detail"><button type="button" class = "register-detail-btn">상세보기</button></a></td>
+<!--                            <td><a href="/admin/enterprise-detail"><button type="button" class = "register-detail-btn">상세보기</button></a></td>-->
+
+<!--                        </tr>-->
+                        <tr th:each="enterprise:${pagination.content}">
+                            <td class = "inputCheckBoxBtn"><input class="inputCheckBox"type="checkbox"></td>
+                            <td th:text="${enterprise.id}"></td>
+                            <td th:text="${enterprise.eBusineesName}"></td>
+                            <td th:text="${enterprise.eManager}"></td>
+                            <td th:text="${enterprise.eHomepage}"></td>
+                            <td th:text="${enterprise.eMajor}"></td>
+                            <td th:text="${enterprise.eLocation}"></td>
+                            <td><a href="/admin/enterprise-estimate"><button type="button" class = "register-estimate-btn">심사 대기</button></a></td>
+                            <td><a th:href="|/admin/enterprise-detail?id=${enterprise.id}|"><button type="button" class = "register-detail-btn">상세보기</button></a></td>
+
 
                         </tr>
                         </thead>
@@ -102,23 +124,53 @@
                 <div class="page-controller-wrap">
 
                     <!-- 이전 페이지로 이동하기 -->
-                    <a class="page-list page-list-move page-before"> <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"
-                            alt="이전 페이지로 이동하기 아이콘"></a>
-                    <a class="page-list page-list-first list-on">1</a>
-                    <a class="page-list page-list-second">2</a>
-                    <a class="page-list page-list-third">3</a>
-                    <a class="page-list page-list-fourth">4</a>
-                    <a class="page-list page-list-fifth">5</a>
+                    <ul class="numb" th:with="
+                            nowPage = ${pagination.number + 1},
+                            pageSize = ${pagination.size},
+                            totalPages = ${pagination.totalPages},
+                            endPage = ${((nowPage - 1) / pageSize + 1) * pageSize},
+                            startPage = ${endPage - pageSize + 1},
+                            realEndPage = ${endPage < totalPages ? endPage : totalPages},
+                            first = ${pagination.first}, last = ${pagination.last}
+                        ">
+                        <li th:classappend="${startPage == 1} ? 'none'" class="prev">
+                            <a th:href="@{/admin/enterprise(page=${startPage-2})}" th:text="＜＜"></a>
+                        </li>
+                        <li th:classappend="${first} ? 'none'" class="prev">
+                            <a th:href="@{/admin/enterprise(page=${nowPage-2})}" th:text="＜"></a>
+                        </li>
+                        <li th:each="page : ${#numbers.sequence(startPage, realEndPage)}">
+                            <a th:if="${nowPage != page}" th:href="@{/admin/enterprise(page=${page-1})}" th:text="${page}"></a>
+                            <span style="color: #ff0000" th:unless="${nowPage != page}" th:text="${page}"></span>
+                        </li>
+                        <li th:classappend="${last} ? 'none'" class="next">
+                            <a th:href="@{/admin/enterprise(page=${nowPage})}" th:text="＞"></a>
+                        </li>
+                        <li th:classappend="${endPage >= totalPages} ? 'none'" class="prev">
+                            <a th:href="@{/admin/enterprise(page=${endPage})}" th:text="＞＞"></a>
+                        </li>
+                    </ul>
+
+<!--                    <a class="page-list page-list-move page-before"> <img-->
+<!--                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"-->
+<!--                            alt="이전 페이지로 이동하기 아이콘"></a>-->
+<!--                    <a class="page-list page-list-first list-on">1</a>-->
+<!--                    <a class="page-list page-list-second">2</a>-->
+<!--                    <a class="page-list page-list-third">3</a>-->
+<!--                    <a class="page-list page-list-fourth">4</a>-->
+<!--                    <a class="page-list page-list-fifth">5</a>-->
 
                     <!-- 다음 페이지로 이동하기 -->
-                    <a class="page-list page-list-move page-after"> <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="
-                            alt="다음 페이지로 이동하기 아이콘">
-                    </a>
+<!--                    <a class="page-list page-list-move page-after"> <img-->
+<!--                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="-->
+<!--                            alt="다음 페이지로 이동하기 아이콘">-->
+<!--                    </a>-->
 
                 </div>
                 <!-- [E] 페이지 컨트롤러 -->
+                <div th:unless="${!pagination.content.isEmpty()}">
+                    <h1>게시글이 없습니다.</h1>
+                </div>
             </div>
         </div>
     </section>
@@ -130,5 +182,10 @@
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="/js/admin/side-bar.js"></script>
+<script th:inline="javascript">
+    let pagination = [[${pagination}]];
+    console.log([[${search}]])
+    console.log([[${pagination}]])
+</script>
+<script src="/js/admin/side-bar2.js"></script>
 </html>
