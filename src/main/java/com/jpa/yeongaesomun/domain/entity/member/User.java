@@ -11,6 +11,7 @@ import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -29,9 +30,7 @@ public class User extends Period {
     private Long Id;
     @NotNull
     private String userEmail;
-    @NotNull
     private String userPassword;
-    @NotNull
     private String userNickname;
 
     @Enumerated(EnumType.STRING)
@@ -54,14 +53,26 @@ public class User extends Period {
     public User( String userEmail, String userPassword, String userNickname,MemberLoginType memberLoginType,MemberRole memberRole,MemberStatus memberStatus
                 ,MemberType memberType) {
         this.userEmail=userEmail;
-        this.userPassword=userPassword;
         this.userNickname=userNickname;
         this.userLoginType =memberLoginType;
         this.userRole=memberRole;
         this.userStatus=memberStatus;
         this.userType=memberType;
     }
+    public void setUserNickname(String memberName) {
+        this.userNickname = memberName;
+    }
 
 
+    public void setUserEmail(String memberEmail) {
+        this.userEmail = memberEmail;
+    }
+
+
+    public User update(String memberName,  String memberEmail){
+        this.setUserNickname(memberName);
+        this.setUserEmail(memberEmail);
+        return this;
+    }
 
 }
