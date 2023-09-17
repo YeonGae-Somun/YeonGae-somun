@@ -80,9 +80,9 @@ public class MessageTest {
 //        }
 
         //확인하지 않은 메세지 개수 세기
+//        log.info(messageRepository.countAllNotIsCheckedByReceiverId(memberRepository.findById(2L).get()).toString());
 
 
-        log.info(messageRepository.countAllNotIsCheckedByReceiverId(memberRepository.findById(2L).get()).toString());
     }
 
 

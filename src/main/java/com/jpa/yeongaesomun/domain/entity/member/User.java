@@ -28,9 +28,7 @@ public class User extends Period {
     private Long id;
     @NotNull
     private String userEmail;
-    @NotNull
     private String userPassword;
-    @NotNull
     private String userNickname;
     @NotNull
     private String userName;
@@ -63,7 +61,6 @@ public class User extends Period {
                 ,MemberType memberType) {
         this.id=id;
         this.userEmail=userEmail;
-        this.userPassword=userPassword;
         this.userNickname=userNickname;
         this.userCellPhone=userCellPhone;
         this.userBirthDate=userBirthDate;
@@ -75,7 +72,20 @@ public class User extends Period {
         this.userStatus=memberStatus;
         this.userType=memberType;
     }
+    public void setUserNickname(String memberName) {
+        this.userNickname = memberName;
+    }
 
 
+    public void setUserEmail(String memberEmail) {
+        this.userEmail = memberEmail;
+    }
+
+
+    public User update(String memberName,  String memberEmail){
+        this.setUserNickname(memberName);
+        this.setUserEmail(memberEmail);
+        return this;
+    }
 
 }
